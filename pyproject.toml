@@ -1,0 +1,46 @@
+[project]
+name = "fomc-research"
+version = "0.1.0"
+description = "FOMC research database: Fed primary-source corpus, statement-parsed policy regime, SPY/TLT event truth table, and regime-intelligence scoring — with an MCP server for agents"
+requires-python = ">=3.13"
+dependencies = [
+    "fomc",
+    "fomc-server",
+]
+
+[tool.uv.sources]
+fomc = { workspace = true }
+fomc-server = { workspace = true }
+
+[tool.uv.workspace]
+members = ["packages/*"]
+
+[dependency-groups]
+dev = [
+    "pytest>=8.0",
+    "pytest-asyncio>=0.23",
+    "pytest-cov>=6.0",
+    "ruff>=0.4.0",
+]
+
+[tool.ruff]
+line-length = 100
+target-version = "py313"
+
+[tool.ruff.lint]
+select = ["E", "F", "I"]
+
+[tool.ruff.lint.per-file-ignores]
+# The analysis/report modules predate the lint gate; their long f-string report and
+# argparse-help lines are left unreflowed so the generated Markdown stays identical.
+"packages/fomc/**/*.py" = ["E501"]
+
+[tool.pytest.ini_options]
+testpaths = ["packages/fomc/tests", "packages/fomc-server/tests", "scripts/tests"]
+asyncio_mode = "auto"
+addopts = "--import-mode=importlib"
+markers = [
+    "unit: Fast, isolated unit tests (no I/O, no network)",
+    "integration: Tests that exercise cross-module or data pipelines",
+    "slow: Tests that take >5s (LLM calls, large data, network)",
+]

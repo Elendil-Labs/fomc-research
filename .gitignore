@@ -1,0 +1,27 @@
+# Python
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+.ruff_cache/
+.coverage
+*.egg-info/
+
+# Raw primary-source binaries are large and reproducible via `python -m fomc.fetch`.
+# The extracted plain text (data/fomc/**/text/) and manifest.json ARE tracked.
+data/fomc/**/raw/
+
+# Local env / secrets
+.env
+
+# Local price cache (seeded from yfinance by `fomc truth`; never committed)
+data/market/
+
+# Dashboard build artefacts and the raw collector output (scorer input only)
+node_modules/
+apps/fomc-dashboard/dist/
+apps/fomc-dashboard/public/data/regime_intel/latest_raw.json
+.vercel/
+
+# OS
+.DS_Store

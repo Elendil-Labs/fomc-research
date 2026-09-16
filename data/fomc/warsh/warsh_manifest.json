@@ -1,0 +1,72 @@
+{
+  "generated_at": "2026-06-19T12:08:35.613247+00:00",
+  "note": "Curated free primary-text Warsh sources. Paywalled items are in warsh_dossier.md.",
+  "doc_count": 3,
+  "ok_count": 2,
+  "documents": [
+    {
+      "slug": "2026-04-21_senate_testimony",
+      "date": "2026-04-21",
+      "title": "Confirmation Opening Statement / Written Testimony",
+      "venue": "Senate Banking (BHUA)",
+      "doc_type": "testimony",
+      "url": "https://www.banking.senate.gov/imo/media/doc/warsh_testimony_4-21-26.pdf",
+      "ext": "pdf",
+      "raw_path": "data/fomc/warsh/raw/2026-04-21_senate_testimony.pdf",
+      "text_path": "data/fomc/warsh/text/2026-04-21_senate_testimony.txt",
+      "http_status": 200,
+      "byte_size": 153922,
+      "sha256": "c11c90c41ba19b95fe6a16573e533eb7a204dff413944420037cfef54f448771",
+      "text_chars": 11656,
+      "fetched_at": "2026-06-19T12:08:33.261802+00:00",
+      "error": ""
+    },
+    {
+      "slug": "2026-04-23_qfr_responses",
+      "date": "2026-04-23",
+      "title": "Combined QFR Responses (Democratic members)",
+      "venue": "Senate Banking (BHUA)",
+      "doc_type": "qfr",
+      "url": "https://www.banking.senate.gov/imo/media/doc/bhua_dems_combined_qfr_responses_from_warsh.pdf",
+      "ext": "pdf",
+      "raw_path": "data/fomc/warsh/raw/2026-04-23_qfr_responses.pdf",
+      "text_path": "data/fomc/warsh/text/2026-04-23_qfr_responses.txt",
+      "http_status": 200,
+      "byte_size": 983042,
+      "sha256": "e7d700e3a496a47f9883d73c0cc70875edd64bd9e1c9169875ef12660813edb3",
+      "text_chars": 143278,
+      "fetched_at": "2026-06-19T12:08:34.485549+00:00",
+      "error": ""
+    }
+  ],
+  "blocked": [
+    {
+      "date": "2025-04-25",
+      "title": "Commanding Heights: Central Banks at a Crossroads (G30 Spring Lecture)",
+      "venue": "Hoover/G30/IMF",
+      "url": "https://www.hoover.org/research/g30-spring-lecture-2025-kevin-warsh-commanding-heights-central-banks-crossroads",
+      "reason": "Hoover PDF URL 404s; landing page is JS-rendered (no static text). Capture via browser."
+    },
+    {
+      "date": "2022-03-01",
+      "title": "Reinvigorating Economic Governance (Cogan & Warsh)",
+      "venue": "Hoover",
+      "url": "https://www.hoover.org/research/reinvigorating-economic-governance-advancing-new-framework-american-prosperity",
+      "reason": "Hoover PDF URL 404s; landing JS-rendered. Capture via browser. (Partly non-monetary.)"
+    },
+    {
+      "date": "2025-11-16",
+      "title": "The Federal Reserve's Broken Leadership",
+      "venue": "Wall Street Journal",
+      "url": "https://www.wsj.com/opinion/the-federal-reserves-broken-leadership-43629c87",
+      "reason": "Paywalled at WSJ; RealClearPolitics repost is a teaser stub only (no full text)."
+    },
+    {
+      "slug": "2025-07-08_inflation_is_a_choice",
+      "title": "Inflation Is a Choice: Warsh on Fixing the Federal Reserve (Uncommon Knowledge)",
+      "url": "https://www.hoover.org/research/inflation-choice-kevin-warsh-fixing-federal-reserve",
+      "date": "2025-07-08",
+      "reason": "Copyrighted Hoover Institution transcript; fetched for private research but not redistributed in this public repository. Cite by URL."
+    }
+  ]
+}

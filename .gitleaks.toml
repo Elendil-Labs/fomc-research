@@ -1,0 +1,18 @@
+# gitleaks config for fomc-research.
+# The regime-intel JSON carries `event_key` (snake_case event-cluster ids) whose
+# entropy trips the generic-api-key rule. They are not secrets.
+[extend]
+useDefault = true
+
+[allowlist]
+description = "Regime-intel event-cluster ids are not credentials"
+regexTarget = "line"
+regexes = [
+  '''"event_key":\s*"[^"]*"''',
+]
+# The JSONL feed is one JSON object per (very long) line; the line-level regex above
+# cannot see the field on every record, so the file itself is allow-listed. It is
+# generated data (titles, URLs, scores), never credentials.
+paths = [
+  '''apps/fomc-dashboard/(public|dist)/data/regime_intel/sources\.jsonl''',
+]

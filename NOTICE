@@ -1,0 +1,67 @@
+FOMC Research
+© 2026 Elendil Labs.
+https://github.com/Elendil-Labs/fomc-research
+
+LICENSES
+
+Code (everything under packages/, scripts/, apps/ except apps/fomc-dashboard/public/data/,
+and .github/):
+    PolyForm Noncommercial License 1.0.0. Full text in LICENSE.
+    Required Notice: Copyright © 2026 Elendil Labs (https://github.com/Elendil-Labs/fomc-research)
+
+Data (everything under data/ and apps/fomc-dashboard/public/data/):
+    Creative Commons Attribution 4.0 International (CC BY 4.0). Full text in LICENSE-DATA.
+    Attribution string:
+    FOMC Research database © 2026 Elendil Labs, CC BY 4.0, https://github.com/Elendil-Labs/fomc-research
+
+DISCLAIMER
+
+Proprietary research, not investment advice. Everything in this repository is
+historical and observational evidence about how markets have behaved around FOMC
+decisions. It is not a recommendation to buy or sell any security, it carries no
+warranty of accuracy or fitness, and past reactions do not predict future ones.
+Statistics reported here are tendencies on small samples (roughly 70 events);
+none clears a conventional significance bar and no transaction costs are modeled.
+
+THIRD-PARTY MATERIALS
+
+U.S. Federal Reserve. FOMC statements, minutes, Summary of Economic Projections,
+press-conference transcripts, and Board member speeches and testimony are works of
+the U.S. Federal Reserve fetched from federalreserve.gov. They are U.S. government
+works in the public domain. Extracted plain text is kept under data/fomc/<type>/text/;
+the original HTML/PDF is not redistributed (git-ignored, reproducible with `fomc fetch`).
+
+U.S. Senate. Kevin Warsh's confirmation opening statement and written Questions for
+the Record responses were fetched from banking.senate.gov and are U.S. government
+works.
+
+FRED (Federal Reserve Bank of St. Louis). The balance-sheet and market-pricing axes
+are computed from FRED series WALCL, WRESBAL, RRPONTSYD, DGS2, DGS10, T10Y2Y, DFF,
+SOFR, IORB and WTREGEN, retrieved through the FRED API and cited per the FRED terms
+of use (https://fred.stlouisfed.org/legal/). The repository stores only the latest
+value, a 90-day change and a -1/0/+1 signal per indicator. The FRED series themselves
+are not redistributed here.
+
+SPY and TLT prices. Full price series are NOT redistributed. The event truth table
+contains only per-event return percentages and the closing price on each of the
+roughly 70 FOMC decision days. The full daily history is fetched at run time from
+Yahoo Finance through the yfinance library into a git-ignored cache (data/market/).
+Users are responsible for complying with Yahoo's terms of service.
+
+Regime-intelligence news feed. apps/fomc-dashboard/public/data/regime_intel/ holds,
+for each cited news item, only its title, URL, publisher, publication date, machine-
+assigned scores, and two short fields (`evidence_text`, `why_it_matters`) that are
+MACHINE-GENERATED PARAPHRASES produced by the collector (Perplexity `sonar` model)
+under a contract that forbids verbatim quotation. They are not publisher text, they
+are unverified, and they may misattribute. Article bodies are never stored. Titles
+and other publisher metadata remain the property of their publishers and appear
+here for citation.
+
+Intentionally excluded. A Hoover Institution interview transcript ("Inflation Is a
+Choice", 2025-07-08), two further Hoover items (the 2025 G30 lecture and a 2022
+essay), and a Wall Street Journal op-ed by Kevin Warsh (2025-11-16) are copyrighted
+and are not included. They are cited by URL only in
+data/fomc/warsh/warsh_manifest.json.
+
+Other referenced materials remain the property of their respective owners and are
+used by summary or citation with attribution.

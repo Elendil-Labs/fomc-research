@@ -1,0 +1,82 @@
+name: Refresh FOMC dashboard
+
+# Daily pre-open refresh of the dashboard's regime-intel data. Vercel deploys from
+# apps/fomc-dashboard and redeploys automatically on each pushed commit.
+
+on:
+  schedule:
+    - cron: "30 11 * * 1-5" # ~07:30 ET weekday pre-open
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: refresh-dashboard
+  cancel-in-progress: false
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0 # full history so the commit step can rebase before pushing
+
+      - uses: astral-sh/setup-uv@v5
+
+      - name: Install Python workspace
+        run: uv sync
+
+      - name: Re-export event-truth CSV+JSON for the dashboard
+        # Offline re-shape of the committed canonical CSV (no price API needed).
+        run: uv run fomc export-truth
+
+      - name: Collect regime intelligence (Perplexity)
+        env:
+          PPLX_API_KEY_fomc: ${{ secrets.PPLX_API_KEY_fomc }}
+        run: uv run python scripts/collect_regime_intel.py --model sonar
+
+      - name: Score regime intelligence
+        # Anchor the score to the next FOMC decision date via the MCP server's
+        # calendar — the same --next-fomc the refresh_intel pipeline passes.
+        # Falls back to an unanchored score if the calendar lookup fails.
+        run: |
+          NEXT_FOMC="$(uv run python -c 'from fomc_server import _calendar as c; print(c.next_fomc(c.today_utc()) or "")' 2>/dev/null || true)"
+          uv run python scripts/score_regime_intel.py ${NEXT_FOMC:+--next-fomc "$NEXT_FOMC"}
+
+      - name: Collect balance-sheet axis (FRED API)
+        # Deterministic second regime axis. Degrades to an "axis pending" state if
+        # FRED_API_KEY is unset or FRED is unreachable (never blocks the refresh).
+        env:
+          FRED_API_KEY: ${{ secrets.FRED_API_KEY }}
+        run: uv run python scripts/collect_balance_sheet.py || echo "balance-sheet collect skipped"
+
+      - name: Collect market-pricing axis (FRED API)
+        # What the MARKET prices for the Fed path (2y momentum, curve, 2y-vs-funds,
+        # net liquidity). Degrades to "axis pending" like the balance-sheet step.
+        env:
+          FRED_API_KEY: ${{ secrets.FRED_API_KEY }}
+        run: uv run python scripts/collect_market_pricing.py || echo "market-pricing collect skipped"
+
+      - name: Commit changed data
+        run: |
+          # Author as a real GitHub identity so Vercel's Git integration can map the
+          # commit to a team member and deploy it. A bot/no-account author leaves the
+          # production build stuck in UNKNOWN (it never promotes to the live alias).
+          git config user.name "jingerzz"
+          git config user.email "21320706+jingerzz@users.noreply.github.com"
+          git add apps/fomc-dashboard/public/data data/fomc/analysis
+          if git diff --cached --quiet; then
+            echo "no data changes to commit"; exit 0
+          fi
+          git commit -m "Refresh FOMC dashboard data ($(date -u +%Y-%m-%d))"
+          # Rebase-then-push with retries: other sessions/PRs merge to main during the
+          # ~2-min run, so a plain push races and gets rejected. Data files don't conflict.
+          for attempt in 1 2 3 4 5; do
+            if git pull --rebase --autostash origin main && git push; then
+              echo "pushed on attempt $attempt"; exit 0
+            fi
+            echo "push attempt $attempt rejected (main moved); retrying…"; sleep 5
+          done
+          echo "::error::could not push refreshed data after retries"; exit 1
