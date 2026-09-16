@@ -31,6 +31,7 @@ Base URL: https://raw.githubusercontent.com/Elendil-Labs/fomc-research/main/
 - apps/fomc-dashboard/public/data/regime_intel/history.json: daily net-lean log
 - data/fomc/analysis/regime_timeline.csv: statement-parsed hiking/easing regime timeline
 - data/fomc/statement/text/, minutes/text/, sep/text/, press_conference_transcript/text/, speech/text/, testimony/text/: the corpus as plain text
+- data/fomc/analysis/retros/retro_blue_tightening_5d.csv: day-by-day SPY/TLT % paths (day 0 to +5) after Blue FOMC closes in Tightening regimes; long format for charting (see retros/README.md)
 - data/fomc/manifest.json: index of every corpus document with source URL and sha256
 
 Freshness: check `generated_at` in latest.json and the last row of the truth table. The

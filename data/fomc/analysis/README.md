@@ -24,3 +24,5 @@ uv run fomc regime && uv run fomc truth && uv run fomc study && uv run fomc dips
 
 Note: files that backfill recent prices via yfinance change their newest rows when
 re-run on a later date. See `../../../AGENTS.md` §6 (price seam).
+
+- `retros/`: day-by-day SPY/TLT paths after FOMC days by decision-day color x regime (see `retros/README.md`; generator `scripts/retro_color_regime.py`).
