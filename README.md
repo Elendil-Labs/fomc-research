@@ -29,6 +29,20 @@ uv run fomc --help        # every command
 The first `uv run fomc truth` fetches SPY/TLT history from Yahoo Finance into a
 git-ignored `data/market/` cache. Everything else runs offline from the committed data.
 
+## Read the data without cloning
+
+Every dataset is a committed file, so an agent that can fetch a URL can use it
+directly. Base URL: `https://raw.githubusercontent.com/Elendil-Labs/fomc-research/main/`
+
+```bash
+curl -s https://raw.githubusercontent.com/Elendil-Labs/fomc-research/main/apps/fomc-dashboard/public/data/fomc_event_truth.json
+curl -s https://raw.githubusercontent.com/Elendil-Labs/fomc-research/main/apps/fomc-dashboard/public/data/regime_intel/latest.json
+```
+
+Field definitions are in [docs/SCHEMA.md](docs/SCHEMA.md). Check `generated_at` (regime
+intel) and the last row of the truth table before relying on freshness. A short
+machine-readable index of the repo is in [llms.txt](llms.txt).
+
 ## Data catalog
 
 All data is licensed CC BY 4.0 (see [LICENSE-DATA](LICENSE-DATA)). A GitHub Actions

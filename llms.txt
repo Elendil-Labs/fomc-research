@@ -1,0 +1,42 @@
+# fomc-research
+
+> An open FOMC research database maintained by Elendil Labs: the Federal Reserve's
+> primary-source corpus (statements, minutes, SEP, press-conference transcripts,
+> speeches, testimony, 2018 to present), the Fed's stated policy regime parsed from its
+> own statements, a per-meeting SPY/TLT "event truth" table, and a weighted
+> regime-intelligence read of news, balance-sheet and market-pricing evidence. Read-only
+> tools are exposed to agents through an MCP server. Historical and observational
+> evidence only; not investment advice.
+
+Code is licensed PolyForm Noncommercial 1.0.0; data is CC BY 4.0
+(attribution: "FOMC Research database © 2026 Elendil Labs, CC BY 4.0,
+https://github.com/Elendil-Labs/fomc-research").
+
+## Start here
+
+- [README](README.md): what the repo is, quick start, data catalog, CLI, MCP config
+- [AGENTS.md](AGENTS.md): onboarding for agents and developers, gotchas, how to collaborate
+- [docs/SCHEMA.md](docs/SCHEMA.md): every field in every data file
+- [docs/PROVENANCE.md](docs/PROVENANCE.md): where each dataset comes from and its license
+- [CONTRIBUTING.md](CONTRIBUTING.md): DCO, Issue tags, how to add a meeting or a source
+
+## Data (fetch raw, no clone needed)
+
+Base URL: https://raw.githubusercontent.com/Elendil-Labs/fomc-research/main/
+
+- apps/fomc-dashboard/public/data/fomc_event_truth.json: per-meeting truth table (date, chair, stated regime, action, target range, SPY/TLT returns d0, +1, +2, +3, +5, +10)
+- apps/fomc-dashboard/public/data/regime_intel/latest.json: current regime read, bucket scores, scored sources, checklist
+- apps/fomc-dashboard/public/data/regime_intel/balance_sheet.json: deterministic FRED balance-sheet axis
+- apps/fomc-dashboard/public/data/regime_intel/market_pricing_axis.json: deterministic FRED market-pricing axis
+- apps/fomc-dashboard/public/data/regime_intel/history.json: daily net-lean log
+- data/fomc/analysis/regime_timeline.csv: statement-parsed hiking/easing regime timeline
+- data/fomc/statement/text/, minutes/text/, sep/text/, press_conference_transcript/text/, speech/text/, testimony/text/: the corpus as plain text
+- data/fomc/manifest.json: index of every corpus document with source URL and sha256
+
+Freshness: check `generated_at` in latest.json and the last row of the truth table. The
+data is only as current as the last refresh commit.
+
+## Tools
+
+- MCP server `fomc-intel` (packages/fomc-server): 16 read-only and pipeline tools over stdio or HTTP; see README "MCP server"
+- CLI `fomc` (packages/fomc): status, regime, truth, study, dips, backtest, fetch, speeches, warsh, export-truth
