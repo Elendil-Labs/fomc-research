@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-22T11:40:48+00:00",
+  "generated_at": "2026-09-23T11:41:09+00:00",
   "available": true,
   "net_lean": 0.6,
   "label": "tightening",
@@ -11,11 +11,11 @@
       "unit": "%",
       "weight": 0.3,
       "latest": 4.76,
-      "as_of": "2026-09-18",
-      "prior_as_of": "2026-06-18",
-      "change_90d": 0.57,
+      "as_of": "2026-09-21",
+      "prior_as_of": "2026-06-23",
+      "change_90d": 0.6,
       "signal": 1,
-      "detail": "\u039492d +0.57 %",
+      "detail": "\u039490d +0.60 %",
       "note": "market repricing tighter policy"
     },
     {
@@ -23,10 +23,10 @@
       "name": "Curve slope (10y \u2212 2y)",
       "unit": "%",
       "weight": 0.2,
-      "latest": 0.25,
-      "as_of": "2026-09-18",
+      "latest": 0.2,
+      "as_of": "2026-09-21",
       "signal": 0,
-      "detail": "+0.25%",
+      "detail": "+0.20%",
       "note": "neutral"
     },
     {
@@ -35,7 +35,7 @@
       "unit": "%",
       "weight": 0.3,
       "latest": 0.88,
-      "as_of": "2026-09-18",
+      "as_of": "2026-09-21",
       "signal": 1,
       "detail": "+0.88%",
       "note": "hikes priced in (2y above funds)"
@@ -45,12 +45,12 @@
       "name": "Net liquidity (WALCL \u2212 TGA \u2212 RRP)",
       "unit": "$M",
       "weight": 0.2,
-      "latest": 5868938.0,
+      "latest": 5869067.0,
       "as_of": "2026-09-16",
       "prior_as_of": "2026-06-17",
-      "change_90d": 19711.0,
+      "change_90d": 17890.0,
       "signal": 0,
-      "detail": "\u039491d +20 $B",
+      "detail": "\u039491d +18 $B",
       "note": "neutral"
     }
   ],
