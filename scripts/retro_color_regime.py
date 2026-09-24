@@ -43,6 +43,7 @@ class EventPath:
     asset: str
     daily_pct: list[float]  # day 0 .. day N
     cum_pct: list[float]  # cumulative from day-0 close, day 1 .. day N
+    closes: list[float]  # closing price, day 0 .. day N
 
 
 def color_of(spy_d0: float, tlt_d0: float) -> str:
@@ -66,12 +67,12 @@ def load_events(regime: str, color: str) -> list[dict]:
 
 def walk(
     closes: dict[date, float], dates: list[date], d0: date, horizon: int
-) -> tuple[list[float], list[float]]:
+) -> tuple[list[float], list[float], list[float]]:
     i = dates.index(d0)
     window = [closes[d] for d in dates[i - 1 : i + horizon + 1]]  # prior close .. +N
     daily = [(window[k] / window[k - 1] - 1) * 100 for k in range(1, len(window))]
     cum = [(window[k] / window[1] - 1) * 100 for k in range(2, len(window))]
-    return daily, cum
+    return daily, cum, window[1:]
 
 
 def build(regime: str, color: str, horizon: int) -> list[EventPath]:
@@ -82,8 +83,10 @@ def build(regime: str, color: str, horizon: int) -> list[EventPath]:
         if d0 not in dates or dates.index(d0) + horizon >= len(dates):
             continue  # not yet settled
         for asset, closes in (("SPY", spy), ("TLT", tlt)):
-            daily, cum = walk(closes, dates, d0, horizon)
-            paths.append(EventPath(d0, r["chair"], r["action"], r["ff_target"], asset, daily, cum))
+            daily, cum, px = walk(closes, dates, d0, horizon)
+            paths.append(
+                EventPath(d0, r["chair"], r["action"], r["ff_target"], asset, daily, cum, px)
+            )
     return paths
 
 
@@ -98,6 +101,7 @@ def write_csv(paths: list[EventPath], out: Path, horizon: int) -> None:
                 "ff_target",
                 "asset",
                 "day",
+                "close",
                 "daily_pct",
                 "cum_from_d0_pct",
             ]
@@ -113,6 +117,7 @@ def write_csv(paths: list[EventPath], out: Path, horizon: int) -> None:
                         p.ff_target,
                         p.asset,
                         day,
+                        f"{p.closes[day]:.2f}",
                         f"{p.daily_pct[day]:.3f}",
                         cum,
                     ]
