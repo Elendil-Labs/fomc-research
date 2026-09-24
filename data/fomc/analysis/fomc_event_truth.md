@@ -1,6 +1,6 @@
 # FOMC Event Truth — SPY & TLT around every FOMC decision
 
-_Generated 2026-09-16 · returns in % from the decision-day close (raw close) · `pN` = +N sessions after · full numeric detail in `fomc_event_truth.csv`._
+_Generated 2026-09-24 · returns in % from the decision-day close (raw close) · `pN` = +N sessions after · full numeric detail in `fomc_event_truth.csv`._
 
 Action ∈ Hike/Hold/Cut; Regime = hiking (Tightening) vs easing cycle. `*` marks COVID emergency decisions.
 
@@ -76,3 +76,4 @@ Action ∈ Hike/Hold/Cut; Regime = hiking (Tightening) vs easing cycle. `*` mark
 | 2026-04-29 | Powell | Easing | Hold | 3.50-3.75 | -0.01 | +0.99 | +0.90 | +3.13 | +4.32 | -0.78 | -0.09 | -0.86 | +0.44 | -1.05 |
 | 2026-06-17 | Warsh | Easing | Hold | 3.50-3.75 | -1.25 | +0.78 | -1.00 | -0.90 | +0.52 | +0.16 | +0.49 | -0.15 | +1.18 | -0.95 |
 | 2026-07-29 | Warsh | Easing | Hold | 3.50-3.75 | -1.54 | +1.68 | +3.87 | +5.53 | +5.90 | -1.65 | -0.06 | -0.80 | +0.18 | -0.89 |
+| 2026-09-16 | Warsh | Tightening | Hike | 3.75-4.00 | -0.44 | +1.13 | +2.58 | +1.82 |  | +0.21 | +1.11 | +1.14 | -0.52 |  |

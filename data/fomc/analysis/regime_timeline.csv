@@ -69,3 +69,4 @@ date,action,regime,target_low,target_high,target_mid,change_bps,trailing_12m_bps
 2026-04-29,Hold,Easing,3.5,3.75,3.625,0,-75
 2026-06-17,Hold,Easing,3.5,3.75,3.625,0,-75
 2026-07-29,Hold,Easing,3.5,3.75,3.625,0,-75
+2026-09-16,Hike,Tightening,3.75,4.0,3.875,25,-50

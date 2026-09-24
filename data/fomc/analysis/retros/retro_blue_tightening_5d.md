@@ -28,12 +28,14 @@ Day 0 is the decision day's own close-to-close move. +1 to +5 are each following
 |  |  | TLT | **+0.98%** | +1.63% | -2.21% | -2.02% | +0.98% | -0.48% | -2.14% |
 | 2024-05-01 | Hold | SPY | **-0.32%** | +0.94% | +1.24% | +1.03% | +0.11% | +0.01% | +3.37% |
 |  |  | TLT | **+0.39%** | +0.43% | +1.01% | +0.39% | +0.61% | -0.61% | +1.84% |
+| 2026-09-16 | Hike | SPY | **-0.44%** | +1.13% | -0.12% | +1.55% | -0.02% | -0.72% | +1.82% |
+|  |  | TLT | **+0.21%** | +1.11% | -0.65% | +0.68% | -0.06% | -1.58% | -0.52% |
 
-## Averages across 12 events
+## Averages across 13 events
 
 | Asset | Day 0 | +1 | +2 | +3 | +4 | +5 | 5-day cum | Up after 5 days |
 |---|---|---|---|---|---|---|---|---|
-| SPY | -0.89% | -0.51% | -0.37% | -0.05% | +0.04% | +0.51% | -0.39% | 5 of 12 |
-| TLT | +0.75% | -0.29% | +0.04% | -0.99% | -0.17% | +0.15% | -1.26% | 4 of 12 |
+| SPY | -0.86% | -0.38% | -0.35% | +0.07% | +0.04% | +0.42% | -0.22% | 6 of 13 |
+| TLT | +0.71% | -0.18% | -0.01% | -0.86% | -0.16% | +0.02% | -1.20% | 4 of 13 |
 
 Source: `data/fomc/analysis/fomc_event_truth.csv` + the yfinance price cache. Regenerate with `uv run python scripts/retro_color_regime.py --regime Tightening --color Blue --horizon 5`.

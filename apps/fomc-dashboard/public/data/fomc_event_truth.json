@@ -1,9 +1,9 @@
 {
-  "generated_at": "2026-09-24T11:38:59+00:00",
+  "generated_at": "2026-09-24T13:38:12+00:00",
   "source": "data/fomc/analysis/fomc_event_truth.csv",
-  "count": 70,
+  "count": 71,
   "first_event_date": "2018-01-31",
-  "latest_event_date": "2026-07-29",
+  "latest_event_date": "2026-09-16",
   "columns": [
     "date",
     "chair",
@@ -1708,6 +1708,30 @@
       "tlt_p3": -0.797,
       "tlt_p5": 0.181,
       "tlt_p10": -0.893
+    },
+    {
+      "date": "2026-09-16",
+      "chair": "Warsh",
+      "regime": "Tightening",
+      "action": "Hike",
+      "ff_target": "3.75-4.00",
+      "emergency": false,
+      "spy_close": 754.05,
+      "spy_pre5": -1.119,
+      "spy_d0": -0.441,
+      "spy_p1": 1.134,
+      "spy_p2": 1.013,
+      "spy_p3": 2.579,
+      "spy_p5": 1.825,
+      "spy_p10": null,
+      "tlt_close": 80.88,
+      "tlt_pre5": -1.813,
+      "tlt_d0": 0.211,
+      "tlt_p1": 1.113,
+      "tlt_p2": 0.457,
+      "tlt_p3": 1.137,
+      "tlt_p5": -0.519,
+      "tlt_p10": null
     }
   ]
 }
