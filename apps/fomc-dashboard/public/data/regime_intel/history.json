@@ -322,6 +322,13 @@
       "inferred_regime": "Potential pivot \u2192 tightening",
       "conviction": "High",
       "new_this_run": 20
+    },
+    {
+      "date": "2026-09-24",
+      "net_lean": 0.5137,
+      "inferred_regime": "Potential pivot \u2192 tightening",
+      "conviction": "High",
+      "new_this_run": 14
     }
   ]
 }
