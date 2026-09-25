@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-24T11:41:15+00:00",
+  "generated_at": "2026-09-25T11:41:32+00:00",
   "available": true,
   "net_lean": 0.2,
   "label": "neutral",
@@ -9,11 +9,11 @@
       "name": "Fed balance sheet",
       "unit": "$M",
       "weight": 0.28,
-      "latest": 6746548.0,
-      "as_of": "2026-09-16",
-      "change_90d": 10124.0,
+      "latest": 6747704.0,
+      "as_of": "2026-09-23",
+      "change_90d": 12059.0,
       "signal": 0,
-      "detail": "\u039490d +10,124.00 $M",
+      "detail": "\u039490d +12,059.00 $M",
       "note": "neutral"
     },
     {
@@ -21,11 +21,11 @@
       "name": "Bank reserves",
       "unit": "$M",
       "weight": 0.22,
-      "latest": 3013794.0,
-      "as_of": "2026-09-16",
-      "change_90d": -19650.0,
+      "latest": 2930193.0,
+      "as_of": "2026-09-23",
+      "change_90d": -21223.0,
       "signal": 0,
-      "detail": "\u039490d -19,650.00 $M",
+      "detail": "\u039490d -21,223.00 $M",
       "note": "neutral"
     },
     {
@@ -33,10 +33,10 @@
       "name": "Reverse-repo cushion",
       "unit": "$B",
       "weight": 0.15,
-      "latest": 0.461,
-      "as_of": "2026-09-23",
+      "latest": 0.63,
+      "as_of": "2026-09-24",
       "signal": 1,
-      "detail": "0 $B",
+      "detail": "1 $B",
       "note": "near-depleted (QT cushion gone)"
     },
     {
@@ -44,11 +44,11 @@
       "name": "10y Treasury yield (term-premium proxy)",
       "unit": "%",
       "weight": 0.2,
-      "latest": 4.96,
-      "as_of": "2026-09-22",
-      "change_90d": 0.55,
+      "latest": 5.11,
+      "as_of": "2026-09-23",
+      "change_90d": 0.71,
       "signal": 1,
-      "detail": "\u039490d +0.55 %",
+      "detail": "\u039490d +0.71 %",
       "note": "long-end rising"
     },
     {
@@ -57,7 +57,7 @@
       "unit": "bp",
       "weight": 0.15,
       "latest": -0.03,
-      "as_of": "2026-09-22",
+      "as_of": "2026-09-23",
       "signal": -1,
       "detail": "-0.03%",
       "note": "ample funding"
