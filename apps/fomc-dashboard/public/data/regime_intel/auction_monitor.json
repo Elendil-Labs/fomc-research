@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-06T14:18:30+00:00",
+  "generated_at": "2026-10-06T17:23:15+00:00",
   "available": true,
   "source": "TreasuryDirect TA_WS securities API",
   "method": "Each 5/7/10/20/30y coupon auction scored vs the trailing 12 months of the same term (excluding itself): bid-to-cover, indirect share and dealer share of competitive awards; two weak readings = stress, one = watch (no LLM).",

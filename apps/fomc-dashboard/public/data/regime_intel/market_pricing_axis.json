@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-05T19:48:52+00:00",
+  "generated_at": "2026-10-06T17:23:10+00:00",
   "available": true,
   "net_lean": 0.6,
   "label": "tightening",
@@ -10,12 +10,12 @@
       "name": "2y Treasury yield (policy-path momentum)",
       "unit": "%",
       "weight": 0.3,
-      "latest": 4.78,
-      "as_of": "2026-10-01",
+      "latest": 4.83,
+      "as_of": "2026-10-02",
       "prior_as_of": "2026-07-02",
-      "change_90d": 0.64,
+      "change_90d": 0.69,
       "signal": 1,
-      "detail": "\u039491d +0.64 %",
+      "detail": "\u039492d +0.69 %",
       "note": "market repricing tighter policy"
     },
     {
@@ -23,10 +23,10 @@
       "name": "Curve slope (10y \u2212 2y)",
       "unit": "%",
       "weight": 0.2,
-      "latest": 0.46,
-      "as_of": "2026-10-01",
+      "latest": 0.45,
+      "as_of": "2026-10-02",
       "signal": 0,
-      "detail": "+0.46%",
+      "detail": "+0.45%",
       "note": "neutral"
     },
     {
@@ -34,10 +34,10 @@
       "name": "Fed-funds path (2y \u2212 funds rate)",
       "unit": "%",
       "weight": 0.3,
-      "latest": 0.9,
-      "as_of": "2026-10-01",
+      "latest": 0.95,
+      "as_of": "2026-10-02",
       "signal": 1,
-      "detail": "+0.90%",
+      "detail": "+0.95%",
       "note": "hikes priced in (2y above funds)"
     },
     {

@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-06T14:20:44+00:00",
+  "generated_at": "2026-10-06T17:23:14+00:00",
   "available": true,
   "source": "FRED API + NY Fed ACM + ICE BofA MOVE (via Yahoo)",
   "method": "Deterministic level/20-day-change checks against the 2022-10 and 2023-10 long-end bottoms; valuation boxes use the 2023 levels, timing boxes need elevated MOVE and a stalled front end (no LLM).",
@@ -46,11 +46,11 @@
       "group": "valuation",
       "threshold": 0.45,
       "rule": "latest >= 0.45 (2023-10-19 bottom level)",
-      "latest": 0.9137,
-      "as_of": "2026-10-02",
-      "change_20d": 0.1601,
+      "latest": 0.9621,
+      "as_of": "2026-10-05",
+      "change_20d": 0.2854,
       "checked": true,
-      "detail": "0.91 pp (20d +0.16)",
+      "detail": "0.96 pp (20d +0.29)",
       "note": "Term premium is the compensation for duration risk; it was 0.45 at the 2023 bottom and negative at the 2022 one."
     },
     {
@@ -74,11 +74,11 @@
       "group": "timing",
       "threshold": 130,
       "rule": "latest >= 130 (2023 bottom ~130, 2022 ~160)",
-      "latest": 110.6568,
+      "latest": 107.911,
       "as_of": "2026-10-06",
-      "change_20d": 34.5168,
+      "change_20d": 31.771,
       "checked": false,
-      "detail": "110.66 index (20d +34.52)",
+      "detail": "107.91 index (20d +31.77)",
       "note": "Both bottoms came with rates vol elevated; a calm MOVE says the flush has not happened yet."
     },
     {
