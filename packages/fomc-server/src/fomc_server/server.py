@@ -5,7 +5,9 @@ Phase A: 11 READ-ONLY tools (guide, regime read, two-axis state, balance sheet,
 playbook, event history, news evidence, daily log, checklist, stated regime,
 calendar). Phase B: 4 more — corpus search + statement redline (read-only) and the
 live pipeline tools refresh_intel / ingest_meeting (subprocess runners, optional
-git publish of the dashboard data).
+git publish of the dashboard data). Phase C: 4 long-end tools (read-only) — the
+long-end valuation/timing scorecard, the Treasury auction monitor, CFTC positioning,
+and the composite long-end watch. 20 tools total.
 
 Run (stdio, zero-config default):
     uv run --project packages/fomc-server fomc-intel
@@ -19,7 +21,17 @@ import argparse
 
 from mcp.server.fastmcp import FastMCP
 
-from fomc_server.tools import corpus, events, guide, news, pipeline, playbook, regime, stated
+from fomc_server.tools import (
+    corpus,
+    events,
+    guide,
+    longend,
+    news,
+    pipeline,
+    playbook,
+    regime,
+    stated,
+)
 
 DEFAULT_HOST = "127.0.0.1"
 DEFAULT_PORT = 8848
@@ -28,6 +40,7 @@ mcp = FastMCP("fomc-intel")
 
 guide.register(mcp)
 regime.register(mcp)
+longend.register(mcp)
 playbook.register(mcp)
 events.register(mcp)
 news.register(mcp)

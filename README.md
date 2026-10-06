@@ -66,6 +66,9 @@ result; the FOMC corpus and truth table are refreshed on meeting days.
 | `.../regime_intel/history.json`, `history/YYYY-MM-DD.json` | Daily net-lean series and full daily snapshots | CC BY 4.0 | Weekday cron |
 | `.../regime_intel/balance_sheet.json` | Deterministic FRED balance-sheet axis (WALCL, WRESBAL, RRPONTSYD, DGS10, SOFR-IORB) | CC BY 4.0; FRED cited | Weekday cron |
 | `.../regime_intel/market_pricing_axis.json` | Deterministic FRED market-pricing axis (DGS2, 10y-2y, 2y-DFF, net liquidity) | CC BY 4.0; FRED cited | Weekday cron |
+| `.../regime_intel/long_end_axis.json` | Long-end bottom watch: 10y real yield, ACM term premium, breakeven, MOVE, 2y-stall test, scored against the Oct-2022 and Oct-2023 bond lows | CC BY 4.0; FRED, NY Fed, ICE BofA MOVE (level only) cited | Weekday cron |
+| `.../regime_intel/auction_monitor.json` | 5y to 30y Treasury auction results vs 12-month averages (bid-to-cover, indirect and dealer shares) with stress flags, plus the upcoming calendar | CC BY 4.0; TreasuryDirect (public domain) | Weekday cron |
+| `.../regime_intel/cftc_positioning.json` | CFTC Traders in Financial Futures net positions in 10y, ultra 10y, bond and ultra bond futures: asset managers vs leveraged funds, weekly changes, streaks | CC BY 4.0; CFTC (public domain) | Weekday cron |
 | `.../regime_intel/sources.jsonl` | Append-only audit feed of every collected source | CC BY 4.0 | Weekday cron |
 | `data/market/` | SPY/TLT daily history from yfinance | Not redistributed (git-ignored) | Run time |
 
@@ -93,8 +96,9 @@ module, so `uv run fomc <cmd> --help` shows that command's options.
 ## MCP server: `fomc-intel`
 
 `packages/fomc-server` exposes the database as an MCP server (stdio by default) with
-16 tools: 12 read tools (`get_fomc_guide`, `get_regime_read`, `get_two_axis_state`,
-`get_balance_sheet_axis`, `get_market_pricing_axis`, `get_playbook`,
+20 tools: 16 read tools (`get_fomc_guide`, `get_regime_read`, `get_two_axis_state`,
+`get_balance_sheet_axis`, `get_market_pricing_axis`, `get_long_end_axis`, `get_auction_monitor`,
+`get_cftc_positioning`, `get_long_end_watch`, `get_playbook`,
 `get_event_history`, `get_news_evidence`, `get_daily_log`, `get_checklist`,
 `get_stated_regime`, `get_fomc_calendar`), 2 corpus tools (`search_fed_corpus`,
 `diff_statements`) and 2 live pipeline tools (`refresh_intel`, `ingest_meeting`).

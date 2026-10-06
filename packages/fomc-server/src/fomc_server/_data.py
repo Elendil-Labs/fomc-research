@@ -44,6 +44,21 @@ def load_history() -> Stamped:
     return _read(_paths.history_json())
 
 
+def load_long_end() -> Stamped:
+    """Deterministic FRED long-end valuation/timing scorecard document."""
+    return _read(_paths.long_end_axis_json())
+
+
+def load_auctions() -> Stamped:
+    """Treasury auction monitor (coupon/bond results, upcoming, stress summary)."""
+    return _read(_paths.auction_monitor_json())
+
+
+def load_cftc() -> Stamped:
+    """CFTC Treasury-futures positioning (asset-manager / leveraged-fund nets)."""
+    return _read(_paths.cftc_positioning_json())
+
+
 def load_truth() -> Stamped:
     """Per-event SPY/TLT source-truth table."""
     return _read(_paths.truth_json())

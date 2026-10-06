@@ -28,6 +28,9 @@ Base URL: https://raw.githubusercontent.com/Elendil-Labs/fomc-research/main/
 - apps/fomc-dashboard/public/data/regime_intel/latest.json: current regime read, bucket scores, scored sources, checklist
 - apps/fomc-dashboard/public/data/regime_intel/balance_sheet.json: deterministic FRED balance-sheet axis
 - apps/fomc-dashboard/public/data/regime_intel/market_pricing_axis.json: deterministic FRED market-pricing axis
+- apps/fomc-dashboard/public/data/regime_intel/long_end_axis.json: long-end bottom watch (10y real yield, ACM term premium, breakeven, MOVE, 2y-stall) scored against the Oct-2022 and Oct-2023 bond lows
+- apps/fomc-dashboard/public/data/regime_intel/auction_monitor.json: Treasury 5y-30y auction results vs 12-month averages with stress flags, plus upcoming auctions
+- apps/fomc-dashboard/public/data/regime_intel/cftc_positioning.json: CFTC TFF net positioning in Treasury futures (asset managers vs leveraged funds), weekly changes and streaks
 - apps/fomc-dashboard/public/data/regime_intel/history.json: daily net-lean log
 - data/fomc/analysis/regime_timeline.csv: statement-parsed hiking/easing regime timeline
 - data/fomc/statement/text/, minutes/text/, sep/text/, press_conference_transcript/text/, speech/text/, testimony/text/: the corpus as plain text
@@ -39,5 +42,5 @@ data is only as current as the last refresh commit.
 
 ## Tools
 
-- MCP server `fomc-intel` (packages/fomc-server): 16 read-only and pipeline tools over stdio or HTTP; see README "MCP server"
+- MCP server `fomc-intel` (packages/fomc-server): 20 read-only and pipeline tools over stdio or HTTP; see README "MCP server"
 - CLI `fomc` (packages/fomc): status, regime, truth, study, dips, backtest, fetch, speeches, warsh, export-truth

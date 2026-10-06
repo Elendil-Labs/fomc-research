@@ -167,3 +167,13 @@ The pipeline uses two third-party services with keys: Perplexity
 locally and in repository secrets in CI. No key, token or account identifier is
 committed. Both scripts degrade to a clearly flagged state (`stale: true` or
 `available: false`) rather than failing when a key is absent.
+
+## 9. Long-end watch sources
+
+- **FRED series** DFII10, T10YIE, DGS2, DGS5, DGS10, DGS30, MORTGAGE30US: cited per FRED terms as in section 4. Stored as latest readings and 20-day changes only.
+- **NY Fed ACM term premium** (`ACMTermPremium.csv`, Adrian, Crump and Moench): the 10-year term premium only, latest value and date. Source: Federal Reserve Bank of New York, cited; not redistributed as a series.
+- **ICE BofA MOVE index**: a single latest level and date, read from Yahoo Finance (`^MOVE`). The index is proprietary to ICE; this repository stores one number per day for comparison with the 2022 and 2023 analogs and does not redistribute the series.
+- **TreasuryDirect auction results and upcoming schedule** (`treasurydirect.gov/TA_WS`): U.S. Treasury data, public domain. Tails versus the when-issued yield are not published there and are left null.
+- **CFTC Traders in Financial Futures** (`cftc.gov/dea/newcot/FinFutWk.txt` and the yearly history archives): U.S. government data, public domain. Weekly net positions for four Treasury futures contracts and a 12-week history are stored.
+- **Analog levels** for 2022-10-24 and 2023-10-19 are Elendil Labs readings of the same public series at those dates; MOVE levels at the analog lows are approximate.
+

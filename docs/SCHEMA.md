@@ -334,3 +334,60 @@ Every data-bearing `fomc-intel` tool response includes:
 | `is_stale` | bool | `true` when `data_as_of` is older than 36 hours or unknown. |
 
 Carry this block forward when you cite the data.
+
+## 10. `regime_intel/long_end_axis.json`
+
+The "has the long end bottomed" scorecard. Each indicator is scored against the two
+most recent long-bond lows (2022-10-24 and 2023-10-19), whose readings are carried in
+`analogs`. Deterministic; no LLM.
+
+| Field | Meaning |
+| --- | --- |
+| `generated_at`, `available`, `source`, `method` | As in the other axes. `available: false` carries a `reason`. |
+| `analogs` | `{date: {DFII10, ACMTP10, MOVE}}` for the two analog lows. |
+| `summary.checked` / `total` | Boxes checked among indicators whose `checked` is not null. |
+| `summary.valuation_checked` / `valuation_total`, `timing_checked` / `timing_total` | Same split by `group`. |
+| `summary.read` | One-sentence read. |
+| `indicators[].id` | `DFII10` (10y TIPS real yield), `ACMTP10` (NY Fed ACM 10y term premium), `T10YIE` (10y breakeven), `MOVE` (ICE BofA MOVE, level via Yahoo), `TWO_YEAR_STALL` (2y off its 20-day high while the 30y is at its 20-day high), and context rows `DGS10`, `DGS30`, `T10Y2Y`, `FIVE_THIRTY`, `MORTGAGE30US`. |
+| `indicators[].group` | `valuation` (DFII10, ACMTP10, T10YIE), `timing` (MOVE, TWO_YEAR_STALL), `context` (never checked). |
+| `indicators[].latest`, `as_of`, `change_20d`, `unit` | Latest value, its date, 20-trading-day change. |
+| `indicators[].threshold`, `rule` | The level and the rule text that sets `checked`. |
+| `indicators[].checked` | `true`, `false`, or `null` (context row or unavailable). |
+| `indicators[].detail`, `note` | Human-readable reading and why it matters. |
+
+Rules: DFII10 >= 2.52; ACMTP10 >= 0.45; T10YIE 20-day change <= 0.05 (the move is real yield, not an inflation scare); MOVE >= 130; TWO_YEAR_STALL when DGS2 is at least 0.05 below its 20-day high while DGS30 is within 0.05 of its 20-day high.
+
+## 11. `regime_intel/auction_monitor.json`
+
+Treasury coupon auctions (5y, 7y, 10y, 20y, 30y; TIPS and FRNs excluded) from the
+TreasuryDirect API, each compared with the trailing 12 months of the same term.
+
+| Field | Meaning |
+| --- | --- |
+| `auctions[]` | Newest first. `term`, `type`, `reopening`, `auction_date`, `high_yield`, `bid_to_cover`, `bc_avg_12m`, `indirect_pct`, `indirect_avg_12m`, `dealer_pct`, `dealer_avg_12m`, `flags[]`, `status`. |
+| `auctions[].tail_bp` | Always `null`. The tail versus the 1 pm when-issued yield is not published by the API; see `note_on_tail`. |
+| `auctions[].flags` | Any of: bid-to-cover below average by 0.15 or more; indirect share below average by 8 points or more; dealer share above average by 5 points or more. |
+| `auctions[].status` | `stress` (two or more flags), `watch` (one), `ok`. |
+| `upcoming[]` | Announced auctions for the same terms: `term`, `auction_date`, `announcement_date`, `offering_amount`, `reopening`. |
+| `summary` | `last_long_end_stress` (latest 10y/20y/30y auction with status stress, or null), `stress_count_90d`, `watch_count_90d`, `next_long_end_auction`, `read`. |
+
+## 12. `regime_intel/cftc_positioning.json`
+
+CFTC Traders in Financial Futures (futures only), four Treasury contracts.
+
+| Field | Meaning |
+| --- | --- |
+| `contracts[].id` | `UST_10Y`, `ULTRA_10Y`, `UST_BOND`, `ULTRA_BOND`. |
+| `contracts[].as_of` | Report date (Tuesday positions, published Friday). |
+| `contracts[].am_net`, `lf_net`, `dealer_net` | Long minus short contracts for asset managers, leveraged funds, dealers. |
+| `contracts[].*_change_1w`, `*_change_4w` | Change in net over one and four reports. |
+| `contracts[].am_selling_streak_weeks` | Consecutive weekly declines in asset-manager net, counted back from the latest report. |
+| `contracts[].am_stopped_selling` | Last two weekly changes both positive. |
+| `contracts[].lf_net_26w_low` | Leveraged-fund net is at its 26-week low. |
+| `contracts[].history[]` | Last 12 reports, oldest first: `report_date`, `am_net`, `lf_net`. |
+| `summary.real_money_distribution` | Asset-manager net down over four weeks in at least three of the four contracts. |
+| `summary.spec_capitulation` | Leveraged-fund net at a 26-week low in at least two contracts. |
+| `summary.am_stopped_selling_count`, `summary.read` | Count of contracts with `am_stopped_selling`; one-sentence read. |
+
+The MCP tool `get_long_end_watch` merges sections 10 to 12 into one scorecard: the valuation and timing indicators from section 10 plus `AUCTION_STRESS` (a long-end stress auction in the last 30 days), `REAL_MONEY_SELLING` (checked when `real_money_distribution` is false), and `SPEC_CAPITULATION`.
+

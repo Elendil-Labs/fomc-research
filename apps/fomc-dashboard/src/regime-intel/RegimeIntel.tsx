@@ -1,9 +1,26 @@
 import { useEffect, useState } from "react";
-import type { BalanceSheetDoc, FomcEvent, MarketPricingDoc, RegimeIntelDocument } from "../types";
-import { loadBalanceSheet, loadEventTruth, loadMarketPricing, loadRegimeIntel } from "../data/load";
+import type {
+  AuctionDoc,
+  BalanceSheetDoc,
+  CftcDoc,
+  FomcEvent,
+  LongEndDoc,
+  MarketPricingDoc,
+  RegimeIntelDocument,
+} from "../types";
+import {
+  loadAuctions,
+  loadBalanceSheet,
+  loadCftc,
+  loadEventTruth,
+  loadLongEnd,
+  loadMarketPricing,
+  loadRegimeIntel,
+} from "../data/load";
 import { Scorecard } from "./Scorecard";
 import { RegimeQuadrant } from "./RegimeQuadrant";
 import { MarketPricing } from "./MarketPricing";
+import { LongEndWatch } from "./LongEndWatch";
 import { BucketCards } from "./BucketCards";
 import { NarrativeSummary } from "./NarrativeSummary";
 import { NewsFeed } from "./NewsFeed";
@@ -37,12 +54,18 @@ export function RegimeIntel() {
   const [points, setPoints] = useState<TrendPoint[]>([]);
   const [bs, setBs] = useState<BalanceSheetDoc | null>(null);
   const [mp, setMp] = useState<MarketPricingDoc | null>(null);
+  const [longEnd, setLongEnd] = useState<LongEndDoc | null>(null);
+  const [auctions, setAuctions] = useState<AuctionDoc | null>(null);
+  const [cftc, setCftc] = useState<CftcDoc | null>(null);
   const [events, setEvents] = useState<FomcEvent[]>([]);
 
   useEffect(() => {
     loadRegimeIntel().then(setDoc);
     loadBalanceSheet().then(setBs);
     loadMarketPricing().then(setMp);
+    loadLongEnd().then(setLongEnd);
+    loadAuctions().then(setAuctions);
+    loadCftc().then(setCftc);
     loadEventTruth()
       .then((t) => setEvents(t.events ?? []))
       .catch(() => setEvents([]));
@@ -90,6 +113,7 @@ export function RegimeIntel() {
 
       <div className="section-title">Market-priced Fed path</div>
       <MarketPricing doc={mp} />
+      <LongEndWatch longEnd={longEnd} auctions={auctions} cftc={cftc} />
 
       <div className="section-title">Playbook — next meeting vs. history</div>
       <PlaybookPanel doc={doc} events={events} />

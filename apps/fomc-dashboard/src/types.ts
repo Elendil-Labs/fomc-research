@@ -207,3 +207,146 @@ export interface RegimeIntelDocument {
   error_summary?: string | null;
   sources: IntelSource[];
 }
+
+// ----- Long-end watch (has TLT bottomed?): rates valuation/timing, auctions, CFTC positioning -----
+
+export type LongEndGroup = "valuation" | "timing" | "context";
+
+/** One box on the long-end checklist (FRED/ACM-derived). `checked` is null when no data. */
+export interface LongEndIndicator {
+  id: string;
+  name: string;
+  unit: string;
+  group: LongEndGroup;
+  latest: number | null;
+  as_of?: string | null;
+  change_20d: number | null;
+  threshold: number | null;
+  rule: string;
+  checked: boolean | null;
+  detail: string;
+  note: string;
+}
+
+/** Values of the three valuation gauges at a historical long-end bottom (e.g. 2022-10-24). */
+export interface LongEndAnalog {
+  DFII10: number | null;
+  ACMTP10: number | null;
+  MOVE: number | null;
+}
+
+export interface LongEndSummary {
+  checked: number;
+  total: number;
+  valuation_checked: number;
+  valuation_total: number;
+  timing_checked: number;
+  timing_total: number;
+  read: string;
+}
+
+export interface LongEndDoc {
+  generated_at: string;
+  /** False when the producer could not fetch its inputs; UI then shows "pending". */
+  available?: boolean;
+  reason?: string;
+  source: string;
+  method?: string;
+  analogs: Record<string, LongEndAnalog>;
+  summary: LongEndSummary;
+  indicators: LongEndIndicator[];
+}
+
+export type AuctionStatus = "stress" | "watch" | "ok";
+
+/** One Treasury coupon auction result vs its trailing-12-month averages. */
+export interface AuctionRow {
+  cusip: string;
+  term: string; // "10-Year", "20-Year", "30-Year", ...
+  type: string;
+  reopening: boolean;
+  auction_date: string; // ISO yyyy-mm-dd
+  high_yield: number | null;
+  bid_to_cover: number | null;
+  bc_avg_12m: number | null;
+  indirect_pct: number | null;
+  indirect_avg_12m: number | null;
+  dealer_pct: number | null;
+  dealer_avg_12m: number | null;
+  /** Tail vs when-issued is not published by TreasuryDirect; always null. */
+  tail_bp: number | null;
+  flags: string[];
+  status: AuctionStatus;
+}
+
+export interface UpcomingAuction {
+  term: string;
+  auction_date: string;
+  announcement_date?: string | null;
+  offering_amount?: number | string | null;
+  reopening?: boolean;
+}
+
+export interface AuctionSummary {
+  last_long_end_stress: string | null;
+  stress_count_90d: number;
+  watch_count_90d: number;
+  next_long_end_auction: { term: string; auction_date: string } | null;
+  read: string;
+}
+
+export interface AuctionDoc {
+  generated_at: string;
+  available?: boolean;
+  reason?: string;
+  source: string;
+  method?: string;
+  note_on_tail?: string;
+  /** Newest first. */
+  auctions: AuctionRow[];
+  upcoming: UpcomingAuction[];
+  summary: AuctionSummary;
+}
+
+export interface CftcHistoryPoint {
+  report_date: string;
+  am_net: number | null;
+  lf_net: number | null;
+}
+
+/** CFTC TFF positioning for one Treasury futures contract (net = long − short, contracts). */
+export interface CftcContract {
+  id: string;
+  name: string;
+  as_of: string;
+  open_interest: number | null;
+  am_net: number | null;
+  am_net_change_1w: number | null;
+  am_net_change_4w: number | null;
+  lf_net: number | null;
+  lf_net_change_1w: number | null;
+  lf_net_change_4w: number | null;
+  dealer_net: number | null;
+  am_selling_streak_weeks: number;
+  am_stopped_selling: boolean;
+  lf_net_26w_low: boolean;
+  history: CftcHistoryPoint[];
+}
+
+export interface CftcSummary {
+  as_of: string;
+  real_money_distribution: boolean;
+  spec_capitulation: boolean;
+  am_stopped_selling_count: number;
+  read: string;
+}
+
+export interface CftcDoc {
+  generated_at: string;
+  available?: boolean;
+  reason?: string;
+  source: string;
+  method?: string;
+  contracts: CftcContract[];
+  summary: CftcSummary;
+}

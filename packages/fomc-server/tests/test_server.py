@@ -1,4 +1,4 @@
-"""Server boot: all 16 tools registered with FastMCP, disclaimers present, and an
+"""Server boot: all 20 tools registered with FastMCP, disclaimers present, and an
 in-process client smoke over the MCP wire protocol."""
 
 import asyncio
@@ -22,6 +22,11 @@ EXPECTED_TOOLS = {
     "get_checklist",
     "get_stated_regime",
     "get_fomc_calendar",
+    # phase C — long end
+    "get_long_end_axis",
+    "get_auction_monitor",
+    "get_cftc_positioning",
+    "get_long_end_watch",
     # phase B
     "search_fed_corpus",
     "diff_statements",
@@ -30,10 +35,10 @@ EXPECTED_TOOLS = {
 }
 
 
-def test_all_16_tools_registered():
+def test_all_20_tools_registered():
     tools = asyncio.run(srv.mcp.list_tools())
     assert {t.name for t in tools} == EXPECTED_TOOLS
-    assert len(tools) == 16
+    assert len(tools) == 20
 
 
 def test_every_tool_description_ends_with_no_advice():

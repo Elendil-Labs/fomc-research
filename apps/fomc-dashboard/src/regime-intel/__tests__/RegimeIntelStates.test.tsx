@@ -8,6 +8,9 @@ vi.mock("../../data/load", () => ({
   loadRegimeIntel: () => loadRegimeIntel(),
   loadBalanceSheet: () => Promise.resolve(null),
   loadMarketPricing: () => Promise.resolve(null),
+  loadLongEnd: () => Promise.resolve(null),
+  loadAuctions: () => Promise.resolve(null),
+  loadCftc: () => Promise.resolve(null),
   loadEventTruth: () => Promise.resolve({ events: [] }),
 }));
 

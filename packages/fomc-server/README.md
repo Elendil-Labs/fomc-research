@@ -6,7 +6,7 @@ deterministic FRED balance-sheet axis currently **lean**, what historically happ
 to SPY/TLT around FOMC decisions under comparable conditions — plus live pipeline
 tools to refresh the intel and ingest a new meeting on decision day.
 
-## The 16 tools
+## The 20 tools
 
 ### Read (12)
 | Tool | What it returns |
@@ -23,6 +23,14 @@ tools to refresh the intel and ingest a new meeting on decision day.
 | `get_checklist` | What-would-change-the-call checklist |
 | `get_stated_regime` | Statement-parsed regime on any date + parser audit/ALARM |
 | `get_fomc_calendar` | 2026 decision dates, blackout windows, data coverage |
+
+### Long end (4)
+| Tool | What it returns |
+| --- | --- |
+| `get_long_end_axis` | The FRED long-end scorecard: valuation boxes (10y real yield, ACM term premium, breakevens, MOVE) and timing boxes (2y stall, 10y/30y, curve slopes, mortgage rate) with threshold rules, checked states, summary counts, and the 2022-10 / 2023-10 analogs |
+| `get_auction_monitor` | Treasury coupon auction results newest first (bid-to-cover, indirect/dealer takedown vs 12m averages, tail, stress flags), upcoming calendar, stress summary; optional `terms` filter and `limit` |
+| `get_cftc_positioning` | CFTC TFF positioning in UST_10Y / ULTRA_10Y / UST_BOND / ULTRA_BOND: asset-manager, leveraged-fund and dealer nets with 1w/4w changes, selling streaks, 26-week-low flags; optional `contract` filter, `include_history` for the 12-week series |
+| `get_long_end_watch` | The composite "has the long end bottomed" checklist: axis valuation/timing boxes + `AUCTION_STRESS` + `REAL_MONEY_SELLING` + `SPEC_CAPITULATION`, counts by group, a one-sentence read, and which source files were unavailable |
 
 ### Corpus (2)
 | Tool | What it returns |
@@ -53,7 +61,7 @@ uv sync --project packages/fomc-server
 
 ### Keys for the pipeline tools
 
-The read and corpus tools need no keys. The pipeline tools resolve keys from the
+The read, long-end and corpus tools need no keys. The pipeline tools resolve keys from the
 repo-root `.env` (the scripts read it themselves; the server only checks the key
 *names* up front so you get a clear error instead of a silent empty run):
 

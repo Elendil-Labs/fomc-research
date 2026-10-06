@@ -5,6 +5,7 @@ import json
 from fomc_server import _paths
 from fomc_server.tools.events import get_event_history
 from fomc_server.tools.guide import get_fomc_guide
+from fomc_server.tools.longend import get_long_end_axis, get_long_end_watch
 from fomc_server.tools.news import get_checklist, get_daily_log, get_news_evidence
 from fomc_server.tools.playbook import get_fomc_calendar, get_playbook
 from fomc_server.tools.regime import (
@@ -28,6 +29,9 @@ ALL_TOOLS = (
     get_checklist,
     lambda: get_stated_regime(),
     get_fomc_calendar,
+    # phase C — these two never error: pending state / box-by-box degradation
+    get_long_end_axis,
+    get_long_end_watch,
 )
 
 
@@ -111,9 +115,11 @@ def test_market_pricing_axis_happy_path_from_tmp_file(tmp_path, monkeypatch):
     assert set(out["provenance"]) >= {"data_as_of", "retrieved_at", "source", "is_stale"}
 
 
-def test_playbook_easing_has_events_and_blackout():
+def test_playbook_has_events_and_blackout():
     out = get_playbook()
-    assert out["conditioning"]["stated_regime"] == "Easing"
+    # The stated regime is data-driven (it flipped to Tightening on 2026-09-16); only
+    # assert it is one of the two parser labels, not a specific value.
+    assert out["conditioning"]["stated_regime"] in ("Easing", "Tightening")
     assert out["conditioning"]["n_events"] > 0
     assert out["stats"]["spy"]["d0"]["n"] > 0
     assert out["stats"]["tlt"]["d0"]["n"] > 0

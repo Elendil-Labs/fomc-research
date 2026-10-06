@@ -2,8 +2,11 @@
 // there is no backend. Vite serves public/ at the site root, so paths are absolute.
 
 import type {
+  AuctionDoc,
   BalanceSheetDoc,
+  CftcDoc,
   EventTruthDocument,
+  LongEndDoc,
   MarketPricingDoc,
   RegimeIntelDocument,
 } from "../types";
@@ -58,6 +61,38 @@ export async function loadBalanceSheet(): Promise<BalanceSheetDoc | null> {
 export async function loadMarketPricing(): Promise<MarketPricingDoc | null> {
   try {
     const doc = await fetchJson<MarketPricingDoc>("data/regime_intel/market_pricing_axis.json");
+    return doc.available === false ? null : doc;
+  } catch {
+    return null;
+  }
+}
+
+/**
+ * Long-end watch: the three inputs behind "has TLT bottomed?". Each returns null when its
+ * file hasn't been produced, fails to parse, or reports available:false, so the panel can
+ * render whichever parts exist and mark the rest "pending next data run".
+ */
+export async function loadLongEnd(): Promise<LongEndDoc | null> {
+  try {
+    const doc = await fetchJson<LongEndDoc>("data/regime_intel/long_end_axis.json");
+    return doc.available === false ? null : doc;
+  } catch {
+    return null;
+  }
+}
+
+export async function loadAuctions(): Promise<AuctionDoc | null> {
+  try {
+    const doc = await fetchJson<AuctionDoc>("data/regime_intel/auction_monitor.json");
+    return doc.available === false ? null : doc;
+  } catch {
+    return null;
+  }
+}
+
+export async function loadCftc(): Promise<CftcDoc | null> {
+  try {
+    const doc = await fetchJson<CftcDoc>("data/regime_intel/cftc_positioning.json");
     return doc.available === false ? null : doc;
   } catch {
     return null;

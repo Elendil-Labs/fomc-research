@@ -62,6 +62,23 @@ _GUIDE: dict[str, Any] = {
                 "sheet; this axis makes that disagreement visible instead of implied."
             ),
         },
+        "long_end_watch": {
+            "what": (
+                "Separate from the policy axes: a 'has the long end bottomed' "
+                "scorecard. VALUATION boxes from FRED (10y real yield DFII10, ACM term "
+                "premium, 10y breakeven, MOVE) and TIMING boxes (2y yield stall, 10y/30y "
+                "levels, 10y-2y and 5s30s slopes, 30y mortgage rate), plus three flow "
+                "boxes: recent long-end auction stress (TreasuryDirect, 30-day window), "
+                "asset managers have stopped selling Treasury futures (CFTC TFF), and "
+                "leveraged-fund capitulation (CFTC TFF, 26-week low). Deterministic, no "
+                "LLM. Each box is a threshold rule, not a forecast."
+            ),
+            "why": (
+                "Long-end bottoms are a checklist of conditions, not a single print; "
+                "the watch keeps the boxes visible and counts them honestly, including "
+                "which sources are unavailable."
+            ),
+        },
         "descriptor": (
             "Four-state read anchored to the statement-derived regime: 'Easing' / "
             "'Tightening' when the evidence confirms the stated regime, and 'Potential "
@@ -87,6 +104,26 @@ _GUIDE: dict[str, Any] = {
         "get_market_pricing_axis": (
             "The deterministic FRED market-pricing axis: what the market prices for "
             "the Fed path (2y momentum, curve slope, 2y-vs-funds, net liquidity)."
+        ),
+        "get_long_end_axis": (
+            "The FRED long-end scorecard: valuation + timing indicators with threshold "
+            "rules, checked states, summary counts, and the 2022-10 / 2023-10 analogs."
+        ),
+        "get_auction_monitor": (
+            "Treasury coupon auction results newest first (bid-to-cover, indirect/dealer "
+            "takedown vs 12m averages, tail, stress flags), upcoming calendar, stress "
+            "summary; optional terms filter + limit."
+        ),
+        "get_cftc_positioning": (
+            "CFTC TFF positioning in UST_10Y / ULTRA_10Y / UST_BOND / ULTRA_BOND: "
+            "asset-manager, leveraged-fund and dealer nets with 1w/4w changes, selling "
+            "streaks, 26w-low flags; optional contract filter, include_history for the "
+            "12-week series."
+        ),
+        "get_long_end_watch": (
+            "The composite long-end scorecard: axis valuation/timing boxes + "
+            "AUCTION_STRESS + REAL_MONEY_SELLING + SPEC_CAPITULATION, with counts, a "
+            "one-sentence read, and which sources were missing."
         ),
         "get_playbook": (
             "Next meeting, blackout window, and conditional SPY/TLT stats for FOMC events "

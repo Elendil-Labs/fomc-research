@@ -59,6 +59,21 @@ jobs:
           FRED_API_KEY: ${{ secrets.FRED_API_KEY }}
         run: uv run python scripts/collect_market_pricing.py || echo "market-pricing collect skipped"
 
+      - name: Collect long-end bottom watch (FRED API + NY Fed ACM + MOVE)
+        # Has the long end bottomed? Valuation/timing boxes vs the 2022-10 and 2023-10
+        # analog bottoms. Degrades to "pending" like the other axes.
+        env:
+          FRED_API_KEY: ${{ secrets.FRED_API_KEY }}
+        run: uv run python scripts/collect_long_end.py || echo "long-end collect skipped"
+
+      - name: Collect Treasury auction monitor (TreasuryDirect)
+        # Demand at 5/7/10/20/30y auctions vs trailing 12 months; no key needed.
+        run: uv run python scripts/collect_auctions.py || echo "auction collect skipped"
+
+      - name: Collect CFTC Treasury positioning (TFF)
+        # Asset-manager / leveraged-fund net positioning in the long-end contracts.
+        run: uv run python scripts/collect_cftc_positioning.py || echo "cftc collect skipped"
+
       - name: Commit changed data
         run: |
           # Author as a real GitHub identity so Vercel's Git integration can map the

@@ -77,5 +77,17 @@ def history_json() -> Path:
     return regime_intel_dir() / "history.json"
 
 
+def long_end_axis_json() -> Path:
+    return regime_intel_dir() / "long_end_axis.json"
+
+
+def auction_monitor_json() -> Path:
+    return regime_intel_dir() / "auction_monitor.json"
+
+
+def cftc_positioning_json() -> Path:
+    return regime_intel_dir() / "cftc_positioning.json"
+
+
 def truth_json() -> Path:
     return dashboard_data_dir() / "fomc_event_truth.json"

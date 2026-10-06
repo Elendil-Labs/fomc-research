@@ -42,6 +42,22 @@ def _read_env_file(env_path) -> dict[str, str]:
     return out
 
 
+def ssl_context():
+    """TLS context for urllib, preferring certifi's bundle when it is installed.
+
+    Some .gov chains (treasurydirect.gov, cftc.gov) fail verification against the
+    default OpenSSL store a uv-managed Python sees on macOS; certifi (pulled in by
+    yfinance/requests) carries the roots. Falls back to the system default without it.
+    """
+    import ssl
+
+    try:
+        import certifi
+    except ImportError:
+        return ssl.create_default_context()
+    return ssl.create_default_context(cafile=certifi.where())
+
+
 def load_api_key(*names: str) -> str | None:
     """Resolve a Perplexity key by name, preferring this project's fomc-specific key.
 

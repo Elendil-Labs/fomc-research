@@ -7,6 +7,12 @@ from fomc_server._paths import ENV_REPO_ROOT
 from fomc_server.tools.corpus import diff_statements, search_fed_corpus
 from fomc_server.tools.events import get_event_history
 from fomc_server.tools.guide import get_fomc_guide
+from fomc_server.tools.longend import (
+    get_auction_monitor,
+    get_cftc_positioning,
+    get_long_end_axis,
+    get_long_end_watch,
+)
 from fomc_server.tools.news import get_checklist, get_daily_log, get_news_evidence
 from fomc_server.tools.pipeline import ingest_meeting, refresh_intel
 from fomc_server.tools.playbook import get_fomc_calendar, get_playbook
@@ -30,6 +36,9 @@ DATA_TOOLS = (
     # phase B — corpus dirs missing under an empty root
     lambda: search_fed_corpus("target range"),
     lambda: diff_statements(),
+    # phase C — auction monitor / CFTC files missing under an empty root
+    lambda: get_auction_monitor(),
+    lambda: get_cftc_positioning(),
 )
 
 
@@ -52,6 +61,30 @@ def test_market_pricing_axis_reports_pending_not_error(empty_root):
     assert isinstance(out, dict)
     assert "error" not in out
     assert out["available"] is False and "note" in out
+
+
+def test_long_end_axis_reports_pending_not_error(empty_root):
+    # Same contract as the market-pricing axis: collector never run -> pending state.
+    out = get_long_end_axis()
+    assert isinstance(out, dict)
+    assert "error" not in out
+    assert out["available"] is False and "note" in out
+
+
+def test_long_end_watch_degrades_without_raising(empty_root):
+    # The composite never errors: every source missing -> the three flow boxes are
+    # unknown, the axis contributes nothing, and all three files are listed missing.
+    out = get_long_end_watch()
+    assert isinstance(out, dict) and "error" not in out
+    assert [b["id"] for b in out["boxes"]] == [
+        "AUCTION_STRESS",
+        "REAL_MONEY_SELLING",
+        "SPEC_CAPITULATION",
+    ]
+    assert all(b["checked"] is None for b in out["boxes"])
+    assert out["total"] == 0 and out["checked"] == 0 and out["unknown"] == 3
+    assert len(out["missing"]) == 3
+    assert out["as_of"] is None
 
 
 def test_static_and_lab_tools_still_return_dicts(empty_root):
