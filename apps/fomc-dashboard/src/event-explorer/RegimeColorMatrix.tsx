@@ -10,6 +10,7 @@ export interface CellStats {
   spyP5: number | null; // mean SPY +5d
   spyP10: number | null; // mean SPY +10d
   tltP5: number | null; // mean TLT +5d
+  tltP10: number | null; // mean TLT +10d
 }
 
 function mean(xs: Array<number | null>): number | null {
@@ -24,6 +25,7 @@ export function cellStats(events: FomcEvent[]): CellStats {
     spyP5: mean(events.map((e) => e.spy_p5)),
     spyP10: mean(events.map((e) => e.spy_p10)),
     tltP5: mean(events.map((e) => e.tlt_p5)),
+    tltP10: mean(events.map((e) => e.tlt_p10)),
   };
 }
 
@@ -35,7 +37,9 @@ function CellBody({ stats }: { stats: CellStats }) {
       <div className="tiny">
         SPY {pct(stats.spyP5)} / {pct(stats.spyP10)}
       </div>
-      <div className="tiny muted">TLT +5d {pct(stats.tltP5)}</div>
+      <div className="tiny muted">
+        TLT {pct(stats.tltP5)} / {pct(stats.tltP10)}
+      </div>
     </div>
   );
 }
@@ -92,7 +96,7 @@ export function RegimeColorMatrix({ events }: { events: FomcEvent[] }) {
         </tbody>
       </table>
       <p className="tiny muted" style={{ marginTop: 8 }}>
-        Each cell: event count · mean SPY <strong>+5d / +10d</strong> · mean TLT <strong>+5d</strong>
+        Each cell: event count · mean SPY <strong>+5d / +10d</strong> · mean TLT <strong>+5d / +10d</strong>
         — forward returns in the sessions <em>after</em> that color day (the day itself sets the
         color). Row/grand totals show counts.
       </p>
