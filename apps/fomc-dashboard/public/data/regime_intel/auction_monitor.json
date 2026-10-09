@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-08T17:59:29+00:00",
+  "generated_at": "2026-10-09T17:32:44+00:00",
   "available": true,
   "source": "TreasuryDirect TA_WS securities API",
   "method": "Each 5/7/10/20/30y coupon auction scored vs the trailing 12 months of the same term (excluding itself): bid-to-cover, indirect share and dealer share of competitive awards; two weak readings = stress, one = watch (no LLM).",
@@ -1162,12 +1162,23 @@
       "status": "ok"
     }
   ],
-  "upcoming": [],
+  "upcoming": [
+    {
+      "term": "20-Year",
+      "auction_date": "2026-10-21",
+      "announcement_date": "2026-10-15",
+      "offering_amount": null,
+      "reopening": true
+    }
+  ],
   "summary": {
     "last_long_end_stress": "2026-09-15",
     "stress_count_90d": 1,
     "watch_count_90d": 1,
-    "next_long_end_auction": null,
-    "read": "1 stress and 1 watch auctions in the last 90 days; last long-end stress 2026-09-15 (20-Year); no long-end auction on the calendar."
+    "next_long_end_auction": {
+      "term": "20-Year",
+      "auction_date": "2026-10-21"
+    },
+    "read": "1 stress and 1 watch auctions in the last 90 days; last long-end stress 2026-09-15 (20-Year); next long-end auction 20-Year on 2026-10-21."
   }
 }
