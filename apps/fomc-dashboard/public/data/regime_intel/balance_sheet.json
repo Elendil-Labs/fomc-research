@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-15T15:47:34+00:00",
+  "generated_at": "2026-10-16T15:34:01+00:00",
   "available": true,
   "net_lean": 0.57,
   "label": "tightening",
@@ -9,11 +9,11 @@
       "name": "Fed balance sheet",
       "unit": "$M",
       "weight": 0.28,
-      "latest": 6747560.0,
-      "as_of": "2026-10-07",
-      "change_90d": 11951.0,
+      "latest": 6755639.0,
+      "as_of": "2026-10-14",
+      "change_90d": 12611.0,
       "signal": 0,
-      "detail": "\u039490d +11,951.00 $M",
+      "detail": "\u039490d +12,611.00 $M",
       "note": "neutral"
     },
     {
@@ -21,11 +21,11 @@
       "name": "Bank reserves",
       "unit": "$M",
       "weight": 0.22,
-      "latest": 3029659.0,
-      "as_of": "2026-10-07",
-      "change_90d": -69252.0,
+      "latest": 3022140.0,
+      "as_of": "2026-10-14",
+      "change_90d": -120581.0,
       "signal": 1,
-      "detail": "\u039490d -69,252.00 $M",
+      "detail": "\u039490d -120,581.00 $M",
       "note": "draining"
     },
     {
@@ -33,10 +33,10 @@
       "name": "Reverse-repo cushion",
       "unit": "$B",
       "weight": 0.15,
-      "latest": 0.201,
-      "as_of": "2026-10-14",
+      "latest": 1.201,
+      "as_of": "2026-10-15",
       "signal": 1,
-      "detail": "0 $B",
+      "detail": "1 $B",
       "note": "near-depleted (QT cushion gone)"
     },
     {
@@ -44,11 +44,11 @@
       "name": "10y Treasury yield (term-premium proxy)",
       "unit": "%",
       "weight": 0.2,
-      "latest": 5.21,
-      "as_of": "2026-10-13",
-      "change_90d": 0.66,
+      "latest": 5.19,
+      "as_of": "2026-10-14",
+      "change_90d": 0.62,
       "signal": 1,
-      "detail": "\u039490d +0.66 %",
+      "detail": "\u039490d +0.62 %",
       "note": "long-end rising"
     },
     {
@@ -56,10 +56,10 @@
       "name": "Repo stress (SOFR \u2212 IORB)",
       "unit": "bp",
       "weight": 0.15,
-      "latest": -0.02,
-      "as_of": "2026-10-14",
+      "latest": -0.01,
+      "as_of": "2026-10-15",
       "signal": 0,
-      "detail": "-0.02%",
+      "detail": "-0.01%",
       "note": "neutral"
     }
   ],

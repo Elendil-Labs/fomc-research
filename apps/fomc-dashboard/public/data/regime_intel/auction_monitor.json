@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-15T15:47:44+00:00",
+  "generated_at": "2026-10-16T15:34:08+00:00",
   "available": true,
   "source": "TreasuryDirect TA_WS securities API",
   "method": "Each 5/7/10/20/30y coupon auction scored vs the trailing 12 months of the same term (excluding itself): bid-to-cover, indirect share and dealer share of competitive awards; two weak readings = stress, one = watch (no LLM).",
@@ -122,9 +122,9 @@
       "bid_to_cover": 2.71,
       "indirect_pct": 79.18,
       "dealer_pct": 4.31,
-      "bc_avg_12m": 2.499,
-      "indirect_avg_12m": 71.344,
-      "dealer_avg_12m": 9.503,
+      "bc_avg_12m": 2.484,
+      "indirect_avg_12m": 70.165,
+      "dealer_avg_12m": 10.032,
       "tail_bp": null,
       "flags": [],
       "status": "ok"
@@ -207,9 +207,9 @@
       "bid_to_cover": 2.53,
       "indirect_pct": 76.73,
       "dealer_pct": 8.6,
-      "bc_avg_12m": 2.499,
-      "indirect_avg_12m": 71.344,
-      "dealer_avg_12m": 9.503,
+      "bc_avg_12m": 2.484,
+      "indirect_avg_12m": 70.165,
+      "dealer_avg_12m": 10.032,
       "tail_bp": null,
       "flags": [],
       "status": "ok"
@@ -292,9 +292,9 @@
       "bid_to_cover": 2.59,
       "indirect_pct": 81.49,
       "dealer_pct": 7.78,
-      "bc_avg_12m": 2.491,
-      "indirect_avg_12m": 70.141,
-      "dealer_avg_12m": 9.414,
+      "bc_avg_12m": 2.469,
+      "indirect_avg_12m": 68.286,
+      "dealer_avg_12m": 10.157,
       "tail_bp": null,
       "flags": [],
       "status": "ok"
@@ -377,9 +377,9 @@
       "bid_to_cover": 2.57,
       "indirect_pct": 78.21,
       "dealer_pct": 9.46,
-      "bc_avg_12m": 2.491,
-      "indirect_avg_12m": 70.141,
-      "dealer_avg_12m": 9.414,
+      "bc_avg_12m": 2.469,
+      "indirect_avg_12m": 68.286,
+      "dealer_avg_12m": 10.157,
       "tail_bp": null,
       "flags": [],
       "status": "ok"
@@ -462,9 +462,9 @@
       "bid_to_cover": 2.4,
       "indirect_pct": 63.95,
       "dealer_pct": 11.98,
-      "bc_avg_12m": 2.491,
-      "indirect_avg_12m": 70.141,
-      "dealer_avg_12m": 9.414,
+      "bc_avg_12m": 2.469,
+      "indirect_avg_12m": 68.286,
+      "dealer_avg_12m": 10.157,
       "tail_bp": null,
       "flags": [],
       "status": "ok"
@@ -547,9 +547,9 @@
       "bid_to_cover": 2.43,
       "indirect_pct": 65.32,
       "dealer_pct": 10.8,
-      "bc_avg_12m": 2.532,
-      "indirect_avg_12m": 71.364,
-      "dealer_avg_12m": 7.682,
+      "bc_avg_12m": 2.502,
+      "indirect_avg_12m": 68.422,
+      "dealer_avg_12m": 8.55,
       "tail_bp": null,
       "flags": [],
       "status": "ok"
@@ -632,14 +632,12 @@
       "bid_to_cover": 2.45,
       "indirect_pct": 74.45,
       "dealer_pct": 12.72,
-      "bc_avg_12m": 2.532,
-      "indirect_avg_12m": 71.364,
-      "dealer_avg_12m": 7.682,
+      "bc_avg_12m": 2.502,
+      "indirect_avg_12m": 68.422,
+      "dealer_avg_12m": 8.55,
       "tail_bp": null,
-      "flags": [
-        "dealer share 12.7% above 12m avg 7.7% by >=5pp"
-      ],
-      "status": "watch"
+      "flags": [],
+      "status": "ok"
     },
     {
       "cusip": "91282CQC8",
@@ -723,14 +721,12 @@
       "bid_to_cover": 2.39,
       "indirect_pct": 64.54,
       "dealer_pct": 13.38,
-      "bc_avg_12m": 2.532,
-      "indirect_avg_12m": 71.364,
-      "dealer_avg_12m": 7.682,
+      "bc_avg_12m": 2.502,
+      "indirect_avg_12m": 68.422,
+      "dealer_avg_12m": 8.55,
       "tail_bp": null,
-      "flags": [
-        "dealer share 13.4% above 12m avg 7.7% by >=5pp"
-      ],
-      "status": "watch"
+      "flags": [],
+      "status": "ok"
     },
     {
       "cusip": "91282CPY1",
@@ -810,9 +806,9 @@
       "bid_to_cover": 2.55,
       "indirect_pct": 69.65,
       "dealer_pct": 5.85,
-      "bc_avg_12m": 2.565,
-      "indirect_avg_12m": 74.965,
-      "dealer_avg_12m": 6.65,
+      "bc_avg_12m": 2.48,
+      "indirect_avg_12m": 66.8,
+      "dealer_avg_12m": 9.09,
       "tail_bp": null,
       "flags": [],
       "status": "ok"
@@ -895,9 +891,9 @@
       "bid_to_cover": 2.55,
       "indirect_pct": 70.24,
       "dealer_pct": 8.81,
-      "bc_avg_12m": 2.565,
-      "indirect_avg_12m": 74.965,
-      "dealer_avg_12m": 6.65,
+      "bc_avg_12m": 2.48,
+      "indirect_avg_12m": 66.8,
+      "dealer_avg_12m": 9.09,
       "tail_bp": null,
       "flags": [],
       "status": "ok"
@@ -984,9 +980,9 @@
       "bid_to_cover": 2.43,
       "indirect_pct": 67.0,
       "dealer_pct": 10.45,
-      "bc_avg_12m": 2.565,
-      "indirect_avg_12m": 74.965,
-      "dealer_avg_12m": 6.65,
+      "bc_avg_12m": 2.48,
+      "indirect_avg_12m": 66.8,
+      "dealer_avg_12m": 9.09,
       "tail_bp": null,
       "flags": [],
       "status": "ok"
@@ -1143,23 +1139,6 @@
       "tail_bp": null,
       "flags": [],
       "status": "ok"
-    },
-    {
-      "cusip": "91282CNT4",
-      "term": "10-Year",
-      "type": "Note",
-      "reopening": true,
-      "auction_date": "2025-09-10",
-      "high_yield": 4.033,
-      "bid_to_cover": 2.65,
-      "indirect_pct": 83.13,
-      "dealer_pct": 4.21,
-      "bc_avg_12m": null,
-      "indirect_avg_12m": null,
-      "dealer_avg_12m": null,
-      "tail_bp": null,
-      "flags": [],
-      "status": "ok"
     }
   ],
   "upcoming": [
@@ -1169,6 +1148,20 @@
       "announcement_date": "2026-10-15",
       "offering_amount": "13000000000",
       "reopening": true
+    },
+    {
+      "term": "5-Year",
+      "auction_date": "2026-10-27",
+      "announcement_date": "2026-10-22",
+      "offering_amount": null,
+      "reopening": false
+    },
+    {
+      "term": "7-Year",
+      "auction_date": "2026-10-29",
+      "announcement_date": "2026-10-22",
+      "offering_amount": null,
+      "reopening": false
     }
   ],
   "summary": {
