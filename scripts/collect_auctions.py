@@ -87,6 +87,16 @@ def pct(numerator: float | None, denominator: float | None) -> float | None:
     return round(numerator / denominator * 100.0, 2)
 
 
+def auction_date_of(rec: dict) -> str | None:
+    """TreasuryDirect renamed `auctionDate` to `competitiveAuctionCloseDate` in Oct 2026;
+    accept either so a field rename never empties the monitor again."""
+    for key in ("auctionDate", "competitiveAuctionCloseDate"):
+        value = rec.get(key)
+        if value:
+            return _day(value)
+    return None
+
+
 def normalize(rec: dict) -> dict | None:
     """One auction result row from a raw API record; None if out of scope / no results."""
     if not is_coupon_in_scope(rec):
@@ -100,7 +110,7 @@ def normalize(rec: dict) -> dict | None:
         "term": term_of(rec),
         "type": rec.get("securityType"),
         "reopening": rec.get("reopening") == "Yes",
-        "auction_date": _day(rec.get("auctionDate")),
+        "auction_date": auction_date_of(rec),
         "high_yield": _num(rec.get("highYield")),
         "bid_to_cover": bc,
         "indirect_pct": pct(_num(rec.get("indirectBidderAccepted")), competitive),
@@ -160,7 +170,7 @@ def build_auctions(records: list[dict]) -> list[dict]:
 def build_upcoming(records: list[dict]) -> list[dict]:
     rows = [{
         "term": term_of(r),
-        "auction_date": _day(r.get("auctionDate")),
+        "auction_date": auction_date_of(r),
         "announcement_date": _day(r.get("announcementDate")),
         "offering_amount": r.get("offeringAmount") or None,
         "reopening": r.get("reopening") == "Yes",
