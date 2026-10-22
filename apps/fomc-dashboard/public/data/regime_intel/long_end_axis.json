@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-10-21T16:05:20+00:00",
-  "available": false,
-  "reason": "FRED unreachable / all series failed",
+  "generated_at": "2026-10-22T16:01:33+00:00",
+  "available": true,
   "source": "FRED API + NY Fed ACM + ICE BofA MOVE (via Yahoo)",
+  "method": "Deterministic level/20-day-change checks against the 2022-10 and 2023-10 long-end bottoms; valuation boxes use the 2023 levels, timing boxes need elevated MOVE and a stalled front end (no LLM).",
   "analogs": {
     "2022-10-24": {
       "DFII10": 1.74,
@@ -16,13 +16,154 @@
     }
   },
   "summary": {
-    "checked": 0,
-    "total": 0,
-    "valuation_checked": 0,
-    "valuation_total": 0,
+    "checked": 3,
+    "total": 5,
+    "valuation_checked": 3,
+    "valuation_total": 3,
     "timing_checked": 0,
-    "timing_total": 0,
-    "read": "unavailable"
+    "timing_total": 2,
+    "read": "3 of 3 valuation boxes and 0 of 2 timing boxes checked; bottoms have needed the timing boxes."
   },
-  "indicators": []
+  "indicators": [
+    {
+      "id": "DFII10",
+      "name": "10y TIPS real yield",
+      "unit": "%",
+      "group": "valuation",
+      "threshold": 2.52,
+      "rule": "latest >= 2.52 (2023-10-19 bottom level)",
+      "latest": 2.77,
+      "as_of": "2026-10-20",
+      "change_20d": 0.15,
+      "checked": true,
+      "detail": "2.77 % (20d +0.15)",
+      "note": "Real yield is the cleanest valuation anchor; the 2023 bottom printed 2.52."
+    },
+    {
+      "id": "ACMTP10",
+      "name": "ACM 10y term premium",
+      "unit": "pp",
+      "group": "valuation",
+      "threshold": 0.45,
+      "rule": "latest >= 0.45 (2023-10-19 bottom level)",
+      "latest": 0.7298,
+      "as_of": "2026-10-20",
+      "change_20d": 0.154,
+      "checked": true,
+      "detail": "0.73 pp (20d +0.15)",
+      "note": "Term premium is the compensation for duration risk; it was 0.45 at the 2023 bottom and negative at the 2022 one."
+    },
+    {
+      "id": "T10YIE",
+      "name": "10y breakeven inflation (not an inflation panic)",
+      "unit": "%",
+      "group": "valuation",
+      "threshold": 0.05,
+      "rule": "20-day change <= +0.05pp",
+      "latest": 2.37,
+      "as_of": "2026-10-21",
+      "change_20d": 0.04,
+      "checked": true,
+      "detail": "2.37 % (20d +0.04)",
+      "note": "A long-end bottom needs the selloff to be about term premium, not a repricing of inflation; breakevens must not be running."
+    },
+    {
+      "id": "MOVE",
+      "name": "MOVE index (rates vol)",
+      "unit": "index",
+      "group": "timing",
+      "threshold": 130,
+      "rule": "latest >= 130 (2023 bottom ~130, 2022 ~160)",
+      "latest": 103.8569,
+      "as_of": "2026-10-22",
+      "change_20d": 8.4069,
+      "checked": false,
+      "detail": "103.86 index (20d +8.41)",
+      "note": "Both bottoms came with rates vol elevated; a calm MOVE says the flush has not happened yet."
+    },
+    {
+      "id": "TWO_YEAR_STALL",
+      "name": "Front end stalling while long end makes highs",
+      "unit": "pp",
+      "group": "timing",
+      "threshold": -0.05,
+      "rule": "DGS2 >= 0.05pp below its 20d max while DGS30 within 0.05pp of its 20d max",
+      "latest": -0.13,
+      "as_of": "2026-10-20",
+      "change_20d": 0.03,
+      "checked": false,
+      "detail": "2y 4.79 is 0.13pp below its 20d max 4.92; 30y 5.42 is 0.25pp below its 20d max 5.67",
+      "note": "At both bottoms the 2y had stopped rising while the 30y was still printing highs: the steepening that marks the end of a long-end selloff."
+    },
+    {
+      "id": "DGS10",
+      "name": "10y Treasury yield",
+      "unit": "%",
+      "group": "context",
+      "threshold": null,
+      "rule": "context only",
+      "latest": 5.12,
+      "as_of": "2026-10-20",
+      "change_20d": 0.16,
+      "checked": null,
+      "detail": "5.12 % (20d +0.16)",
+      "note": "Level of the benchmark long rate."
+    },
+    {
+      "id": "DGS30",
+      "name": "30y Treasury yield",
+      "unit": "%",
+      "group": "context",
+      "threshold": null,
+      "rule": "context only",
+      "latest": 5.42,
+      "as_of": "2026-10-20",
+      "change_20d": 0.13,
+      "checked": null,
+      "detail": "5.42 % (20d +0.13)",
+      "note": "Level of the long bond."
+    },
+    {
+      "id": "T10Y2Y",
+      "name": "Curve slope (10y - 2y)",
+      "unit": "pp",
+      "group": "context",
+      "threshold": null,
+      "rule": "context only",
+      "latest": 0.33,
+      "as_of": "2026-10-20",
+      "change_20d": 0.13,
+      "checked": null,
+      "detail": "0.33 pp (20d +0.13)",
+      "note": "Bear steepening is the long-end selloff signature; its reversal marks a bottom."
+    },
+    {
+      "id": "FIVE_THIRTY",
+      "name": "5s30s slope (30y - 5y)",
+      "unit": "pp",
+      "group": "context",
+      "threshold": null,
+      "rule": "context only",
+      "latest": 0.48,
+      "as_of": "2026-10-20",
+      "change_20d": 0.02,
+      "checked": null,
+      "detail": "0.48 pp (20d +0.02)",
+      "note": "Belly-to-long slope isolates term premium from the policy path."
+    },
+    {
+      "id": "MORTGAGE30US",
+      "name": "30y mortgage rate (weekly)",
+      "unit": "%",
+      "group": "context",
+      "threshold": null,
+      "rule": "context only",
+      "latest": 7.4,
+      "as_of": "2026-10-15",
+      "change_20d": 0.45,
+      "checked": null,
+      "detail": "7.40 % (20d +0.45)",
+      "note": "Where the long end bites the real economy."
+    }
+  ]
 }

@@ -1,10 +1,27 @@
 {
-  "generated_at": "2026-10-21T16:05:22+00:00",
+  "generated_at": "2026-10-22T16:01:34+00:00",
   "available": true,
   "source": "TreasuryDirect TA_WS securities API",
   "method": "Each 5/7/10/20/30y coupon auction scored vs the trailing 12 months of the same term (excluding itself): bid-to-cover, indirect share and dealer share of competitive awards; two weak readings = stress, one = watch (no LLM).",
   "note_on_tail": "tail_bp is always null: the when-issued yield at the 1pm close, needed for the true tail/stop-through, is not published in the TreasuryDirect API.",
   "auctions": [
+    {
+      "cusip": "912810UX4",
+      "term": "20-Year",
+      "type": "Bond",
+      "reopening": true,
+      "auction_date": "2026-10-21",
+      "high_yield": 5.469,
+      "bid_to_cover": 2.73,
+      "indirect_pct": null,
+      "dealer_pct": null,
+      "bc_avg_12m": 2.641,
+      "indirect_avg_12m": null,
+      "dealer_avg_12m": null,
+      "tail_bp": null,
+      "flags": [],
+      "status": "ok"
+    },
     {
       "cusip": "912810UW6",
       "term": "30-Year",
@@ -104,7 +121,7 @@
       "bid_to_cover": 2.57,
       "indirect_pct": null,
       "dealer_pct": null,
-      "bc_avg_12m": 2.65,
+      "bc_avg_12m": 2.641,
       "indirect_avg_12m": null,
       "dealer_avg_12m": null,
       "tail_bp": null,
@@ -206,7 +223,7 @@
       "bid_to_cover": 2.53,
       "indirect_pct": null,
       "dealer_pct": null,
-      "bc_avg_12m": 2.65,
+      "bc_avg_12m": 2.641,
       "indirect_avg_12m": null,
       "dealer_avg_12m": null,
       "tail_bp": null,
@@ -312,7 +329,7 @@
       "bid_to_cover": 2.64,
       "indirect_pct": null,
       "dealer_pct": null,
-      "bc_avg_12m": 2.651,
+      "bc_avg_12m": 2.639,
       "indirect_avg_12m": null,
       "dealer_avg_12m": null,
       "tail_bp": null,
@@ -414,7 +431,7 @@
       "bid_to_cover": 2.75,
       "indirect_pct": null,
       "dealer_pct": null,
-      "bc_avg_12m": 2.651,
+      "bc_avg_12m": 2.639,
       "indirect_avg_12m": null,
       "dealer_avg_12m": null,
       "tail_bp": null,
@@ -516,7 +533,7 @@
       "bid_to_cover": 2.55,
       "indirect_pct": null,
       "dealer_pct": null,
-      "bc_avg_12m": 2.651,
+      "bc_avg_12m": 2.639,
       "indirect_avg_12m": null,
       "dealer_avg_12m": null,
       "tail_bp": null,
@@ -620,7 +637,7 @@
       "bid_to_cover": 2.68,
       "indirect_pct": null,
       "dealer_pct": null,
-      "bc_avg_12m": 2.682,
+      "bc_avg_12m": 2.667,
       "indirect_avg_12m": null,
       "dealer_avg_12m": null,
       "tail_bp": null,
@@ -724,7 +741,7 @@
       "bid_to_cover": 2.76,
       "indirect_pct": null,
       "dealer_pct": null,
-      "bc_avg_12m": 2.682,
+      "bc_avg_12m": 2.667,
       "indirect_avg_12m": null,
       "dealer_avg_12m": null,
       "tail_bp": null,
@@ -826,12 +843,12 @@
       "bid_to_cover": 2.36,
       "indirect_pct": null,
       "dealer_pct": null,
-      "bc_avg_12m": 2.682,
+      "bc_avg_12m": 2.667,
       "indirect_avg_12m": null,
       "dealer_avg_12m": null,
       "tail_bp": null,
       "flags": [
-        "bid-to-cover 2.36 below 12m avg 2.68 by >=0.15"
+        "bid-to-cover 2.36 below 12m avg 2.67 by >=0.15"
       ],
       "status": "watch"
     },
@@ -947,7 +964,7 @@
       "bid_to_cover": 2.86,
       "indirect_pct": null,
       "dealer_pct": null,
-      "bc_avg_12m": 2.735,
+      "bc_avg_12m": 2.73,
       "indirect_avg_12m": null,
       "dealer_avg_12m": null,
       "tail_bp": null,
@@ -1049,7 +1066,7 @@
       "bid_to_cover": 2.67,
       "indirect_pct": null,
       "dealer_pct": null,
-      "bc_avg_12m": 2.735,
+      "bc_avg_12m": 2.73,
       "indirect_avg_12m": null,
       "dealer_avg_12m": null,
       "tail_bp": null,
@@ -1151,7 +1168,7 @@
       "bid_to_cover": 2.41,
       "indirect_pct": null,
       "dealer_pct": null,
-      "bc_avg_12m": 2.735,
+      "bc_avg_12m": 2.73,
       "indirect_avg_12m": null,
       "dealer_avg_12m": null,
       "tail_bp": null,
@@ -1346,33 +1363,9 @@
       "tail_bp": null,
       "flags": [],
       "status": "ok"
-    },
-    {
-      "cusip": "912810UN6",
-      "term": "20-Year",
-      "type": "Bond",
-      "reopening": true,
-      "auction_date": "2025-09-16",
-      "high_yield": 4.613,
-      "bid_to_cover": 2.74,
-      "indirect_pct": null,
-      "dealer_pct": null,
-      "bc_avg_12m": null,
-      "indirect_avg_12m": null,
-      "dealer_avg_12m": null,
-      "tail_bp": null,
-      "flags": [],
-      "status": "ok"
     }
   ],
   "upcoming": [
-    {
-      "term": "20-Year",
-      "auction_date": "2026-10-21",
-      "announcement_date": "2026-10-15",
-      "offering_amount": "13000000000",
-      "reopening": true
-    },
     {
       "term": "5-Year",
       "auction_date": "2026-10-22",
@@ -1384,25 +1377,22 @@
       "term": "5-Year",
       "auction_date": "2026-10-27",
       "announcement_date": "2026-10-22",
-      "offering_amount": null,
+      "offering_amount": "70000000000",
       "reopening": false
     },
     {
       "term": "7-Year",
       "auction_date": "2026-10-29",
       "announcement_date": "2026-10-22",
-      "offering_amount": null,
+      "offering_amount": "44000000000",
       "reopening": false
     }
   ],
   "summary": {
     "last_long_end_stress": null,
     "stress_count_90d": 0,
-    "watch_count_90d": 4,
-    "next_long_end_auction": {
-      "term": "20-Year",
-      "auction_date": "2026-10-21"
-    },
-    "read": "0 stress and 4 watch auctions in the last 90 days; no long-end stress in the window; next long-end auction 20-Year on 2026-10-21."
+    "watch_count_90d": 3,
+    "next_long_end_auction": null,
+    "read": "0 stress and 3 watch auctions in the last 90 days; no long-end stress in the window; no long-end auction on the calendar."
   }
 }
