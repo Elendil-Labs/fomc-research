@@ -1,10 +1,27 @@
 {
-  "generated_at": "2026-10-22T16:01:34+00:00",
+  "generated_at": "2026-10-23T15:52:23+00:00",
   "available": true,
   "source": "TreasuryDirect TA_WS securities API",
   "method": "Each 5/7/10/20/30y coupon auction scored vs the trailing 12 months of the same term (excluding itself): bid-to-cover, indirect share and dealer share of competitive awards; two weak readings = stress, one = watch (no LLM).",
   "note_on_tail": "tail_bp is always null: the when-issued yield at the 1pm close, needed for the true tail/stop-through, is not published in the TreasuryDirect API.",
   "auctions": [
+    {
+      "cusip": "91282CRR4",
+      "term": "5-Year",
+      "type": "Note",
+      "reopening": false,
+      "auction_date": "2026-10-22",
+      "high_yield": 2.367,
+      "bid_to_cover": 2.41,
+      "indirect_pct": null,
+      "dealer_pct": null,
+      "bc_avg_12m": 2.414,
+      "indirect_avg_12m": null,
+      "dealer_avg_12m": null,
+      "tail_bp": null,
+      "flags": [],
+      "status": "ok"
+    },
     {
       "cusip": "912810UX4",
       "term": "20-Year",
@@ -1366,13 +1383,6 @@
     }
   ],
   "upcoming": [
-    {
-      "term": "5-Year",
-      "auction_date": "2026-10-22",
-      "announcement_date": "2026-10-15",
-      "offering_amount": "26000000000",
-      "reopening": false
-    },
     {
       "term": "5-Year",
       "auction_date": "2026-10-27",
