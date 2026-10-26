@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-23T15:52:23+00:00",
+  "generated_at": "2026-10-26T17:35:33+00:00",
   "available": true,
   "source": "CFTC Traders in Financial Futures (futures only)",
   "method": "Net = long - short per trader class from the weekly TFF futures-only report; 1w/4w changes, selling streaks and 26-week spec lows computed over the merged current-week + yearly history (no LLM).",
@@ -7,24 +7,19 @@
     {
       "id": "UST_10Y",
       "name": "10y T-Note",
-      "as_of": "2026-10-13",
-      "open_interest": 5819512,
-      "am_net": 2898562,
-      "am_net_change_1w": 70423,
-      "am_net_change_4w": 263582,
-      "lf_net": -2205937,
-      "lf_net_change_1w": -66152,
-      "lf_net_change_4w": -337811,
-      "dealer_net": -632813,
+      "as_of": "2026-10-20",
+      "open_interest": 5868295,
+      "am_net": 2925416,
+      "am_net_change_1w": 26854,
+      "am_net_change_4w": 394032,
+      "lf_net": -2107224,
+      "lf_net_change_1w": 98713,
+      "lf_net_change_4w": -180277,
+      "dealer_net": -682228,
       "am_selling_streak_weeks": 0,
       "am_stopped_selling": true,
       "lf_net_26w_low": false,
       "history": [
-        {
-          "report_date": "2026-07-28",
-          "am_net": 2611964,
-          "lf_net": -2155739
-        },
         {
           "report_date": "2026-08-04",
           "am_net": 2594679,
@@ -79,30 +74,30 @@
           "report_date": "2026-10-13",
           "am_net": 2898562,
           "lf_net": -2205937
+        },
+        {
+          "report_date": "2026-10-20",
+          "am_net": 2925416,
+          "lf_net": -2107224
         }
       ]
     },
     {
       "id": "ULTRA_10Y",
       "name": "Ultra 10y T-Note",
-      "as_of": "2026-10-13",
-      "open_interest": 2643685,
-      "am_net": 797494,
-      "am_net_change_1w": 16762,
-      "am_net_change_4w": 54227,
-      "lf_net": -335858,
-      "lf_net_change_1w": -16797,
-      "lf_net_change_4w": 63388,
-      "dealer_net": -321192,
-      "am_selling_streak_weeks": 0,
-      "am_stopped_selling": true,
+      "as_of": "2026-10-20",
+      "open_interest": 2665818,
+      "am_net": 737266,
+      "am_net_change_1w": -60228,
+      "am_net_change_4w": 10746,
+      "lf_net": -318477,
+      "lf_net_change_1w": 17381,
+      "lf_net_change_4w": 77201,
+      "dealer_net": -309570,
+      "am_selling_streak_weeks": 1,
+      "am_stopped_selling": false,
       "lf_net_26w_low": false,
       "history": [
-        {
-          "report_date": "2026-07-28",
-          "am_net": 709907,
-          "lf_net": -400210
-        },
         {
           "report_date": "2026-08-04",
           "am_net": 712609,
@@ -157,30 +152,30 @@
           "report_date": "2026-10-13",
           "am_net": 797494,
           "lf_net": -335858
+        },
+        {
+          "report_date": "2026-10-20",
+          "am_net": 737266,
+          "lf_net": -318477
         }
       ]
     },
     {
       "id": "UST_BOND",
       "name": "T-Bond",
-      "as_of": "2026-10-13",
-      "open_interest": 1849727,
-      "am_net": 391534,
-      "am_net_change_1w": -14094,
-      "am_net_change_4w": -69128,
-      "lf_net": -154020,
-      "lf_net_change_1w": 35658,
-      "lf_net_change_4w": 57715,
-      "dealer_net": -179299,
-      "am_selling_streak_weeks": 2,
+      "as_of": "2026-10-20",
+      "open_interest": 1785457,
+      "am_net": 388007,
+      "am_net_change_1w": -3527,
+      "am_net_change_4w": -25609,
+      "lf_net": -162757,
+      "lf_net_change_1w": -8737,
+      "lf_net_change_4w": -705,
+      "dealer_net": -182706,
+      "am_selling_streak_weeks": 3,
       "am_stopped_selling": false,
       "lf_net_26w_low": false,
       "history": [
-        {
-          "report_date": "2026-07-28",
-          "am_net": 568268,
-          "lf_net": -389522
-        },
         {
           "report_date": "2026-08-04",
           "am_net": 551606,
@@ -235,30 +230,30 @@
           "report_date": "2026-10-13",
           "am_net": 391534,
           "lf_net": -154020
+        },
+        {
+          "report_date": "2026-10-20",
+          "am_net": 388007,
+          "lf_net": -162757
         }
       ]
     },
     {
       "id": "ULTRA_BOND",
       "name": "Ultra T-Bond",
-      "as_of": "2026-10-13",
-      "open_interest": 2397995,
-      "am_net": 776492,
-      "am_net_change_1w": 20733,
-      "am_net_change_4w": -130387,
-      "lf_net": -715729,
-      "lf_net_change_1w": 10528,
-      "lf_net_change_4w": 97697,
-      "dealer_net": -97565,
+      "as_of": "2026-10-20",
+      "open_interest": 2364949,
+      "am_net": 849383,
+      "am_net_change_1w": 72891,
+      "am_net_change_4w": -82944,
+      "lf_net": -804808,
+      "lf_net_change_1w": -89079,
+      "lf_net_change_4w": 19535,
+      "dealer_net": -93420,
       "am_selling_streak_weeks": 0,
-      "am_stopped_selling": false,
+      "am_stopped_selling": true,
       "lf_net_26w_low": false,
       "history": [
-        {
-          "report_date": "2026-07-28",
-          "am_net": 1131787,
-          "lf_net": -862638
-        },
         {
           "report_date": "2026-08-04",
           "am_net": 1060834,
@@ -313,12 +308,17 @@
           "report_date": "2026-10-13",
           "am_net": 776492,
           "lf_net": -715729
+        },
+        {
+          "report_date": "2026-10-20",
+          "am_net": 849383,
+          "lf_net": -804808
         }
       ]
     }
   ],
   "summary": {
-    "as_of": "2026-10-13",
+    "as_of": "2026-10-20",
     "real_money_distribution": false,
     "spec_capitulation": false,
     "am_stopped_selling_count": 2,
