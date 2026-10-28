@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-07-29T20:11:06.548527+00:00",
+  "generated_at": "2026-10-28T23:48:34.965790+00:00",
   "source": "federalreserve.gov",
-  "doc_count": 260,
-  "ok_count": 244,
+  "doc_count": 265,
+  "ok_count": 249,
   "documents": [
     {
       "doc_type": "minutes",
@@ -3643,6 +3643,76 @@
       "sha256": "0f0508c607f6e9d88764c694c678a5eaf1b734ac6e57b4fbd913568aa2a7e5a2",
       "fetched_at": "2026-07-29T20:11:06.041662+00:00",
       "error": ""
+    },
+    {
+      "doc_type": "minutes",
+      "meeting_date": "2026-09-16",
+      "suffix": "",
+      "url": "https://www.federalreserve.gov/monetarypolicy/fomcminutes20260916.htm",
+      "ext": "html",
+      "raw_path": "data/fomc/minutes/raw/2026-09-16.html",
+      "text_path": "data/fomc/minutes/text/2026-09-16.txt",
+      "http_status": 200,
+      "byte_size": 116192,
+      "sha256": "4ae6465938433dbd6bbe3964ecf8d4d299a5efc84145f56a3df49139a74c0264",
+      "fetched_at": "2026-10-28T23:48:31.030479+00:00",
+      "error": ""
+    },
+    {
+      "doc_type": "press_conference_transcript",
+      "meeting_date": "2026-09-16",
+      "suffix": "",
+      "url": "https://www.federalreserve.gov/mediacenter/files/FOMCpresconf20260916.pdf",
+      "ext": "pdf",
+      "raw_path": "data/fomc/press_conference_transcript/raw/2026-09-16.pdf",
+      "text_path": "data/fomc/press_conference_transcript/text/2026-09-16.txt",
+      "http_status": 200,
+      "byte_size": 200169,
+      "sha256": "aa308d25613c429101f2b2ac540d5d3b38a1448cf30ebf61b6f15acd74ae927c",
+      "fetched_at": "2026-10-28T23:48:32.530216+00:00",
+      "error": ""
+    },
+    {
+      "doc_type": "statement",
+      "meeting_date": "2026-09-16",
+      "suffix": "a",
+      "url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20260916a.htm",
+      "ext": "html",
+      "raw_path": "data/fomc/statement/raw/2026-09-16a.html",
+      "text_path": "data/fomc/statement/text/2026-09-16a.txt",
+      "http_status": 200,
+      "byte_size": 82636,
+      "sha256": "03d583fbbed689394ce63035df0097b8c368175eda1b5f13ea48969500161ab4",
+      "fetched_at": "2026-10-28T23:48:33.104942+00:00",
+      "error": ""
+    },
+    {
+      "doc_type": "press_conference_transcript",
+      "meeting_date": "2026-10-28",
+      "suffix": "",
+      "url": "https://www.federalreserve.gov/mediacenter/files/FOMCpresconf20261028.pdf",
+      "ext": "pdf",
+      "raw_path": "data/fomc/press_conference_transcript/raw/2026-10-28.pdf",
+      "text_path": "data/fomc/press_conference_transcript/text/2026-10-28.txt",
+      "http_status": 200,
+      "byte_size": 125764,
+      "sha256": "7b0b9f5fa79fd8fa5444d381f6f6b4c922b39c3092a8f03b1a36c9cbe646059d",
+      "fetched_at": "2026-10-28T23:48:33.886143+00:00",
+      "error": ""
+    },
+    {
+      "doc_type": "statement",
+      "meeting_date": "2026-10-28",
+      "suffix": "a",
+      "url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20261028a.htm",
+      "ext": "html",
+      "raw_path": "data/fomc/statement/raw/2026-10-28a.html",
+      "text_path": "data/fomc/statement/text/2026-10-28a.txt",
+      "http_status": 200,
+      "byte_size": 82879,
+      "sha256": "0148d173f4334ec0aa312430a1598f94701fe240e0e673543bcb84566e8316cf",
+      "fetched_at": "2026-10-28T23:48:34.462733+00:00",
+      "error": ""
     }
   ],
   "meetings": [
@@ -5841,6 +5911,51 @@
           "url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20260729a.htm",
           "text_path": "data/fomc/statement/text/2026-07-29a.txt",
           "raw_path": "data/fomc/statement/raw/2026-07-29a.html",
+          "ok": true,
+          "error": null
+        }
+      }
+    },
+    {
+      "meeting_date": "2026-09-16",
+      "documents": {
+        "minutes": {
+          "url": "https://www.federalreserve.gov/monetarypolicy/fomcminutes20260916.htm",
+          "text_path": "data/fomc/minutes/text/2026-09-16.txt",
+          "raw_path": "data/fomc/minutes/raw/2026-09-16.html",
+          "ok": true,
+          "error": null
+        },
+        "press_conference_transcript": {
+          "url": "https://www.federalreserve.gov/mediacenter/files/FOMCpresconf20260916.pdf",
+          "text_path": "data/fomc/press_conference_transcript/text/2026-09-16.txt",
+          "raw_path": "data/fomc/press_conference_transcript/raw/2026-09-16.pdf",
+          "ok": true,
+          "error": null
+        },
+        "statement": {
+          "url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20260916a.htm",
+          "text_path": "data/fomc/statement/text/2026-09-16a.txt",
+          "raw_path": "data/fomc/statement/raw/2026-09-16a.html",
+          "ok": true,
+          "error": null
+        }
+      }
+    },
+    {
+      "meeting_date": "2026-10-28",
+      "documents": {
+        "press_conference_transcript": {
+          "url": "https://www.federalreserve.gov/mediacenter/files/FOMCpresconf20261028.pdf",
+          "text_path": "data/fomc/press_conference_transcript/text/2026-10-28.txt",
+          "raw_path": "data/fomc/press_conference_transcript/raw/2026-10-28.pdf",
+          "ok": true,
+          "error": null
+        },
+        "statement": {
+          "url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20261028a.htm",
+          "text_path": "data/fomc/statement/text/2026-10-28a.txt",
+          "raw_path": "data/fomc/statement/raw/2026-10-28a.html",
           "ok": true,
           "error": null
         }
