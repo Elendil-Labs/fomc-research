@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-10-29T17:31:36+00:00",
+  "generated_at": "2026-10-30T17:08:06+00:00",
   "available": true,
-  "net_lean": 0.8,
+  "net_lean": 0.6,
   "label": "tightening",
   "coverage": 1.0,
   "indicators": [
@@ -10,12 +10,12 @@
       "name": "2y Treasury yield (policy-path momentum)",
       "unit": "%",
       "weight": 0.3,
-      "latest": 4.7,
-      "as_of": "2026-10-27",
-      "prior_as_of": "2026-07-29",
-      "change_90d": 0.48,
+      "latest": 4.67,
+      "as_of": "2026-10-28",
+      "prior_as_of": "2026-07-30",
+      "change_90d": 0.44,
       "signal": 1,
-      "detail": "\u039490d +0.48 %",
+      "detail": "\u039490d +0.44 %",
       "note": "market repricing tighter policy"
     },
     {
@@ -23,10 +23,10 @@
       "name": "Curve slope (10y \u2212 2y)",
       "unit": "%",
       "weight": 0.2,
-      "latest": 0.29,
-      "as_of": "2026-10-27",
+      "latest": 0.38,
+      "as_of": "2026-10-28",
       "signal": 0,
-      "detail": "+0.29%",
+      "detail": "+0.38%",
       "note": "neutral"
     },
     {
@@ -34,10 +34,10 @@
       "name": "Fed-funds path (2y \u2212 funds rate)",
       "unit": "%",
       "weight": 0.3,
-      "latest": 0.82,
-      "as_of": "2026-10-27",
+      "latest": 0.79,
+      "as_of": "2026-10-28",
       "signal": 1,
-      "detail": "+0.82%",
+      "detail": "+0.79%",
       "note": "hikes priced in (2y above funds)"
     },
     {
@@ -45,13 +45,13 @@
       "name": "Net liquidity (WALCL \u2212 TGA \u2212 RRP)",
       "unit": "$M",
       "weight": 0.2,
-      "latest": 5801426.0,
-      "as_of": "2026-10-21",
-      "prior_as_of": "2026-07-22",
-      "change_90d": -115253.0,
-      "signal": 1,
-      "detail": "\u039491d -115 $B",
-      "note": "liquidity draining"
+      "latest": 5745555.0,
+      "as_of": "2026-10-28",
+      "prior_as_of": "2026-07-29",
+      "change_90d": -79708.0,
+      "signal": 0,
+      "detail": "\u039491d -80 $B",
+      "note": "neutral"
     }
   ],
   "method": "Weighted -1/0/+1 signals from FRED primary series (deterministic; no LLM).",

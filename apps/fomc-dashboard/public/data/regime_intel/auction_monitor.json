@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-29T17:31:41+00:00",
+  "generated_at": "2026-10-30T17:08:13+00:00",
   "available": true,
   "source": "TreasuryDirect TA_WS securities API",
   "method": "Each 5/7/10/20/30y coupon auction scored vs the trailing 12 months of the same term (excluding itself): bid-to-cover, indirect share and dealer share of competitive awards; two weak readings = stress, one = watch (no LLM).",
@@ -134,12 +134,12 @@
       "bid_to_cover": 2.21,
       "indirect_pct": null,
       "dealer_pct": null,
-      "bc_avg_12m": 2.421,
+      "bc_avg_12m": 2.426,
       "indirect_avg_12m": null,
       "dealer_avg_12m": null,
       "tail_bp": null,
       "flags": [
-        "bid-to-cover 2.21 below 12m avg 2.42 by >=0.15"
+        "bid-to-cover 2.21 below 12m avg 2.43 by >=0.15"
       ],
       "status": "watch"
     },
@@ -240,7 +240,7 @@
       "bid_to_cover": 2.37,
       "indirect_pct": null,
       "dealer_pct": null,
-      "bc_avg_12m": 2.424,
+      "bc_avg_12m": 2.43,
       "indirect_avg_12m": null,
       "dealer_avg_12m": null,
       "tail_bp": null,
@@ -342,12 +342,12 @@
       "bid_to_cover": 2.28,
       "indirect_pct": null,
       "dealer_pct": null,
-      "bc_avg_12m": 2.434,
+      "bc_avg_12m": 2.441,
       "indirect_avg_12m": null,
       "dealer_avg_12m": null,
       "tail_bp": null,
       "flags": [
-        "bid-to-cover 2.28 below 12m avg 2.43 by >=0.15"
+        "bid-to-cover 2.28 below 12m avg 2.44 by >=0.15"
       ],
       "status": "watch"
     },
@@ -448,7 +448,7 @@
       "bid_to_cover": 2.35,
       "indirect_pct": null,
       "dealer_pct": null,
-      "bc_avg_12m": 2.44,
+      "bc_avg_12m": 2.448,
       "indirect_avg_12m": null,
       "dealer_avg_12m": null,
       "tail_bp": null,
@@ -465,7 +465,7 @@
       "bid_to_cover": 2.61,
       "indirect_pct": null,
       "dealer_pct": null,
-      "bc_avg_12m": 2.415,
+      "bc_avg_12m": 2.422,
       "indirect_avg_12m": null,
       "dealer_avg_12m": null,
       "tail_bp": null,
@@ -550,7 +550,7 @@
       "bid_to_cover": 2.34,
       "indirect_pct": null,
       "dealer_pct": null,
-      "bc_avg_12m": 2.434,
+      "bc_avg_12m": 2.443,
       "indirect_avg_12m": null,
       "dealer_avg_12m": null,
       "tail_bp": null,
@@ -654,7 +654,7 @@
       "bid_to_cover": 2.33,
       "indirect_pct": null,
       "dealer_pct": null,
-      "bc_avg_12m": 2.444,
+      "bc_avg_12m": 2.454,
       "indirect_avg_12m": null,
       "dealer_avg_12m": null,
       "tail_bp": null,
@@ -671,7 +671,7 @@
       "bid_to_cover": 2.57,
       "indirect_pct": null,
       "dealer_pct": null,
-      "bc_avg_12m": 2.431,
+      "bc_avg_12m": 2.441,
       "indirect_avg_12m": null,
       "dealer_avg_12m": null,
       "tail_bp": null,
@@ -756,12 +756,12 @@
       "bid_to_cover": 2.29,
       "indirect_pct": null,
       "dealer_pct": null,
-      "bc_avg_12m": 2.447,
+      "bc_avg_12m": 2.46,
       "indirect_avg_12m": null,
       "dealer_avg_12m": null,
       "tail_bp": null,
       "flags": [
-        "bid-to-cover 2.29 below 12m avg 2.45 by >=0.15"
+        "bid-to-cover 2.29 below 12m avg 2.46 by >=0.15"
       ],
       "status": "watch"
     },
@@ -860,12 +860,14 @@
       "bid_to_cover": 2.32,
       "indirect_pct": null,
       "dealer_pct": null,
-      "bc_avg_12m": 2.462,
+      "bc_avg_12m": 2.48,
       "indirect_avg_12m": null,
       "dealer_avg_12m": null,
       "tail_bp": null,
-      "flags": [],
-      "status": "ok"
+      "flags": [
+        "bid-to-cover 2.32 below 12m avg 2.48 by >=0.15"
+      ],
+      "status": "watch"
     },
     {
       "cusip": "912810US5",
@@ -964,12 +966,14 @@
       "bid_to_cover": 2.34,
       "indirect_pct": null,
       "dealer_pct": null,
-      "bc_avg_12m": 2.48,
+      "bc_avg_12m": 2.503,
       "indirect_avg_12m": null,
       "dealer_avg_12m": null,
       "tail_bp": null,
-      "flags": [],
-      "status": "ok"
+      "flags": [
+        "bid-to-cover 2.34 below 12m avg 2.50 by >=0.15"
+      ],
+      "status": "watch"
     },
     {
       "cusip": "91282CGH8",
@@ -981,7 +985,7 @@
       "bid_to_cover": 2.75,
       "indirect_pct": null,
       "dealer_pct": null,
-      "bc_avg_12m": 2.435,
+      "bc_avg_12m": 2.454,
       "indirect_avg_12m": null,
       "dealer_avg_12m": null,
       "tail_bp": null,
@@ -1083,7 +1087,7 @@
       "bid_to_cover": 2.35,
       "indirect_pct": null,
       "dealer_pct": null,
-      "bc_avg_12m": 2.452,
+      "bc_avg_12m": 2.48,
       "indirect_avg_12m": null,
       "dealer_avg_12m": null,
       "tail_bp": null,
@@ -1100,7 +1104,7 @@
       "bid_to_cover": 2.62,
       "indirect_pct": null,
       "dealer_pct": null,
-      "bc_avg_12m": 2.377,
+      "bc_avg_12m": 2.395,
       "indirect_avg_12m": null,
       "dealer_avg_12m": null,
       "tail_bp": null,
@@ -1185,7 +1189,7 @@
       "bid_to_cover": 2.41,
       "indirect_pct": null,
       "dealer_pct": null,
-      "bc_avg_12m": 2.41,
+      "bc_avg_12m": 2.445,
       "indirect_avg_12m": null,
       "dealer_avg_12m": null,
       "tail_bp": null,
@@ -1289,7 +1293,7 @@
       "bid_to_cover": 2.38,
       "indirect_pct": null,
       "dealer_pct": null,
-      "bc_avg_12m": 2.425,
+      "bc_avg_12m": 2.51,
       "indirect_avg_12m": null,
       "dealer_avg_12m": null,
       "tail_bp": null,
@@ -1306,7 +1310,7 @@
       "bid_to_cover": 2.51,
       "indirect_pct": null,
       "dealer_pct": null,
-      "bc_avg_12m": 2.34,
+      "bc_avg_12m": null,
       "indirect_avg_12m": null,
       "dealer_avg_12m": null,
       "tail_bp": null,
@@ -1380,31 +1384,32 @@
       "tail_bp": null,
       "flags": [],
       "status": "ok"
-    },
-    {
-      "cusip": "91282CPA3",
-      "term": "5-Year",
-      "type": "Note",
-      "reopening": false,
-      "auction_date": "2025-09-24",
-      "high_yield": 3.71,
-      "bid_to_cover": 2.34,
-      "indirect_pct": null,
-      "dealer_pct": null,
-      "bc_avg_12m": null,
-      "indirect_avg_12m": null,
-      "dealer_avg_12m": null,
-      "tail_bp": null,
-      "flags": [],
-      "status": "ok"
     }
   ],
-  "upcoming": [],
+  "upcoming": [
+    {
+      "term": "10-Year",
+      "auction_date": "2026-11-10",
+      "announcement_date": "2026-11-04",
+      "offering_amount": null,
+      "reopening": false
+    },
+    {
+      "term": "30-Year",
+      "auction_date": "2026-11-12",
+      "announcement_date": "2026-11-04",
+      "offering_amount": null,
+      "reopening": false
+    }
+  ],
   "summary": {
     "last_long_end_stress": null,
     "stress_count_90d": 0,
     "watch_count_90d": 2,
-    "next_long_end_auction": null,
-    "read": "0 stress and 2 watch auctions in the last 90 days; no long-end stress in the window; no long-end auction on the calendar."
+    "next_long_end_auction": {
+      "term": "10-Year",
+      "auction_date": "2026-11-10"
+    },
+    "read": "0 stress and 2 watch auctions in the last 90 days; no long-end stress in the window; next long-end auction 10-Year on 2026-11-10."
   }
 }
