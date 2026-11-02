@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-10-30T17:08:03+00:00",
+  "generated_at": "2026-11-02T20:53:01+00:00",
   "available": true,
-  "net_lean": 0.57,
+  "net_lean": 0.72,
   "label": "tightening",
   "indicators": [
     {
@@ -33,10 +33,10 @@
       "name": "Reverse-repo cushion",
       "unit": "$B",
       "weight": 0.15,
-      "latest": 0.353,
-      "as_of": "2026-10-29",
+      "latest": 5.087,
+      "as_of": "2026-11-02",
       "signal": 1,
-      "detail": "0 $B",
+      "detail": "5 $B",
       "note": "near-depleted (QT cushion gone)"
     },
     {
@@ -44,11 +44,11 @@
       "name": "10y Treasury yield (term-premium proxy)",
       "unit": "%",
       "weight": 0.2,
-      "latest": 5.05,
-      "as_of": "2026-10-28",
-      "change_90d": 0.37,
+      "latest": 4.98,
+      "as_of": "2026-10-29",
+      "change_90d": 0.23,
       "signal": 1,
-      "detail": "\u039490d +0.37 %",
+      "detail": "\u039490d +0.23 %",
       "note": "long-end rising"
     },
     {
@@ -56,11 +56,11 @@
       "name": "Repo stress (SOFR \u2212 IORB)",
       "unit": "bp",
       "weight": 0.15,
-      "latest": 0.04,
-      "as_of": "2026-10-29",
-      "signal": 0,
-      "detail": "+0.04%",
-      "note": "neutral"
+      "latest": 0.05,
+      "as_of": "2026-10-30",
+      "signal": 1,
+      "detail": "+0.05%",
+      "note": "funding stress"
     }
   ],
   "method": "Weighted -1/0/+1 signals from FRED primary series (deterministic; no LLM).",
