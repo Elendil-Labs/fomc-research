@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-03T18:39:21+00:00",
+  "generated_at": "2026-11-04T18:48:18+00:00",
   "available": true,
   "source": "TreasuryDirect TA_WS securities API",
   "method": "Each 5/7/10/20/30y coupon auction scored vs the trailing 12 months of the same term (excluding itself): bid-to-cover, indirect share and dealer share of competitive awards; two weak readings = stress, one = watch (no LLM).",
@@ -1374,14 +1374,14 @@
       "term": "10-Year",
       "auction_date": "2026-11-10",
       "announcement_date": "2026-11-04",
-      "offering_amount": null,
+      "offering_amount": "42000000000",
       "reopening": false
     },
     {
       "term": "30-Year",
       "auction_date": "2026-11-12",
       "announcement_date": "2026-11-04",
-      "offering_amount": null,
+      "offering_amount": "25000000000",
       "reopening": false
     }
   ],
