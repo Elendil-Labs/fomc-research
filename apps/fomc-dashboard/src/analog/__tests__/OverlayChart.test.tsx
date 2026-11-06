@@ -25,7 +25,7 @@ describe("OverlayChart", () => {
     expect(screen.getByText("2018: Jan 4 'patient', -14.0%")).toBeInTheDocument();
     expect(screen.getByText("2026, from Oct 6")).toBeInTheDocument();
     expect(screen.getByText("2018, from Sep 20")).toBeInTheDocument();
-    for (const label of ["200-day break", "-10% low", "rally fails at 200-day", "Dec 19 hike", "-20% low"]) {
+    for (const label of ["200-day break", "-10% low", "reclaims 200-day, fails", "Dec 19 hike", "-20% low"]) {
       expect(screen.getByText(label)).toBeInTheDocument();
     }
     // the 2026 calendar markers are labeled once, at the top

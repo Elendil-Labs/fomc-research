@@ -31,7 +31,7 @@ describe("Analog2018View", () => {
     expect(screen.getByText("The analog is confirmed if")).toBeInTheDocument();
     expect(screen.getByText(/^Caveats we owe you\./)).toBeInTheDocument();
     expect(
-      screen.getByText("[Disclosure: state the book's exposure to SPY, ES, MES and rate products here, or \"no position\" if none.]"),
+      screen.getByText("Disclosure: the author holds no ES or MES futures and is short one MES November 20, 2026 7775 call as of publication."),
     ).toBeInTheDocument();
     expect(screen.getByText("Not investment advice.")).toBeInTheDocument();
     expect(screen.getByText("Jing Xie, Co-Founder, Elendil Labs")).toBeInTheDocument();

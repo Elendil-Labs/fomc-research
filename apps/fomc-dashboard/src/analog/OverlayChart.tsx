@@ -19,7 +19,7 @@ const Y_LO = -22;
 const EVENTS_2018: { date: string; label: string; dx: number; dy: number; anchor: "start" | "middle" | "end" }[] = [
   { date: "2018-10-11", label: "200-day break", dx: -9, dy: 4, anchor: "end" },
   { date: "2018-10-29", label: "-10% low", dx: 0, dy: 16, anchor: "middle" },
-  { date: "2018-11-07", label: "rally fails at 200-day", dx: 7, dy: -6, anchor: "start" },
+  { date: "2018-11-07", label: "reclaims 200-day, fails", dx: 7, dy: -6, anchor: "start" },
   { date: "2018-12-19", label: "Dec 19 hike", dx: -9, dy: 4, anchor: "end" },
   { date: "2018-12-24", label: "-20% low", dx: 0, dy: 16, anchor: "middle" },
 ];
