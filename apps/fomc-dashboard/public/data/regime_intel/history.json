@@ -532,6 +532,13 @@
       "inferred_regime": "Tightening",
       "conviction": "High",
       "new_this_run": 5
+    },
+    {
+      "date": "2026-11-06",
+      "net_lean": 0.5785,
+      "inferred_regime": "Tightening",
+      "conviction": "High",
+      "new_this_run": 6
     }
   ]
 }
