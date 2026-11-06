@@ -350,3 +350,38 @@ export interface CftcDoc {
   contracts: CftcContract[];
   summary: CftcSummary;
 }
+
+// ----- 4Q'18 analog page (sourced from data/analog_2018.json) -----
+
+/** One trading day on either the 2018 or 2026 path, indexed by days from the SPY peak. */
+export interface AnalogPoint {
+  /** Trading days from the peak close (0 = peak). */
+  t: number;
+  date: string; // YYYY-MM-DD
+  /** SPY % from the peak close. */
+  spy: number;
+  /** TLT % from the peak date. */
+  tlt: number;
+  spy_close: number;
+  /** SPY close % above (+) or below (-) its 200-day SMA. */
+  sma200_pct: number;
+  event?: string;
+}
+
+/** [price, label] */
+export type AnalogLevel = [number, string];
+
+export interface AnalogLevelSet {
+  resistance: AnalogLevel[];
+  support: AnalogLevel[];
+}
+
+export interface AnalogDoc {
+  generated_at: string;
+  peak_2018: { date: string; spy: number };
+  peak_2026: { date: string; spy: number };
+  series_2018: AnalogPoint[];
+  series_2026: AnalogPoint[];
+  key_dates_2026: Record<string, string>;
+  levels: { spy: AnalogLevelSet; es: AnalogLevelSet };
+}

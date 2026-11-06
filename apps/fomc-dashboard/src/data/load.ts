@@ -2,6 +2,7 @@
 // there is no backend. Vite serves public/ at the site root, so paths are absolute.
 
 import type {
+  AnalogDoc,
   AuctionDoc,
   BalanceSheetDoc,
   CftcDoc,
@@ -94,6 +95,20 @@ export async function loadCftc(): Promise<CftcDoc | null> {
   try {
     const doc = await fetchJson<CftcDoc>("data/regime_intel/cftc_positioning.json");
     return doc.available === false ? null : doc;
+  } catch {
+    return null;
+  }
+}
+
+/**
+ * 4Q'18 analog overlay (SPY/TLT paths from peak, 2018 vs 2026, plus the level ladders).
+ * Returns null when the file is missing or malformed so the tab renders its pending state.
+ */
+export async function loadAnalog2018(): Promise<AnalogDoc | null> {
+  try {
+    const doc = await fetchJson<AnalogDoc>("data/analog_2018.json");
+    if (!Array.isArray(doc.series_2018) || !Array.isArray(doc.series_2026)) return null;
+    return doc;
   } catch {
     return null;
   }

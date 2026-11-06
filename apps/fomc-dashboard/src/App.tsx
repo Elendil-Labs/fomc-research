@@ -1,11 +1,15 @@
 import { useEffect, useState } from "react";
 import { EventExplorer } from "./event-explorer/EventExplorer";
 import { RegimeIntel } from "./regime-intel/RegimeIntel";
+import { Analog2018 } from "./analog/Analog2018";
 
-type View = "explorer" | "regime";
+type View = "explorer" | "regime" | "analog";
 
 function viewFromHash(): View {
-  return window.location.hash.replace("#", "") === "regime" ? "regime" : "explorer";
+  const h = window.location.hash.replace("#", "");
+  if (h === "regime") return "regime";
+  if (h === "analog") return "analog";
+  return "explorer";
 }
 
 export function App() {
@@ -46,11 +50,20 @@ export function App() {
           >
             Regime Intelligence
           </button>
+          <button
+            role="tab"
+            aria-selected={view === "analog"}
+            className={view === "analog" ? "tab active" : "tab"}
+            onClick={() => go("analog")}
+          >
+            <span className="tab-long">What if 4Q'26 looks like 4Q'18?</span>
+            <span className="tab-short">4Q'18 analog</span>
+          </button>
         </nav>
       </header>
 
       <main className="content">
-        {view === "explorer" ? <EventExplorer /> : <RegimeIntel />}
+        {view === "explorer" ? <EventExplorer /> : view === "regime" ? <RegimeIntel /> : <Analog2018 />}
       </main>
 
       <footer className="footer">

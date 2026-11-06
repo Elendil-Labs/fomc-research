@@ -83,6 +83,7 @@ a:hover {
 .tabs {
   display: flex;
   gap: 6px;
+  flex-wrap: wrap;
 }
 .tab {
   background: transparent;
@@ -102,6 +103,18 @@ a:hover {
   color: var(--text);
   background: var(--panel-2);
   border-color: var(--border);
+}
+/* long tab labels collapse to a short form on narrow screens */
+.tab-short {
+  display: none;
+}
+@media (max-width: 760px) {
+  .tab-long {
+    display: none;
+  }
+  .tab-short {
+    display: inline;
+  }
 }
 
 .content {
