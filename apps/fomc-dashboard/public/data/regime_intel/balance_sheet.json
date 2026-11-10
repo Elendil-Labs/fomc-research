@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-09T21:36:26+00:00",
+  "generated_at": "2026-11-10T18:47:29+00:00",
   "available": true,
   "net_lean": 0.57,
   "label": "tightening",
@@ -56,10 +56,10 @@
       "name": "Repo stress (SOFR \u2212 IORB)",
       "unit": "bp",
       "weight": 0.15,
-      "latest": -0.01,
-      "as_of": "2026-11-06",
+      "latest": -0.02,
+      "as_of": "2026-11-09",
       "signal": 0,
-      "detail": "-0.01%",
+      "detail": "-0.02%",
       "note": "neutral"
     }
   ],

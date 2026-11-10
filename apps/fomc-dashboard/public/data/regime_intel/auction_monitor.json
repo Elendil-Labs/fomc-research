@@ -1,10 +1,27 @@
 {
-  "generated_at": "2026-11-09T21:36:34+00:00",
+  "generated_at": "2026-11-10T18:47:37+00:00",
   "available": true,
   "source": "TreasuryDirect TA_WS securities API",
   "method": "Each 5/7/10/20/30y coupon auction scored vs the trailing 12 months of the same term (excluding itself): bid-to-cover, indirect share and dealer share of competitive awards; two weak readings = stress, one = watch (no LLM).",
   "note_on_tail": "tail_bp is always null: the when-issued yield at the 1pm close, needed for the true tail/stop-through, is not published in the TreasuryDirect API.",
   "auctions": [
+    {
+      "cusip": "91282CRX1",
+      "term": "10-Year",
+      "type": "Note",
+      "reopening": false,
+      "auction_date": "2026-11-10",
+      "high_yield": 5.02,
+      "bid_to_cover": 2.46,
+      "indirect_pct": null,
+      "dealer_pct": null,
+      "bc_avg_12m": 2.483,
+      "indirect_avg_12m": null,
+      "dealer_avg_12m": null,
+      "tail_bp": null,
+      "flags": [],
+      "status": "ok"
+    },
     {
       "cusip": "91282CRV5",
       "term": "7-Year",
@@ -1371,13 +1388,6 @@
   ],
   "upcoming": [
     {
-      "term": "10-Year",
-      "auction_date": "2026-11-10",
-      "announcement_date": "2026-11-04",
-      "offering_amount": "42000000000",
-      "reopening": false
-    },
-    {
       "term": "30-Year",
       "auction_date": "2026-11-12",
       "announcement_date": "2026-11-04",
@@ -1397,9 +1407,9 @@
     "stress_count_90d": 0,
     "watch_count_90d": 2,
     "next_long_end_auction": {
-      "term": "10-Year",
-      "auction_date": "2026-11-10"
+      "term": "30-Year",
+      "auction_date": "2026-11-12"
     },
-    "read": "0 stress and 2 watch auctions in the last 90 days; no long-end stress in the window; next long-end auction 10-Year on 2026-11-10."
+    "read": "0 stress and 2 watch auctions in the last 90 days; no long-end stress in the window; next long-end auction 30-Year on 2026-11-12."
   }
 }

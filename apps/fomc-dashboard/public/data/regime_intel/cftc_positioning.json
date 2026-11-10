@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-09T21:36:34+00:00",
+  "generated_at": "2026-11-10T18:47:37+00:00",
   "available": true,
   "source": "CFTC Traders in Financial Futures (futures only)",
   "method": "Net = long - short per trader class from the weekly TFF futures-only report; 1w/4w changes, selling streaks and 26-week spec lows computed over the merged current-week + yearly history (no LLM).",
