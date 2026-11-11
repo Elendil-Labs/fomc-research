@@ -1,79 +1,79 @@
 {
-  "generated_at": "2026-11-10T18:47:24+00:00",
-  "run_id": "2026-11-10T18:46:16+00:00",
+  "generated_at": "2026-11-11T18:51:33+00:00",
+  "run_id": "2026-11-11T18:50:29+00:00",
   "window_start": "2026-10-28",
-  "window_end": "2026-11-10",
+  "window_end": "2026-11-11",
   "current_repo_regime": "Tightening",
   "inferred_regime": "Tightening",
   "conviction": "High",
   "evidence_shares": {
-    "easing": 0.0333,
-    "neutral": 0.2149,
-    "tightening": 0.7519
+    "easing": 0.0195,
+    "neutral": 0.2227,
+    "tightening": 0.7578
   },
-  "net_lean": 0.7186,
+  "net_lean": 0.7383,
   "evidence_dir": "tightening",
   "next_fomc_meeting": "2026-12-09",
-  "new_this_run": 8,
-  "n_sources": 123,
-  "n_events": 81,
+  "new_this_run": 6,
+  "n_sources": 132,
+  "n_events": 89,
   "stale": false,
   "error_summary": null,
   "bucket_scores": {
     "employment": {
       "shares": {
-        "easing": 0.1907,
-        "neutral": 0.4065,
-        "tightening": 0.4028
+        "easing": 0.1175,
+        "neutral": 0.4619,
+        "tightening": 0.4206
       },
-      "net": 0.2121,
+      "net": 0.3031,
       "dominant": "tightening",
-      "label": "leaning tightening",
-      "n": 15,
-      "n_sources": 22,
-      "weight_sum": 10.1
+      "label": "strongly tightening",
+      "n": 16,
+      "n_sources": 23,
+      "weight_sum": 10.643
     },
     "inflation": {
       "shares": {
         "easing": 0.0,
-        "neutral": 0.0,
-        "tightening": 1.0
+        "neutral": 0.0912,
+        "tightening": 0.9088
       },
-      "net": 1.0,
+      "net": 0.9088,
       "dominant": "tightening",
       "label": "strongly tightening",
-      "n": 10,
-      "n_sources": 19,
-      "weight_sum": 8.97
+      "n": 11,
+      "n_sources": 22,
+      "weight_sum": 9.87
     },
     "fed_communications": {
       "shares": {
         "easing": 0.0,
-        "neutral": 0.261,
-        "tightening": 0.739
+        "neutral": 0.2631,
+        "tightening": 0.7369
       },
-      "net": 0.739,
+      "net": 0.7369,
       "dominant": "tightening",
       "label": "strongly tightening",
-      "n": 22,
-      "n_sources": 32,
-      "weight_sum": 23.373
+      "n": 24,
+      "n_sources": 34,
+      "weight_sum": 27.171
     },
     "market_pricing": {
       "shares": {
-        "easing": 0.008,
-        "neutral": 0.1348,
-        "tightening": 0.8572
+        "easing": 0.0054,
+        "neutral": 0.0969,
+        "tightening": 0.8977
       },
-      "net": 0.8492,
+      "net": 0.8923,
       "dominant": "tightening",
       "label": "strongly tightening",
-      "n": 35,
-      "n_sources": 47,
-      "weight_sum": 20.964
+      "n": 39,
+      "n_sources": 50,
+      "weight_sum": 23.366
     }
   },
-  "summary": "Regime read: Tightening. Of the weighted evidence, 75% points tightening, 21% mixed, and 3% easing. Inflation is strongly tightening (per U.S. Bureau of Labor Statistics: Consumer Price Index News Release - 2026 M10 Results). Fed communications are strongly tightening (per Federal Reserve Board: Speech by Governor Waller on the economic outlook). Employment is leaning tightening and market pricing is strongly tightening.",
+  "summary": "Regime read: Tightening. Of the weighted evidence, 76% points tightening, 22% mixed, and 2% easing. Inflation is strongly tightening (per U.S. Bureau of Labor Statistics: Consumer Price Index News Release - 2026 M10 Results). Fed communications are strongly tightening (per Federal Reserve Bank of Philadelphia: Economic Outlook). Employment is strongly tightening and market pricing is strongly tightening.",
   "what_would_change_the_call": [
     "A second consecutive upside inflation surprise.",
     "Front-end (2Y) yields rising materially further over the intermeeting window.",
@@ -114,15 +114,15 @@
     {
       "id": "spytlt_confirms",
       "text": "SPY/TLT color and rate-market behavior confirm the macro read",
-      "status": "confirmed"
+      "status": "partial"
     }
   ],
   "spytlt": {
     "window_days": 10,
-    "spy_ret": -0.0292,
-    "tlt_ret": -0.0113,
-    "as_of": "2026-11-10",
-    "status": "confirmed"
+    "spy_ret": -0.0128,
+    "tlt_ret": -0.0019,
+    "as_of": "2026-11-11",
+    "status": "partial"
   },
   "scoring": {
     "method": "weighted vote-share over source direction, one vote per event cluster (no magnitude averaging)",
@@ -152,7 +152,7 @@
   },
   "sources": [
     {
-      "id": "src_064",
+      "id": "src_074",
       "title": "Why a CPI surprise could trip up the Fed's rate-cutting plans",
       "publisher": "MarketWatch",
       "url": "https://www.marketwatch.com/story/why-a-cpi-surprise-could-trip-up-the-feds-rate-cutting-plans-32a7a494",
@@ -192,7 +192,7 @@
       "is_new": false
     },
     {
-      "id": "src_062",
+      "id": "src_072",
       "title": "Lower-Than-Expected Inflation Keeps Fed On Track For October Rate Cut",
       "publisher": "Investopedia",
       "url": "https://www.investopedia.com/lower-than-expected-inflation-keeps-fed-on-track-for-october-rate-cut-11836354",
@@ -212,7 +212,7 @@
       "is_new": false
     },
     {
-      "id": "src_061",
+      "id": "src_071",
       "title": "Tame US inflation gives the Fed room for more rate cuts",
       "publisher": "ING",
       "url": "https://think.ing.com/articles/tame-us-inflation-gives-the-fed-room-for-more-cuts/",
@@ -232,7 +232,7 @@
       "is_new": false
     },
     {
-      "id": "src_003",
+      "id": "src_009",
       "title": "CPI Surprises to the Downside",
       "publisher": "ADM Investor Services",
       "url": "https://www.admis.com/cpi-surprises-to-the-downside/",
@@ -252,7 +252,7 @@
       "is_new": false
     },
     {
-      "id": "src_041",
+      "id": "src_050",
       "title": "Daily Treasury Par Yield Curve Rates \u2014 November 2026",
       "publisher": "U.S. Department of the Treasury",
       "url": "https://home.treasury.gov/resource-center/data-chart-center/interest-rates/TextView?type=daily_treasury_yield_curve&field_tdr_date_value_month=202611",
@@ -272,7 +272,7 @@
       "is_new": false
     },
     {
-      "id": "src_063",
+      "id": "src_073",
       "title": "Economic News Releases",
       "publisher": "U.S. Bureau of Labor Statistics",
       "url": "https://www.bls.gov/bls/newsrels.htm",
@@ -292,7 +292,7 @@
       "is_new": false
     },
     {
-      "id": "src_078",
+      "id": "src_086",
       "title": "US weekly jobless claims hover near 57-year lows",
       "publisher": "Reuters",
       "url": "https://kelo.com/2026/10/29/us-weekly-jobless-claims-hover-near-57-year-lows/",
@@ -312,7 +312,7 @@
       "is_new": false
     },
     {
-      "id": "src_079",
+      "id": "src_087",
       "title": "US unemployment claims slide to 194,000, the lowest since mid-July",
       "publisher": "Associated Press",
       "url": "https://www.citizensvoice.com/2026/10/29/us-unemployment-claims-oct-29/",
@@ -332,7 +332,7 @@
       "is_new": false
     },
     {
-      "id": "src_080",
+      "id": "src_088",
       "title": "FOMC October 29, 2026 Preview: Gold, Rate Odds & Key Data",
       "publisher": "XAU Daily",
       "url": "https://xaudaily.com/en/topic/fomc-october-2026.html",
@@ -352,7 +352,7 @@
       "is_new": false
     },
     {
-      "id": "src_081",
+      "id": "src_089",
       "title": "Fed Holds US Rate as S&P 500 Gains 0.3%",
       "publisher": "Rio Times",
       "url": "https://www.riotimesonline.com/global-economy-briefing-october-29-2026",
@@ -372,7 +372,7 @@
       "is_new": false
     },
     {
-      "id": "src_100",
+      "id": "src_106",
       "title": "FOMC Statement",
       "publisher": "Federal Reserve Board",
       "url": "https://www.federalreserve.gov/monetarypolicy/fomcstatements.htm",
@@ -392,7 +392,7 @@
       "is_new": false
     },
     {
-      "id": "src_101",
+      "id": "src_107",
       "title": "Quarterly Data Series on Business Employment Dynamics",
       "publisher": "U.S. Bureau of Labor Statistics",
       "url": "https://www.bls.gov/news.release/cewbd.htm",
@@ -412,7 +412,7 @@
       "is_new": false
     },
     {
-      "id": "src_102",
+      "id": "src_108",
       "title": "Metropolitan Area Employment and Unemployment",
       "publisher": "U.S. Bureau of Labor Statistics",
       "url": "https://www.bls.gov/news.release/metro.nr0.htm",
@@ -432,7 +432,7 @@
       "is_new": false
     },
     {
-      "id": "src_072",
+      "id": "src_081",
       "title": "Personal Consumption Expenditures Price Index",
       "publisher": "U.S. Bureau of Economic Analysis",
       "url": "https://www.bea.gov/data/personal-consumption-expenditures-price-index",
@@ -452,7 +452,7 @@
       "is_new": false
     },
     {
-      "id": "src_105",
+      "id": "src_111",
       "title": "CPI Home: Consumer Price Index",
       "publisher": "U.S. Bureau of Labor Statistics",
       "url": "https://www.bls.gov/cpi/",
@@ -472,26 +472,26 @@
       "is_new": false
     },
     {
-      "id": "src_069",
-      "title": "Federal Reserve Board \u2014 Monetary Policy",
+      "id": "src_112",
+      "title": "Federal Reserve issues FOMC statement",
       "publisher": "Federal Reserve Board",
       "url": "https://www.federalreserve.gov/monetarypolicy.htm",
-      "published_at": "2026-10-30T00:00:00Z",
+      "published_at": "2026-10-28T00:00:00Z",
       "bucket": "fed_communications",
       "direction": "neutral",
       "score": 0,
-      "importance": "medium",
-      "confidence": "high",
+      "importance": "high",
+      "confidence": "medium",
       "claim_type": "documented_fact",
-      "event_key": "2026_10_28_fomc_statement",
-      "evidence_text": "The Federal Reserve\u2019s policy page identifies the October 28 FOMC statement and press conference as the latest monetary-policy communications and lists minutes for the October 27\u201328 meeting as forthcoming on November 18.",
-      "why_it_matters": "The October meeting\u2019s official communication is the key baseline for judging whether subsequent labor-market information is shifting the easing or tightening regime.",
+      "event_key": "2026_10_fomc_statement",
+      "evidence_text": "The Federal Reserve listed its October 28, 2026 FOMC statement and subsequent November 18 minutes release on its monetary-policy page.",
+      "why_it_matters": "The available result confirms the latest meeting communication but does not provide enough detail to classify the policy signal as easing or tightening.",
       "official": true,
       "first_seen_at": "2026-10-29T17:30:13+00:00",
       "is_new": false
     },
     {
-      "id": "src_074",
+      "id": "src_083",
       "title": "Personal Income and Outlays, September 2026",
       "publisher": "U.S. Bureau of Economic Analysis",
       "url": "https://www.bea.gov/news/2026/personal-income-and-outlays-September-2026",
@@ -511,7 +511,7 @@
       "is_new": false
     },
     {
-      "id": "src_075",
+      "id": "src_084",
       "title": "GDP, 3rd Quarter 2026 \u2014 Advance Estimate",
       "publisher": "U.S. Bureau of Economic Analysis",
       "url": "https://www.bea.gov/news/2026/gdp-advance-estimate-3rd-quarter-2026",
@@ -531,7 +531,7 @@
       "is_new": false
     },
     {
-      "id": "src_123",
+      "id": "src_131",
       "title": "U.S. Economy at a Glance",
       "publisher": "U.S. Bureau of Labor Statistics",
       "url": "https://www.bls.gov/eag/eag.us.htm",
@@ -551,7 +551,7 @@
       "is_new": false
     },
     {
-      "id": "src_106",
+      "id": "src_113",
       "title": "Federal Reserve keeps rates unchanged despite elevated inflation",
       "publisher": "The Associated Press",
       "url": "https://www.thereporteronline.com/2026/10/28/fed-meeting-interest-rates/",
@@ -571,7 +571,7 @@
       "is_new": false
     },
     {
-      "id": "src_107",
+      "id": "src_114",
       "title": "Fed meeting live updates: Interest rates held steady in split vote",
       "publisher": "Yahoo Finance",
       "url": "https://finance.yahoo.com/economy/policy/live/fed-meeting-live-updates-interest-rates-held-steady-in-split-vote-warsh-says-politics-played-no-role-ahead-of-midterm-elections-191946928.html",
@@ -591,7 +591,7 @@
       "is_new": false
     },
     {
-      "id": "src_096",
+      "id": "src_103",
       "title": "Fed meeting recap: Warsh says central bank will host fewer rate-setting ...",
       "publisher": "CNBC",
       "url": "https://www.cnbc.com/2026/10/28/fed-meeting-today-live-updates.html",
@@ -611,7 +611,7 @@
       "is_new": false
     },
     {
-      "id": "src_108",
+      "id": "src_115",
       "title": "Fed holds rates steady as it awaits more information",
       "publisher": "Reuters",
       "url": "https://www.newsobserver.com/news/nation-world/national/article317819208.html",
@@ -631,7 +631,7 @@
       "is_new": false
     },
     {
-      "id": "src_109",
+      "id": "src_116",
       "title": "Federal Reserve holds interest rates steady as midterm elections loom",
       "publisher": "ABC News",
       "url": "https://abcnews.com/Business/federal-reserve-set-issue-interest-rate-decision-midterm/story?id=137599228",
@@ -651,45 +651,45 @@
       "is_new": false
     },
     {
-      "id": "src_103",
-      "title": "Federal Reserve issues FOMC statement",
+      "id": "src_109",
+      "title": "FOMC Statement, October 28, 2026",
       "publisher": "Board of Governors of the Federal Reserve System",
       "url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20261028a.htm",
       "published_at": "2026-10-28T14:00:00-04:00",
       "bucket": "fed_communications",
-      "direction": "tightening",
-      "score": 1,
+      "direction": "neutral",
+      "score": 0,
       "importance": "high",
-      "confidence": "high",
-      "claim_type": "official_data",
+      "confidence": "medium",
+      "claim_type": "documented_fact",
       "event_key": "2026_10_28_fomc_statement",
-      "evidence_text": "The FOMC voted 10\u20132 to keep the federal funds target range at 3.75%\u20134.00%, noting that job gains were keeping pace with the workforce, unemployment had changed little, and inflation remained elevated.",
-      "why_it_matters": "A hold amid stable labor conditions and elevated inflation indicates the Committee is not currently validating further cuts and retains a restrictive policy bias.",
+      "evidence_text": "The Federal Reserve published its monetary-policy statement following the October 27\u201328, 2026 FOMC meeting.",
+      "why_it_matters": "The statement is the primary policy signal for whether officials are continuing an easing cycle, pausing, or shifting toward restraint; the available record does not establish its detailed policy language.",
       "official": true,
       "first_seen_at": "2026-10-29T17:30:13+00:00",
       "is_new": false
     },
     {
-      "id": "src_097",
-      "title": "October 27-28, 2026 FOMC Meeting",
-      "publisher": "Board of Governors of the Federal Reserve System",
+      "id": "src_117",
+      "title": "October 27\u201328, 2026 FOMC Meeting",
+      "publisher": "Federal Reserve Board",
       "url": "https://www.federalreserve.gov/monetarypolicy/fomcpresconf20261028.htm",
-      "published_at": "2026-10-28T18:00:00Z",
+      "published_at": "2026-10-28T00:00:00Z",
       "bucket": "fed_communications",
       "direction": "neutral",
       "score": 0,
       "importance": "high",
       "confidence": "high",
       "claim_type": "documented_fact",
-      "event_key": "2026_10_28_fomc_statement",
-      "evidence_text": "The FOMC released its policy statement and implementation note following its October 27-28 meeting.",
-      "why_it_matters": "The policy decision is the primary reaction-function signal, but the available record does not establish a new cut or hike.",
+      "event_key": "2026_10_fomc_meeting",
+      "evidence_text": "The FOMC held its October 27\u201328 policy meeting and released its policy statement and implementation note on October 28.",
+      "why_it_matters": "The meeting is a key reaction-function event, but the available result does not establish whether the decision shifted policy toward further easing or tightening.",
       "official": true,
       "first_seen_at": "2026-10-29T17:30:13+00:00",
       "is_new": false
     },
     {
-      "id": "src_082",
+      "id": "src_090",
       "title": "US Fed Meeting Highlights: Federal Reserve keeps rates unchanged",
       "publisher": "CNBC-TV18",
       "url": "https://www.cnbctv18.com/market/us-fed-meeting-live-updates-fed-rate-decision-today-october-2026-fomc-kevin-warsh-speech-key-announcements-outcome-market-impacts-liveblog-20021557.htm",
@@ -709,7 +709,7 @@
       "is_new": false
     },
     {
-      "id": "src_095",
+      "id": "src_102",
       "title": "FOMC press conference, October 28, 2026",
       "publisher": "Board of Governors of the Federal Reserve System",
       "url": "https://www.federalreserve.gov/monetarypolicy/fomcpressconf20261028.htm",
@@ -729,7 +729,7 @@
       "is_new": false
     },
     {
-      "id": "src_110",
+      "id": "src_118",
       "title": "Federal Reserve holds interest rates steady despite inflation concerns",
       "publisher": "USA Today",
       "url": "https://www.usatoday.com/story/money/economy/2026/10/28/federal-reserve-october-interest-rate-decision--live/92441632007/",
@@ -749,27 +749,26 @@
       "is_new": false
     },
     {
-      "id": "src_083",
+      "id": "src_119",
       "title": "Meeting calendars and information",
       "publisher": "Federal Reserve Board",
       "url": "https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm",
-      "published_at": "2026-10-29T00:00:00Z",
+      "published_at": "2026-10-28T00:00:00Z",
       "bucket": "fed_communications",
       "direction": "neutral",
       "score": 0,
-      "importance": "high",
+      "importance": "medium",
       "confidence": "high",
       "claim_type": "documented_fact",
       "event_key": "2026_10_fomc_meeting",
-      "evidence_text": "The Federal Reserve calendar records the October 27\u201328, 2026 FOMC meeting and indicates that meeting minutes are released three weeks after the policy decision.",
-      "why_it_matters": "The calendar confirms the policy-event timing but does not yet provide evidence that the reaction function is shifting toward easing or tightening.",
+      "evidence_text": "The Federal Reserve calendar identifies October 27\u201328, 2026 as a scheduled FOMC meeting and lists the associated statement, implementation note, press conference, and later minutes.",
+      "why_it_matters": "It confirms the policy decision cycle relevant to assessing whether the easing regime persisted, without itself providing a directional policy signal.",
       "official": true,
-      "collected_at": "2026-10-29T17:30:13+00:00",
       "first_seen_at": "2026-10-29T17:30:13+00:00",
       "is_new": false
     },
     {
-      "id": "src_077",
+      "id": "src_085",
       "title": "TREASURIES-Short-term Treasury yields fall as Fed prompts rethink of rate-hike wagers",
       "publisher": "Reuters via Fidelity",
       "url": "https://www.fidelity.com/news/article/us-markets/202610290043RTRSNEWSCOMBINED_L3N46F0DL_1",
@@ -789,7 +788,7 @@
       "is_new": false
     },
     {
-      "id": "src_084",
+      "id": "src_091",
       "title": "10-year Treasury yield hovers below 5% after strong GDP ...",
       "publisher": "CNBC",
       "url": "https://www.cnbc.com/2026/10/29/treasury-yields-federal-reserve-rates.html",
@@ -809,7 +808,7 @@
       "is_new": false
     },
     {
-      "id": "src_065",
+      "id": "src_075",
       "title": "Market Yield on U.S. Treasury Securities at 2-Year Constant Maturity",
       "publisher": "FRED",
       "url": "https://fred.stlouisfed.org/series/dgs2",
@@ -829,7 +828,7 @@
       "is_new": false
     },
     {
-      "id": "src_085",
+      "id": "src_092",
       "title": "Daily Treasury Outlook - Singapore",
       "publisher": "OCBC",
       "url": "https://www.ocbc.com/iwov-resources/sg/ocbc/gbc/pdf/daily%20treasury%20outlook/2026/dto%20291026%20.pdf",
@@ -849,7 +848,7 @@
       "is_new": false
     },
     {
-      "id": "src_086",
+      "id": "src_093",
       "title": "US Federal Reserve Keeps Rates Unchanged Despite Elevated Inflation",
       "publisher": "ETV Bharat",
       "url": "https://www.etvbharat.com/amp/en/business/us-federal-reserve-keeps-rates-unchanged-despite-elevated-inflation-enn26102900469",
@@ -869,7 +868,7 @@
       "is_new": false
     },
     {
-      "id": "src_098",
+      "id": "src_104",
       "title": "Fed holds rates steady despite concerns over inflation",
       "publisher": "CNBC",
       "url": "https://www.cnbc.com/2026/10/28/fed-interest-rate-decision-october-2026.html",
@@ -889,7 +888,7 @@
       "is_new": false
     },
     {
-      "id": "src_087",
+      "id": "src_094",
       "title": "Perspective: Morning Commentary for October 29",
       "publisher": "StoneX",
       "url": "https://www.stonex.com/en/insights/perspective-morning-commentary-for-october-29-2026-10-29/",
@@ -909,7 +908,7 @@
       "is_new": false
     },
     {
-      "id": "src_088",
+      "id": "src_095",
       "title": "Fed Policy Monitor: Supporting a timelier return to target",
       "publisher": "National Bank of Canada",
       "url": "https://www.nbc.ca/content/dam/bnc/taux-analyses/analyse-eco/fed-policy-monitor.pdf",
@@ -929,7 +928,7 @@
       "is_new": false
     },
     {
-      "id": "src_094",
+      "id": "src_101",
       "title": "Fed holds rates steady as it awaits accumulation of more information",
       "publisher": "Reuters",
       "url": "https://virginiabusiness.com/fed-holds-rates-steady-ahead-of-us-midterm-elections/",
@@ -949,7 +948,7 @@
       "is_new": false
     },
     {
-      "id": "src_111",
+      "id": "src_120",
       "title": "Treasury yields tick higher after Fed interest rate decision",
       "publisher": "CNBC",
       "url": "https://www.cnbc.com/2026/10/28/us-treasurys-bonds-yields-federal-reserve.html",
@@ -969,7 +968,7 @@
       "is_new": false
     },
     {
-      "id": "src_089",
+      "id": "src_096",
       "title": "Fed keeps interest rates unchanged, but two officials dissent",
       "publisher": "CNN",
       "url": "https://edition.cnn.com/2026/10/28/business/live-news/federal-reserve-interest-rate-october",
@@ -989,7 +988,7 @@
       "is_new": false
     },
     {
-      "id": "src_090",
+      "id": "src_097",
       "title": "Analysis\u2014Fed highlights economic strength but muddies outlook",
       "publisher": "Reuters",
       "url": "https://www.charlotteobserver.com/news/nation-world/national/article317827289.html",
@@ -1009,7 +1008,7 @@
       "is_new": false
     },
     {
-      "id": "src_093",
+      "id": "src_100",
       "title": "BLS Weekly Update",
       "publisher": "U.S. Bureau of Labor Statistics",
       "url": "https://www.bls.gov/opub/update.htm",
@@ -1029,27 +1028,26 @@
       "is_new": false
     },
     {
-      "id": "src_076",
-      "title": "Unemployment Insurance Weekly Claims \u2014 October 29, 2026",
-      "publisher": "U.S. Department of Labor",
+      "id": "src_034",
+      "title": "Unemployment Insurance Weekly Claims Report",
+      "publisher": "U.S. Department of Labor, Employment and Training Administration",
       "url": "https://www.dol.gov/ui/data.pdf",
-      "published_at": "2026-10-29T08:30:00-04:00",
+      "published_at": "2026-11-05T08:30:00-04:00",
       "bucket": "employment",
-      "direction": "easing",
-      "score": -1,
+      "direction": "neutral",
+      "score": 0,
       "importance": "medium",
       "confidence": "high",
       "claim_type": "official_data",
-      "event_key": "2026_10_29_weekly_jobless_claims",
-      "evidence_text": "Initial unemployment claims fell to 194,000 in the week ending October 24, while the four-week average declined to 196,750.",
-      "why_it_matters": "Lower claims indicate continued labor-market resilience, but the modest decline in the moving average does not materially increase pressure for tighter policy.",
+      "event_key": "2026_11_05_weekly_initial_jobless_claims",
+      "evidence_text": "Seasonally adjusted initial jobless claims fell to 189,000 for the week ending October 31, while the four-week moving average declined to 194,750.",
+      "why_it_matters": "Low and declining claims indicate limited labor-market stress, providing little support for additional Fed cuts despite modest cooling.",
       "official": true,
-      "collected_at": "2026-10-30T17:06:46+00:00",
       "first_seen_at": "2026-10-30T17:06:46+00:00",
       "is_new": false
     },
     {
-      "id": "src_073",
+      "id": "src_082",
       "title": "Personal Consumption Expenditures Price Index, Excluding Food and Energy",
       "publisher": "U.S. Bureau of Economic Analysis",
       "url": "https://www.bea.gov/data/personal-consumption-expenditures-price-index-excluding-food-and-energy",
@@ -1069,27 +1067,26 @@
       "is_new": false
     },
     {
-      "id": "src_068",
-      "title": "Employment Cost Index Summary - 2026 Q03 Results",
+      "id": "src_077",
+      "title": "Employment Cost Index Summary - Third Quarter 2026",
       "publisher": "U.S. Bureau of Labor Statistics",
-      "url": "https://www.bls.gov/news.release/eci.nr0.htm?lv=true",
+      "url": "https://www.bls.gov/news.release/eci.nr0.htm",
       "published_at": "2026-10-30T08:30:00-04:00",
       "bucket": "employment",
       "direction": "neutral",
       "score": 0,
       "importance": "medium",
-      "confidence": "high",
+      "confidence": "medium",
       "claim_type": "official_data",
       "event_key": "2026_q3_employment_cost_index_release",
-      "evidence_text": "The BLS released third-quarter 2026 Employment Cost Index data for the year ending in September 2026.",
-      "why_it_matters": "Labor-cost momentum informs the Fed\u2019s assessment of persistent inflation pressure, but the available result does not establish a clear easing or tightening signal.",
+      "evidence_text": "The release reports third-quarter 2026 employment-cost data for the period ending in September, including inflation-adjusted wages and salaries.",
+      "why_it_matters": "Labor-cost data inform the Fed\u2019s assessment of persistent services inflation, but the available result does not establish a clearly easing or tightening impulse without the detailed growth rates.",
       "official": true,
-      "collected_at": "2026-11-09T21:35:17+00:00",
       "first_seen_at": "2026-10-30T17:06:46+00:00",
       "is_new": false
     },
     {
-      "id": "src_070",
+      "id": "src_079",
       "title": "October Fed Meeting: Updates and Commentary",
       "publisher": "Yahoo Finance",
       "url": "https://finance.yahoo.com/economy/policy/articles/october-fed-meeting-live-updates-204129908.html",
@@ -1109,7 +1106,7 @@
       "is_new": false
     },
     {
-      "id": "src_091",
+      "id": "src_098",
       "title": "US inflation",
       "publisher": "Financial Times",
       "url": "https://www.ft.com/us-inflation",
@@ -1129,7 +1126,7 @@
       "is_new": false
     },
     {
-      "id": "src_071",
+      "id": "src_080",
       "title": "Employment Cost Index release schedule, third quarter 2026",
       "publisher": "U.S. Bureau of Labor Statistics",
       "url": "https://www.bls.gov/schedule/news_release/eci.htm",
@@ -1149,7 +1146,7 @@
       "is_new": false
     },
     {
-      "id": "src_112",
+      "id": "src_121",
       "title": "Fed holds rates steady after hiking last meeting, with investors expecting more increases to come",
       "publisher": "U.S. Bank",
       "url": "https://www.usbank.com/content/dam/usbank/en/documents/pdfs/wealth-management/situation-analysis-10-28-2026.pdf",
@@ -1169,7 +1166,7 @@
       "is_new": false
     },
     {
-      "id": "src_113",
+      "id": "src_122",
       "title": "U.S. Treasury Yields Rise Ahead of Federal Reserve Interest-Rate Decision",
       "publisher": "Morningstar",
       "url": "https://www.morningstar.com/news/dow-jones/202610282028/us-treasury-yields-rise-ahead-of-federal-reserve-interest-rate-decision",
@@ -1189,7 +1186,7 @@
       "is_new": false
     },
     {
-      "id": "src_114",
+      "id": "src_123",
       "title": "US Short-Term Yields Fall as Traders Parse Warsh, Fed Path",
       "publisher": "Bloomberg",
       "url": "https://www.bloomberg.com/news/articles/2026-10-28/bond-traders-see-90-chance-of-december-hike-after-fed-holds",
@@ -1209,7 +1206,7 @@
       "is_new": false
     },
     {
-      "id": "src_115",
+      "id": "src_124",
       "title": "Kevin Warsh Vows No Ifs, Ands or Buts on Delivering Price Stability as Fed Holds Rates in October",
       "publisher": "J.P. Morgan",
       "url": "https://www.jpmorgan.com/insights/markets-and-economy/economy/kevin-warsh-october-2026-federal-reserve-holds-rates-vows-to-deliver-price-stability",
@@ -1229,7 +1226,7 @@
       "is_new": false
     },
     {
-      "id": "src_021",
+      "id": "src_029",
       "title": "H.15 - Selected Interest Rates (Daily) - November 06, 2026",
       "publisher": "Board of Governors of the Federal Reserve System",
       "url": "https://www.federalreserve.gov/releases/h15/",
@@ -1249,7 +1246,7 @@
       "is_new": false
     },
     {
-      "id": "src_116",
+      "id": "src_125",
       "title": "FOMC holds rates steady, markets mostly follow suit",
       "publisher": "Reuters",
       "url": "https://www.charlotteobserver.com/news/nation-world/national/article317819565.html",
@@ -1269,11 +1266,11 @@
       "is_new": false
     },
     {
-      "id": "src_117",
-      "title": "Transcript of Chairman Warsh's Press Conference, October 2026 FOMC Meeting",
-      "publisher": "Federal Reserve",
+      "id": "src_132",
+      "title": "Transcript of Chairman Warsh's Press Conference, October FOMC Meeting",
+      "publisher": "Board of Governors of the Federal Reserve System",
       "url": "https://www.federalreserve.gov/mediacenter/files/FOMCpresconf20261028.pdf",
-      "published_at": "2026-10-28T00:00:00Z",
+      "published_at": "2026-10-28T00:00:00-04:00",
       "bucket": "fed_communications",
       "direction": "tightening",
       "score": 1,
@@ -1281,14 +1278,14 @@
       "confidence": "high",
       "claim_type": "documented_fact",
       "event_key": "2026_10_28_fomc_press_conference",
-      "evidence_text": "The press conference characterized inflation as elevated and noted that household inflation expectations were above the Federal Reserve's 2 percent objective over at least the near term.",
-      "why_it_matters": "Above-target inflation and expectations raise the risk of persistence, reducing the scope for additional cuts.",
+      "evidence_text": "The press conference addressed household inflation expectations remaining above the Federal Reserve's 2 percent price-stability objective.",
+      "why_it_matters": "Elevated expectations increase the risk of persistent services and wage-price pressure, favoring a cautious or tighter policy stance.",
       "official": true,
       "first_seen_at": "2026-11-02T20:51:47+00:00",
       "is_new": false
     },
     {
-      "id": "src_104",
+      "id": "src_110",
       "title": "Metropolitan Area Employment and Unemployment (Monthly) News Release",
       "publisher": "U.S. Bureau of Labor Statistics",
       "url": "https://www.bls.gov/news.release/archives/metro_10282026.htm",
@@ -1308,7 +1305,7 @@
       "is_new": false
     },
     {
-      "id": "src_026",
+      "id": "src_035",
       "title": "Unemployment Insurance Weekly Claims Report",
       "publisher": "U.S. Department of Labor",
       "url": "https://www.dol.gov/index.php/newsroom/releases/eta",
@@ -1323,11 +1320,12 @@
       "evidence_text": "Seasonally adjusted initial unemployment claims fell to 189,000 in the week ending October 31, while the four-week average declined to 194,750.",
       "why_it_matters": "Lower claims indicate continued labor-market resilience, reducing near-term pressure for additional Federal Reserve cuts.",
       "official": true,
+      "collected_at": "2026-11-10T18:46:16+00:00",
       "first_seen_at": "2026-11-02T20:51:47+00:00",
       "is_new": false
     },
     {
-      "id": "src_066",
+      "id": "src_076",
       "title": "Employment Cost Index News Release - 2026 Q03 Results",
       "publisher": "U.S. Bureau of Labor Statistics",
       "url": "https://www.bls.gov/news.release/archives/eci_10302026.htm",
@@ -1347,7 +1345,7 @@
       "is_new": false
     },
     {
-      "id": "src_118",
+      "id": "src_126",
       "title": "Implementation Note issued October 28, 2026",
       "publisher": "Board of Governors of the Federal Reserve System",
       "url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20261028a1.htm",
@@ -1367,7 +1365,7 @@
       "is_new": false
     },
     {
-      "id": "src_119",
+      "id": "src_127",
       "title": "FedWatch",
       "publisher": "CME Group",
       "url": "https://www.cmegroup.com/en/markets/interest-rates/cme-fedwatch-tool.html",
@@ -1387,7 +1385,7 @@
       "is_new": false
     },
     {
-      "id": "src_051",
+      "id": "src_061",
       "title": "From the US Market Desk: AI Wobbles. Treasuries Step Up.",
       "publisher": "Franklin Templeton Global",
       "url": "https://www.franklintempletonglobal.com/articles/series/from-the-market-desk",
@@ -1407,7 +1405,7 @@
       "is_new": false
     },
     {
-      "id": "src_052",
+      "id": "src_062",
       "title": "Economy Grows Faster as the Federal Reserve Holds Rates Steady",
       "publisher": "Cary Street Partners",
       "url": "https://carystreetpartners.com/insight/weekly-market-brief-11-2-26/",
@@ -1427,7 +1425,7 @@
       "is_new": false
     },
     {
-      "id": "src_053",
+      "id": "src_063",
       "title": "USD/CAD technical outlook, central bank policies and NFP in focus",
       "publisher": "OANDA",
       "url": "https://www.oanda.com/us-en/skills-and-insights/education/market-commentary/chart-of-the-week/usd-cad-technical-outlook/",
@@ -1447,7 +1445,7 @@
       "is_new": false
     },
     {
-      "id": "src_054",
+      "id": "src_064",
       "title": "An Updated Outlook for Interest Rates in 2026 and 2027",
       "publisher": "Southern Ag Today",
       "url": "https://southernagtoday.org/2026/11/02/an-updated-outlook-for-interest-rates-in-2026-and-2027/",
@@ -1467,7 +1465,7 @@
       "is_new": false
     },
     {
-      "id": "src_120",
+      "id": "src_128",
       "title": "FOMC Statement: October 2026",
       "publisher": "J.P. Morgan Asset Management",
       "url": "https://am.jpmorgan.com/pt/en/asset-management/institutional/insights/portfolio-insights/fixed-income/fixed-income-perspectives/fomc-statement-october-2026/",
@@ -1487,7 +1485,7 @@
       "is_new": false
     },
     {
-      "id": "src_050",
+      "id": "src_060",
       "title": "US job openings increase sharply in September",
       "publisher": "Reuters",
       "url": "http://rmb.reuters.com/rmd/rss/item/tag:reuters.com,2026:newsml_KCN3WE20L?channel=frL012",
@@ -1507,7 +1505,7 @@
       "is_new": false
     },
     {
-      "id": "src_055",
+      "id": "src_065",
       "title": "Economic Update: Week of November 2, 2026",
       "publisher": "Interactive Brokers",
       "url": "https://www.interactivebrokers.com/campus/traders-insight/securities/macro/economic-update-week-of-november-2-2026/",
@@ -1527,7 +1525,7 @@
       "is_new": false
     },
     {
-      "id": "src_042",
+      "id": "src_051",
       "title": "Federal Reserve Regulatory Service",
       "publisher": "Board of Governors of the Federal Reserve System",
       "url": "https://www.federalreserve.gov/frrs/federal-reserve-regulatory-service.htm",
@@ -1547,7 +1545,7 @@
       "is_new": false
     },
     {
-      "id": "src_027",
+      "id": "src_036",
       "title": "The Fed Is Suddenly on Hold. When Could It Start Hiking?",
       "publisher": "Yahoo Finance",
       "url": "https://finance.yahoo.com/economy/policy/articles/fed-suddenly-hold-could-start-195000324.html",
@@ -1567,7 +1565,7 @@
       "is_new": false
     },
     {
-      "id": "src_043",
+      "id": "src_052",
       "title": "2-Year Treasury Yield Drops to 4.56%, Signaling Softer Fed Bets",
       "publisher": "247WallSt",
       "url": "https://247wallst.com/cards/the-2-year-yield-the-market-s-cleanest-read-on-fed-policy-e-macro-release-01m6fbbt3mvmnwjxwxfgvckrcv",
@@ -1587,7 +1585,7 @@
       "is_new": false
     },
     {
-      "id": "src_044",
+      "id": "src_053",
       "title": "News about Fed",
       "publisher": "Upside",
       "url": "https://upside.pandobit.com/en/news/topic/fed/",
@@ -1607,7 +1605,7 @@
       "is_new": false
     },
     {
-      "id": "src_056",
+      "id": "src_066",
       "title": "US Fed Funds Interest Rate: Latest Updates and Trends",
       "publisher": "Grow Bean Sprout",
       "url": "https://growbeansprout.com/tools/fedwatch",
@@ -1627,7 +1625,7 @@
       "is_new": false
     },
     {
-      "id": "src_045",
+      "id": "src_054",
       "title": "December 2026 Fed Combo \u00b7 Rate and Dissents",
       "publisher": "Octagon",
       "url": "https://www.octagonai.co/markets/economics/fed/december-2026-fed-combo-rate-and-dissents/",
@@ -1647,7 +1645,7 @@
       "is_new": false
     },
     {
-      "id": "src_004",
+      "id": "src_010",
       "title": "Daily Treasury Rates",
       "publisher": "U.S. Department of the Treasury",
       "url": "https://home.treasury.gov/resource-center/data-chart-center/interest-rates/daily-treasury-rates.csv/2026/all?type=daily_treasury_yield_curve",
@@ -1658,15 +1656,15 @@
       "importance": "high",
       "confidence": "high",
       "claim_type": "official_data",
-      "event_key": "2026_11_06_treasury_yield_curve_release",
-      "evidence_text": "The Treasury data show the 2-year par yield at 4.74% on November 6, compared with 4.65% on November 2.",
-      "why_it_matters": "The increase in the 2-year yield over the week signals a market shift toward fewer expected cuts or more prospective tightening.",
+      "event_key": "2026_11_10_treasury_yield_curve",
+      "evidence_text": "The Treasury daily curve showed the two-year yield at 4.04% on November 9, compared with 4.06% on October 30, after trading near 4.00% to 4.05% during early November.",
+      "why_it_matters": "The elevated two-year yield remains consistent with restrictive policy expectations, although its modest decline suggests some easing in near-term tightening pricing.",
       "official": true,
       "first_seen_at": "2026-11-03T18:37:52+00:00",
       "is_new": false
     },
     {
-      "id": "src_057",
+      "id": "src_067",
       "title": "Treasury Yields Little Changed in Asian Trade Ahead of Midterms, Key Data This Week",
       "publisher": "Morningstar",
       "url": "https://www.morningstar.com/news/dow-jones/20261102833/treasury-yields-little-changed-in-asian-trade-ahead-of-midterms-key-data-this-week",
@@ -1686,7 +1684,7 @@
       "is_new": false
     },
     {
-      "id": "src_046",
+      "id": "src_055",
       "title": "U.S. Treasury Yields Nudge Higher as AI Fears Ebb",
       "publisher": "The Economic Times",
       "url": "https://economictimes.indiatimes.com/markets/bonds/us-treasury-yields-nudge-higher-as-ai-fears-ebb/printarticle/135052005.cms",
@@ -1706,27 +1704,26 @@
       "is_new": false
     },
     {
-      "id": "src_039",
-      "title": "Minutes of the Federal Open Market Committee",
-      "publisher": "Federal Reserve",
+      "id": "src_056",
+      "title": "Minutes of the Federal Open Market Committee, September 15\u201316, 2026",
+      "publisher": "Federal Reserve Board",
       "url": "https://www.federalreserve.gov/monetarypolicy/fomcminutes20260916.htm",
-      "published_at": "2026-11-03T14:00:00-04:00",
+      "published_at": "2026-11-03T00:00:00Z",
       "bucket": "fed_communications",
       "direction": "tightening",
       "score": 2,
       "importance": "high",
       "confidence": "high",
       "claim_type": "documented_fact",
-      "event_key": "2026_09_16_fomc_minutes",
-      "evidence_text": "The minutes reported elevated inflation, a labor market viewed as near maximum employment with some recent strengthening, and unanimous support at the September meeting for a 25-basis-point rate increase to 3.75%\u20134.00%.",
-      "why_it_matters": "The combination of an enacted hike, elevated inflation, and limited employment slack indicates a clearly restrictive reaction function.",
+      "event_key": "2026_09_fomc_minutes",
+      "evidence_text": "Participants reported elevated inflation, a labor market near maximum employment with some recent strengthening, solid economic activity, and upside risks to the inflation outlook.",
+      "why_it_matters": "The combination of persistent inflation and limited labor-market slack favors holding rates higher rather than extending an easing cycle.",
       "official": true,
-      "collected_at": "2026-11-09T21:35:17+00:00",
       "first_seen_at": "2026-11-04T18:46:59+00:00",
       "is_new": false
     },
     {
-      "id": "src_121",
+      "id": "src_129",
       "title": "Divided Fed Chooses Patience, Leaves Rates Unchanged",
       "publisher": "Charles Schwab",
       "url": "https://www.schwab.com/learn/story/fomc-meeting",
@@ -1746,7 +1743,7 @@
       "is_new": false
     },
     {
-      "id": "src_012",
+      "id": "src_019",
       "title": "Wage and Income Growth Expectations Before, During, and After the Pandemic Period",
       "publisher": "Federal Reserve",
       "url": "https://www.federalreserve.gov/econres/notes/feds-notes/2026-index.htm",
@@ -1761,11 +1758,12 @@
       "evidence_text": "A Federal Reserve research note examines the relationship between wage and income growth expectations and inflation expectations across the pandemic period.",
       "why_it_matters": "The topic is relevant to inflation dynamics, but the research description alone does not establish a current directional policy signal.",
       "official": true,
+      "collected_at": "2026-11-10T18:46:16+00:00",
       "first_seen_at": "2026-11-04T18:46:59+00:00",
       "is_new": false
     },
     {
-      "id": "src_040",
+      "id": "src_049",
       "title": "Job Openings and Labor Turnover Survey",
       "publisher": "U.S. Bureau of Labor Statistics",
       "url": "https://www.bls.gov/news.release/jolts.nr0.htm",
@@ -1785,7 +1783,7 @@
       "is_new": false
     },
     {
-      "id": "src_032",
+      "id": "src_042",
       "title": "The Federal Reserve Isn't the Only Central Bank To Hike Rates in 2026",
       "publisher": "J.P. Morgan",
       "url": "https://www.jpmorgan.com/insights/markets-and-economy/economy/central-bank-rate-hikes-2026-what-global-tightening-means-for-investors",
@@ -1805,7 +1803,7 @@
       "is_new": false
     },
     {
-      "id": "src_047",
+      "id": "src_057",
       "title": "What\u2019s the Fed\u2019s Next Move?",
       "publisher": "J.P. Morgan Global Research",
       "url": "https://www.jpmorgan.com/insights/global-research/economy/fed-rate-cuts",
@@ -1820,11 +1818,12 @@
       "evidence_text": "J.P. Morgan reported that the October meeting held the target range at 3.75%\u20134.00% and forecast a 25-basis-point increase in December amid elevated inflation and resilient employment.",
       "why_it_matters": "A projected near-term hike indicates that the baseline reaction function has moved away from immediate easing.",
       "official": false,
+      "collected_at": "2026-11-10T18:46:16+00:00",
       "first_seen_at": "2026-11-04T18:46:59+00:00",
       "is_new": false
     },
     {
-      "id": "src_048",
+      "id": "src_058",
       "title": "Federal Funds Effective Rate",
       "publisher": "Federal Reserve Bank of St. Louis FRED",
       "url": "https://fred.stlouisfed.org/series/RIFSPFFNB",
@@ -1844,7 +1843,7 @@
       "is_new": false
     },
     {
-      "id": "src_033",
+      "id": "src_043",
       "title": "Quarterly Refunding Statement of the Assistant Secretary for Financial Markets",
       "publisher": "U.S. Department of the Treasury",
       "url": "https://home.treasury.gov/news/press-releases/sb0678/",
@@ -1864,7 +1863,7 @@
       "is_new": false
     },
     {
-      "id": "src_031",
+      "id": "src_041",
       "title": "What to Expect From the October Jobs Report",
       "publisher": "Kiplinger",
       "url": "https://www.kiplinger.com/investing/economy/jobs-report-october-2026-what-to-expect",
@@ -1884,7 +1883,7 @@
       "is_new": false
     },
     {
-      "id": "src_017",
+      "id": "src_024",
       "title": "Employment Situation News Release - October 2026",
       "publisher": "U.S. Bureau of Labor Statistics",
       "url": "https://www.bls.gov/news.release/empsit.htm",
@@ -1899,11 +1898,12 @@
       "evidence_text": "Nonfarm payroll employment increased by 165,000 in October, the unemployment rate was 4.1%, and average hourly earnings increased by $0.14.",
       "why_it_matters": "Job gains above the prior-year average and continued low unemployment indicate resilient labor demand, reducing the urgency for additional policy easing.",
       "official": true,
+      "collected_at": "2026-11-10T18:46:16+00:00",
       "first_seen_at": "2026-11-05T18:54:31+00:00",
       "is_new": false
     },
     {
-      "id": "src_034",
+      "id": "src_044",
       "title": "What To Expect From Friday's Jobs Report",
       "publisher": "Investopedia",
       "url": "https://www.investopedia.com/what-to-expect-from-friday-jobs-report-fed-interest-rates-12214148",
@@ -1923,7 +1923,7 @@
       "is_new": false
     },
     {
-      "id": "src_058",
+      "id": "src_068",
       "title": "FEDS 2026-071: How Firms Form Beliefs and the Implications for Inflation",
       "publisher": "Federal Reserve",
       "url": "https://www.federalreserve.gov/econres/feds/2026.htm",
@@ -1943,7 +1943,7 @@
       "is_new": false
     },
     {
-      "id": "src_028",
+      "id": "src_037",
       "title": "Current Employment Statistics",
       "publisher": "U.S. Bureau of Labor Statistics",
       "url": "https://www.bls.gov/ces/",
@@ -1963,7 +1963,7 @@
       "is_new": false
     },
     {
-      "id": "src_013",
+      "id": "src_020",
       "title": "Fed's Hammack, Barkin favor gradual rate-hike path",
       "publisher": "Reuters",
       "url": "https://finance.yahoo.com/economy/policy/articles/feds-hammack-favors-gradual-rate-135118553.html",
@@ -1978,11 +1978,12 @@
       "evidence_text": "Cleveland Fed President Beth Hammack and Richmond Fed President Thomas Barkin argued that policy should become restrictive or that inflation remains too high, while favoring gradual increases.",
       "why_it_matters": "The officials\u2019 comments reinforce a tightening bias, although their preference for gradual moves limits the signal for aggressive hikes.",
       "official": false,
+      "collected_at": "2026-11-10T18:46:16+00:00",
       "first_seen_at": "2026-11-05T18:54:31+00:00",
       "is_new": false
     },
     {
-      "id": "src_049",
+      "id": "src_059",
       "title": "U.S. Financial Conditions: Tighter, But Not Tight",
       "publisher": "TD Economics",
       "url": "https://economics.td.com/us-financial-conditions",
@@ -2002,7 +2003,7 @@
       "is_new": false
     },
     {
-      "id": "src_035",
+      "id": "src_045",
       "title": "Selected Interest Rates (Daily) - H.15",
       "publisher": "Federal Reserve Board",
       "url": "https://www.federalreserve.gov/releases//h15/default.htm",
@@ -2022,10 +2023,29 @@
       "is_new": false
     },
     {
-      "id": "src_018",
+      "id": "src_025",
       "title": "Employment Situation News Release - 2026 M10 Results",
       "publisher": "U.S. Bureau of Labor Statistics",
       "url": "https://www.bls.gov/news.release/archives/empsit_11062026.htm",
+      "published_at": "2026-11-06T08:30:00-05:00",
+      "bucket": "employment",
+      "direction": "tightening",
+      "score": 1,
+      "importance": "medium",
+      "confidence": "high",
+      "claim_type": "official_data",
+      "event_key": "2026_10_employment_situation_release",
+      "evidence_text": "Revisions increased combined August and September payroll employment by 84,000 relative to previously reported estimates.",
+      "why_it_matters": "Upward revisions reinforce the view that labor-market momentum was stronger than initially assessed, making an easing bias less urgent.",
+      "official": true,
+      "first_seen_at": "2026-11-06T18:17:12+00:00",
+      "is_new": false
+    },
+    {
+      "id": "src_026",
+      "title": "Employment Situation Summary - 2026 M09 Results",
+      "publisher": "U.S. Bureau of Labor Statistics",
+      "url": "https://www.bls.gov/news.release/empsit.nr0.htm",
       "published_at": "2026-11-06T08:30:00-05:00",
       "bucket": "employment",
       "direction": "tightening",
@@ -2034,35 +2054,14 @@
       "confidence": "high",
       "claim_type": "official_data",
       "event_key": "2026_10_employment_situation_release",
-      "evidence_text": "Nonfarm payroll employment increased by 165,000 in October while the unemployment rate remained at 4.1 percent, and payroll growth exceeded the prior-12-month average.",
-      "why_it_matters": "Resilient hiring and a stable unemployment rate reduce the urgency for additional rate cuts, although they do not by themselves imply a need for hikes.",
+      "evidence_text": "Nonfarm payroll employment increased by 165,000 in October, unemployment held at 4.1 percent, and average hourly earnings rose during the month; payroll growth exceeded the 48,000 average monthly gain of the prior 12 months.",
+      "why_it_matters": "A resilient labor market reduces pressure for additional rate cuts, while the wage increase warrants continued monitoring for inflation persistence.",
       "official": true,
-      "collected_at": "2026-11-09T21:35:17+00:00",
       "first_seen_at": "2026-11-06T18:17:12+00:00",
       "is_new": false
     },
     {
-      "id": "src_019",
-      "title": "Employment Situation News Release \u2014 October 2026",
-      "publisher": "U.S. Bureau of Labor Statistics",
-      "url": "https://www.bls.gov/news.release/empsit.nr0.htm",
-      "published_at": "2026-11-06T08:30:00-05:00",
-      "bucket": "employment",
-      "direction": "neutral",
-      "score": 0,
-      "importance": "high",
-      "confidence": "high",
-      "claim_type": "official_data",
-      "event_key": "2026_10_employment_situation_release",
-      "evidence_text": "Nonfarm payroll employment increased by 165,000 in October, while the unemployment rate was little changed at 4.1 percent.",
-      "why_it_matters": "Steady hiring and a stable unemployment rate indicate a resilient labor market, reducing the urgency for additional easing while not clearly requiring tighter policy.",
-      "official": true,
-      "collected_at": "2026-11-09T21:35:17+00:00",
-      "first_seen_at": "2026-11-06T18:17:12+00:00",
-      "is_new": false
-    },
-    {
-      "id": "src_020",
+      "id": "src_027",
       "title": "THE EMPLOYMENT SITUATION \u2014 OCTOBER 2026",
       "publisher": "U.S. Bureau of Labor Statistics",
       "url": "https://www.dol.gov/newsroom/economicdata/empsit_11062026.pdf",
@@ -2082,7 +2081,7 @@
       "is_new": false
     },
     {
-      "id": "src_022",
+      "id": "src_030",
       "title": "US Treasuries Stumble as Strong Labor Market Lifts Fed-Hike Bets",
       "publisher": "Bloomberg via Yahoo Finance",
       "url": "https://finance.yahoo.com/economy/policy/articles/us-treasuries-stumble-strong-labor-134733867.html",
@@ -2102,7 +2101,7 @@
       "is_new": false
     },
     {
-      "id": "src_029",
+      "id": "src_038",
       "title": "Richmond Fed's Barkin Says he Expects More Rate Hikes But Unsure About How Many or When",
       "publisher": "Yahoo Finance",
       "url": "https://finance.yahoo.com/economy/policy/articles/richmond-feds-barkin-says-expects-153940698.html",
@@ -2122,7 +2121,7 @@
       "is_new": false
     },
     {
-      "id": "src_023",
+      "id": "src_031",
       "title": "Williams Says Fed Should Gather Data to Judge Price Risks",
       "publisher": "Bloomberg via Yahoo Finance",
       "url": "https://ca.finance.yahoo.com/news/williams-says-fed-gather-data-103153007.html",
@@ -2142,7 +2141,7 @@
       "is_new": false
     },
     {
-      "id": "src_059",
+      "id": "src_069",
       "title": "Key Interest Rates",
       "publisher": "The Wall Street Journal",
       "url": "https://www.wsj.com/market-data/bonds/keyinterestrates",
@@ -2162,11 +2161,11 @@
       "is_new": false
     },
     {
-      "id": "src_067",
+      "id": "src_078",
       "title": "Employment Cost Index - September 2026",
       "publisher": "U.S. Bureau of Labor Statistics",
       "url": "https://www.dol.gov/newsroom/economicdata/eci_10302026.pdf",
-      "published_at": "2026-10-30T12:00:00Z",
+      "published_at": "2026-10-30T08:30:00-04:00",
       "bucket": "inflation",
       "direction": "tightening",
       "score": 1,
@@ -2175,13 +2174,13 @@
       "claim_type": "official_data",
       "event_key": "2026_09_employment_cost_index_release",
       "evidence_text": "Civilian compensation costs rose 3.4 percent over the year through September, with wages and salaries up 3.1 percent.",
-      "why_it_matters": "Persistent wage growth can sustain services inflation and make the Federal Reserve less willing to accelerate rate cuts.",
+      "why_it_matters": "Firm compensation growth can sustain service inflation and make the Fed more cautious about cutting rates.",
       "official": true,
       "first_seen_at": "2026-11-09T21:35:17+00:00",
       "is_new": false
     },
     {
-      "id": "src_092",
+      "id": "src_099",
       "title": "Inflation Hits Highest Since May as Energy Prices Surge",
       "publisher": "Yahoo Finance",
       "url": "https://finance.yahoo.com/economy/articles/inflation-hits-highest-since-may-123148009.html",
@@ -2201,7 +2200,7 @@
       "is_new": false
     },
     {
-      "id": "src_122",
+      "id": "src_130",
       "title": "October FOMC Decision: Fed on Hold, But Not Done",
       "publisher": "The Conference Board",
       "url": "https://www.conference-board.org/research/global-economy-briefs/fomc-insights-october-2026",
@@ -2221,7 +2220,7 @@
       "is_new": false
     },
     {
-      "id": "src_036",
+      "id": "src_046",
       "title": "Financial Markets",
       "publisher": "Marcus & Millichap",
       "url": "https://www.marcusmillichap.com/research/research-brief/2026/11/research-brief-november-financial-markets",
@@ -2241,7 +2240,7 @@
       "is_new": false
     },
     {
-      "id": "src_024",
+      "id": "src_032",
       "title": "October CPI Forecasts Show Inflation Softening, but December Rate Hike Still Looks Likely",
       "publisher": "Morningstar",
       "url": "https://www.morningstar.com/economy/october-cpi-forecasts-show-inflation-softening-december-rate-hike-still-looks-likely",
@@ -2261,7 +2260,7 @@
       "is_new": false
     },
     {
-      "id": "src_025",
+      "id": "src_033",
       "title": "Federal Reserve Board Calendar: November 2026",
       "publisher": "Federal Reserve",
       "url": "https://www.federalreserve.gov/newsevents/2026-november.htm",
@@ -2281,7 +2280,7 @@
       "is_new": false
     },
     {
-      "id": "src_099",
+      "id": "src_105",
       "title": "2026 FOMC Press Releases",
       "publisher": "Board of Governors of the Federal Reserve System",
       "url": "https://www.federalreserve.gov/newsevents/pressreleases/2026-press-fomc.htm",
@@ -2296,11 +2295,12 @@
       "evidence_text": "The Federal Reserve published an October 28, 2026 FOMC statement under its monetary-policy press releases.",
       "why_it_matters": "An unchanged or non-easing policy communication indicates that the easing cycle is not being extended at this meeting.",
       "official": true,
+      "collected_at": "2026-11-10T18:46:16+00:00",
       "first_seen_at": "2026-11-09T21:35:17+00:00",
       "is_new": false
     },
     {
-      "id": "src_037",
+      "id": "src_047",
       "title": "Report to the Secretary of the Treasury from the Treasury Borrowing Advisory Committee",
       "publisher": "U.S. Department of the Treasury",
       "url": "https://home.treasury.gov/news/press-releases/sb0679/",
@@ -2311,16 +2311,15 @@
       "importance": "high",
       "confidence": "high",
       "claim_type": "official_data",
-      "event_key": "2026_11_tbac_market_repricing",
-      "evidence_text": "Treasury reported that markets had repriced toward a higher rate path, with two-year yields up roughly 50 basis points and approximately three additional rate increases priced over the following year.",
-      "why_it_matters": "A higher front-end yield curve and additional hikes priced into markets indicate substantially tighter expected monetary policy.",
+      "event_key": "2026_09_fed_rate_hike_and_sep",
+      "evidence_text": "Treasury reported that two-year yields rose about 50 basis points, the September Fed projection increased to 4.1% for both 2026 and 2027, and markets priced roughly three additional rate increases over the following year.",
+      "why_it_matters": "A sharply higher front-end yield and repricing toward additional hikes indicate that market policy expectations have shifted decisively away from easing.",
       "official": true,
-      "collected_at": "2026-11-09T21:35:17+00:00",
       "first_seen_at": "2026-11-09T21:35:17+00:00",
       "is_new": false
     },
     {
-      "id": "src_005",
+      "id": "src_011",
       "title": "Fed seen sticking to December rate hike after jobs data",
       "publisher": "Reuters",
       "url": "https://finance.yahoo.com/economy/policy/articles/traders-raise-bets-fed-rate-134402668.html",
@@ -2335,11 +2334,12 @@
       "evidence_text": "Markets were reported to price about a 78% probability of a quarter-point December hike after a stronger-than-expected October jobs report.",
       "why_it_matters": "Resilient employment reduces the urgency for rate relief and gives the Fed more room to maintain or extend restrictive policy.",
       "official": false,
+      "collected_at": "2026-11-10T18:46:16+00:00",
       "first_seen_at": "2026-11-09T21:35:17+00:00",
       "is_new": false
     },
     {
-      "id": "src_014",
+      "id": "src_021",
       "title": "US Fed rate hike in December faces uncertainty as jobs surge, but CPI and oil hold the key",
       "publisher": "Financial Express",
       "url": "https://www.financialexpress.com/market/global-markets/us-fed-rate-hike-in-december-faces-uncertainty-as-jobs-surge-but-cpi-and-oil-hold-the-key/4380071/",
@@ -2359,7 +2359,7 @@
       "is_new": false
     },
     {
-      "id": "src_016",
+      "id": "src_023",
       "title": "Midterm results may add uncertainty to the Fed's next rate decision",
       "publisher": "Yahoo Finance",
       "url": "https://finance.yahoo.com/economy/policy/articles/midterm-results-may-add-uncertainty-135000425.html",
@@ -2379,7 +2379,7 @@
       "is_new": false
     },
     {
-      "id": "src_060",
+      "id": "src_070",
       "title": "CIO Notebook: Fed Holds Rates Steady, Cites the Need for More Information",
       "publisher": "Neuberger Berman",
       "url": "https://www.nb.com/insights/cio-notebook-fed-holds-rates-steady-cites-the-need-for-more-information",
@@ -2399,8 +2399,8 @@
       "is_new": false
     },
     {
-      "id": "src_038",
-      "title": "Minutes of the Meeting of the Treasury Borrowing Advisory Committee",
+      "id": "src_048",
+      "title": "Minutes of the Meeting of the Treasury Borrowing Advisory Committee November 3, 2026",
       "publisher": "U.S. Department of the Treasury",
       "url": "https://home.treasury.gov/news/press-releases/sb0680",
       "published_at": "2026-11-04T00:00:00Z",
@@ -2408,22 +2408,21 @@
       "direction": "tightening",
       "score": 1,
       "importance": "medium",
-      "confidence": "medium",
-      "claim_type": "interpretation",
-      "event_key": "2026_11_tbac_market_repricing",
-      "evidence_text": "The committee discussion attributed higher Treasury yields partly to stronger capex-driven growth and energy-price shocks that lifted real yields.",
-      "why_it_matters": "Stronger growth and energy-related price pressure can reduce the scope for rate cuts and reinforce a restrictive policy stance.",
+      "confidence": "high",
+      "claim_type": "documented_fact",
+      "event_key": "2026_11_tbac_market_assessment",
+      "evidence_text": "The committee attributed higher longer-term Treasury yields primarily to stronger capex-driven growth and added upward pressure from energy-price shocks.",
+      "why_it_matters": "Stronger growth and energy pressures can raise inflation risks, reducing the case for additional Fed cuts even though this evidence is less direct for the two-year sector.",
       "official": true,
-      "collected_at": "2026-11-09T21:35:17+00:00",
       "first_seen_at": "2026-11-09T21:35:17+00:00",
       "is_new": false
     },
     {
-      "id": "src_006",
+      "id": "src_016",
       "title": "Speech by Governor Waller on the economic outlook",
-      "publisher": "Federal Reserve Board",
+      "publisher": "Board of Governors of the Federal Reserve System",
       "url": "https://www.federalreserve.gov/newsevents/speech/waller20261110a.htm",
-      "published_at": "2026-11-10T00:00:00Z",
+      "published_at": "2026-11-10T00:00:00-05:00",
       "bucket": "fed_communications",
       "direction": "tightening",
       "score": 2,
@@ -2431,14 +2430,14 @@
       "confidence": "high",
       "claim_type": "documented_fact",
       "event_key": "2026_11_10_waller_economic_outlook_speech",
-      "evidence_text": "Governor Waller characterized the labor market as stable and near maximum employment while indicating support for a 25-basis-point policy-rate increase at the December meeting because inflation remains too high.",
-      "why_it_matters": "A policymaker viewing employment as near maximum and favoring a rate increase signals that labor-market conditions are not currently limiting the Fed\u2019s ability to tighten.",
+      "evidence_text": "Governor Waller said inflation remains well above the 2 percent goal and indicated support for a December rate increase, potentially larger if October core CPI remained elevated.",
+      "why_it_matters": "Persistent above-target inflation with stable employment raises the reaction-function case for fewer cuts or renewed tightening.",
       "official": true,
       "first_seen_at": "2026-11-10T18:46:16+00:00",
       "is_new": false
     },
     {
-      "id": "src_002",
+      "id": "src_005",
       "title": "Consumer Price Index News Release - 2026 M10 Results",
       "publisher": "U.S. Bureau of Labor Statistics",
       "url": "https://www.bls.gov/news.release/archives/cpi_11102026.htm",
@@ -2453,11 +2452,12 @@
       "evidence_text": "Consumer prices increased 0.4% month over month in October 2026 after rising 0.6% in September, with shelter, food, and energy contributing to the increase.",
       "why_it_matters": "The still-elevated monthly inflation pace and persistent service-price contribution argue for caution about additional rate cuts.",
       "official": true,
+      "collected_at": "2026-11-10T18:46:16+00:00",
       "first_seen_at": "2026-11-10T18:46:16+00:00",
-      "is_new": true
+      "is_new": false
     },
     {
-      "id": "src_007",
+      "id": "src_012",
       "title": "Economic and monetary policy outlook",
       "publisher": "Federal Reserve Bank of Dallas",
       "url": "https://www.dallasfed.org/news/speeches/logan/2026/lkl261110",
@@ -2468,15 +2468,15 @@
       "importance": "high",
       "confidence": "high",
       "claim_type": "documented_fact",
-      "event_key": "2026_11_10_logan_monetary_policy_outlook",
-      "evidence_text": "Dallas Fed President Lorie Logan said inflation remains above target and indicated that at least two additional 25-basis-point rate increases are needed.",
-      "why_it_matters": "A regional Fed president explicitly favoring multiple further hikes signals that persistent inflation is shifting the reaction function toward tighter policy.",
+      "event_key": "2026_11_logan_additional_rate_increases_signal",
+      "evidence_text": "Lorie Logan said inflation would likely remain above target without restraint and estimated that the policy rate was at least 50 basis points below a mildly restrictive level, implying at least two more increases.",
+      "why_it_matters": "The assessment implies current policy is not yet sufficiently restrictive to restore inflation to target.",
       "official": true,
       "first_seen_at": "2026-11-10T18:46:16+00:00",
-      "is_new": true
+      "is_new": false
     },
     {
-      "id": "src_011",
+      "id": "src_018",
       "title": "Fed should move policy with care as it responds to inflation, Barkin says",
       "publisher": "Reuters",
       "url": "https://finance.yahoo.com/economy/policy/articles/fed-move-policy-care-responds-170534763.html",
@@ -2491,11 +2491,12 @@
       "evidence_text": "Reuters reported that Richmond Fed President Tom Barkin identified inflation as the main risk and that investors expected a December rate increase.",
       "why_it_matters": "Both inflation-focused Fed communication and reported market expectations point toward fewer cuts and a live tightening risk.",
       "official": false,
+      "collected_at": "2026-11-10T18:46:16+00:00",
       "first_seen_at": "2026-11-10T18:46:16+00:00",
-      "is_new": true
+      "is_new": false
     },
     {
-      "id": "src_008",
+      "id": "src_013",
       "title": "Fed to Raise Rates Once More in December as Inflation Risks Stay High: Reuters Poll",
       "publisher": "Reuters",
       "url": "https://money.usnews.com/investing/news/articles/2026-11-10/fed-to-raise-rates-once-more-in-december-as-inflation-risks-stay-high-reuters-poll",
@@ -2510,11 +2511,12 @@
       "evidence_text": "A November Reuters survey found all 101 economists expected a December hike, while 45 still expected at least two further increases.",
       "why_it_matters": "Consensus expectations for a December hike and a meaningful tail for additional hikes indicate that easing is not the prevailing near-term policy scenario.",
       "official": false,
+      "collected_at": "2026-11-10T18:46:16+00:00",
       "first_seen_at": "2026-11-10T18:46:16+00:00",
-      "is_new": true
+      "is_new": false
     },
     {
-      "id": "src_030",
+      "id": "src_039",
       "title": "Economic Outlook: Economy keeps on keeping on",
       "publisher": "U.S. Bank",
       "url": "https://www.usbank.com/content/dam/usbank/en/documents/pdfs/corporate-and-commercial-banking/november-26-economics.pdf",
@@ -2529,11 +2531,12 @@
       "evidence_text": "U.S. Bank projected additional 25-basis-point increases in December and March, with risks tilted toward a longer tightening cycle.",
       "why_it_matters": "The forecast provides an external scenario consistent with persistent inflation and resilient demand delaying any return to an easing regime.",
       "official": false,
+      "collected_at": "2026-11-10T18:46:16+00:00",
       "first_seen_at": "2026-11-10T18:46:16+00:00",
-      "is_new": true
+      "is_new": false
     },
     {
-      "id": "src_009",
+      "id": "src_014",
       "title": "10-year Treasury yield races back to 5% as inflation data, Waller comments drive rate hike expectations",
       "publisher": "CNBC",
       "url": "https://www.cnbc.com/2026/11/10/us-bonds-treasurys-yields.html",
@@ -2548,11 +2551,12 @@
       "evidence_text": "The 2-year Treasury yield rose more than 15 basis points to 4.698% as markets increased expectations for Federal Reserve rate hikes.",
       "why_it_matters": "A sharp rise in the policy-sensitive 2-year yield indicates markets are pricing less easing and greater risk of additional tightening.",
       "official": true,
+      "collected_at": "2026-11-10T18:46:16+00:00",
       "first_seen_at": "2026-11-10T18:46:16+00:00",
-      "is_new": true
+      "is_new": false
     },
     {
-      "id": "src_015",
+      "id": "src_022",
       "title": "Treasury yields rise as investors await October CPI and ...",
       "publisher": "CNBC",
       "url": "https://www.cnbc.com/2026/11/09/us-treasurys-bonds-yields.html",
@@ -2567,11 +2571,12 @@
       "evidence_text": "The 2-year Treasury yield climbed as strong employment data and anticipated inflation data led investors to reassess the future path of Federal Reserve policy.",
       "why_it_matters": "Higher short-maturity yields reflect reduced confidence in near-term cuts and a more restrictive expected policy path.",
       "official": true,
+      "collected_at": "2026-11-10T18:46:16+00:00",
       "first_seen_at": "2026-11-10T18:46:16+00:00",
-      "is_new": true
+      "is_new": false
     },
     {
-      "id": "src_010",
+      "id": "src_015",
       "title": "Fed's Waller plans to support at least a quarter-point rate ...",
       "publisher": "Reuters",
       "url": "https://www.sacbee.com/news/business/article318008671.html",
@@ -2586,7 +2591,179 @@
       "evidence_text": "Federal Reserve Governor Christopher Waller indicated support for at least a quarter-point December rate increase and said a larger hike could be considered if inflation worsens.",
       "why_it_matters": "A stated preference for renewed rate increases directly shifts the reaction function away from easing and toward tightening.",
       "official": false,
+      "collected_at": "2026-11-10T18:46:16+00:00",
       "first_seen_at": "2026-11-10T18:46:16+00:00",
+      "is_new": false
+    },
+    {
+      "id": "src_028",
+      "title": "Table A-15. Alternative measures of labor underutilization",
+      "publisher": "U.S. Bureau of Labor Statistics",
+      "url": "https://www.bls.gov/news.release/empsit.t15.htm",
+      "published_at": "2026-11-06T08:30:00-05:00",
+      "bucket": "employment",
+      "direction": "neutral",
+      "score": 0,
+      "importance": "medium",
+      "confidence": "high",
+      "claim_type": "official_data",
+      "event_key": "2026_10_employment_situation_release",
+      "evidence_text": "The broad U-6 labor-underutilization rate increased to 7.9 percent in October from 7.6 percent in September, while the official unemployment rate remained 4.1 percent.",
+      "why_it_matters": "Stable headline unemployment argues against immediate easing pressure, but rising broader underutilization signals some labor-market slack and keeps the reaction function balanced.",
+      "official": true,
+      "first_seen_at": "2026-11-11T18:50:29+00:00",
+      "is_new": true
+    },
+    {
+      "id": "src_006",
+      "title": "Real Earnings Summary - 2026 M10 Results",
+      "publisher": "U.S. Bureau of Labor Statistics",
+      "url": "https://www.bls.gov/news.release/realer.nr0.htm",
+      "published_at": "2026-11-10T08:30:00-05:00",
+      "bucket": "inflation",
+      "direction": "neutral",
+      "score": 0,
+      "importance": "medium",
+      "confidence": "high",
+      "claim_type": "official_data",
+      "event_key": "2026_10_real_earnings_release",
+      "evidence_text": "Real average hourly earnings were unchanged from September to October as nominal hourly earnings and consumer prices both increased 0.4 percent.",
+      "why_it_matters": "Flat real earnings indicate that wage growth was broadly matched by consumer-price growth, providing no clear additional easing or tightening signal.",
+      "official": true,
+      "first_seen_at": "2026-11-11T18:50:29+00:00",
+      "is_new": false
+    },
+    {
+      "id": "src_007",
+      "title": "Consumer Price Index News Release - October 2026",
+      "publisher": "U.S. Bureau of Labor Statistics",
+      "url": "https://www.bls.gov/news.release/cpi.htm",
+      "published_at": "2026-11-10T08:30:00-05:00",
+      "bucket": "inflation",
+      "direction": "tightening",
+      "score": 1,
+      "importance": "high",
+      "confidence": "high",
+      "claim_type": "official_data",
+      "event_key": "2026_10_cpi_release",
+      "evidence_text": "Consumer prices rose 0.4% month over month in October, while core CPI increased 0.3%; headline inflation was 3.7% year over year in September, the latest annual figure shown in the release.",
+      "why_it_matters": "Firm monthly price gains and elevated annual inflation argue for caution about additional rate cuts, even though the monthly headline pace moderated from September.",
+      "official": true,
+      "first_seen_at": "2026-11-11T18:50:29+00:00",
+      "is_new": false
+    },
+    {
+      "id": "src_017",
+      "title": "The U.S. Economy and Considerations for Monetary Policy",
+      "publisher": "Board of Governors of the Federal Reserve System",
+      "url": "https://www.federalreserve.gov/newsevents/speech/bowman20261110a.htm",
+      "published_at": "2026-11-10T00:00:00-05:00",
+      "bucket": "fed_communications",
+      "direction": "tightening",
+      "score": 1,
+      "importance": "high",
+      "confidence": "high",
+      "claim_type": "documented_fact",
+      "event_key": "2026_11_10_bowman_economic_policy_speech",
+      "evidence_text": "Governor Bowman said inflation had been more persistent than expected and estimated October core PCE inflation may have risen to 3.3 percent, while wage growth had slowed and the labor market was not tight.",
+      "why_it_matters": "Higher core inflation supports policy restraint, although moderating wages and a non-tight labor market limit the case for aggressive tightening.",
+      "official": true,
+      "first_seen_at": "2026-11-11T18:50:29+00:00",
+      "is_new": true
+    },
+    {
+      "id": "src_008",
+      "title": "Consumer Price Index - October 2026",
+      "publisher": "U.S. Bureau of Labor Statistics",
+      "url": "https://www.bls.gov/news.release/pdf/cpi.pdf?pdf",
+      "published_at": "2026-11-10T08:30:00-04:00",
+      "bucket": "inflation",
+      "direction": "tightening",
+      "score": 1,
+      "importance": "high",
+      "confidence": "high",
+      "claim_type": "official_data",
+      "event_key": "2026_10_cpi_release",
+      "evidence_text": "Consumer prices increased 0.4% month over month in October after rising 0.6% in September, while core CPI increased 0.3%.",
+      "why_it_matters": "Persistent monthly headline and core inflation leaves less room for additional Fed cuts and supports a more cautious reaction function.",
+      "official": true,
+      "first_seen_at": "2026-11-11T18:50:29+00:00",
+      "is_new": false
+    },
+    {
+      "id": "src_002",
+      "title": "Fed rate hike odds in December at 88% after hot CPI - CME FedWatch",
+      "publisher": "CME FedWatch via Yahoo Finance",
+      "url": "https://uk.finance.yahoo.com/news/fed-rate-hike-odds-december-035408575.html",
+      "published_at": "2026-11-11T00:00:00Z",
+      "bucket": "market_pricing",
+      "direction": "tightening",
+      "score": 2,
+      "importance": "high",
+      "confidence": "medium",
+      "claim_type": "official_data",
+      "event_key": "2026_11_cme_fedwatch_december_hike_pricing",
+      "evidence_text": "CME FedWatch showed an 88.8% probability of a 25-basis-point December hike, with an 11.2% probability of a 50-basis-point hike and no hold priced.",
+      "why_it_matters": "The futures curve indicates markets expect additional tightening rather than further easing at the next meeting.",
+      "official": true,
+      "first_seen_at": "2026-11-11T18:50:29+00:00",
+      "is_new": true
+    },
+    {
+      "id": "src_003",
+      "title": "Bond yields spike most since tariff meltdown on rate-hike bets",
+      "publisher": "Bloomberg",
+      "url": "https://www.bloomberg.com/news/articles/2026-11-10/treasuries-slide-as-hot-us-inflation-cements-december-rate-bets",
+      "published_at": "2026-11-11T00:00:00Z",
+      "bucket": "market_pricing",
+      "direction": "tightening",
+      "score": 2,
+      "importance": "high",
+      "confidence": "medium",
+      "claim_type": "documented_fact",
+      "event_key": "2026_11_two_year_treasury_rate_hike_repricing",
+      "evidence_text": "The two-year Treasury yield rose 17 basis points to 4.73% as markets priced a certain quarter-point December hike, some chance of a larger move, and roughly three hikes by June.",
+      "why_it_matters": "A sharp rise in the policy-sensitive two-year yield signals a materially more restrictive expected policy path.",
+      "official": false,
+      "first_seen_at": "2026-11-11T18:50:29+00:00",
+      "is_new": true
+    },
+    {
+      "id": "src_004",
+      "title": "Economic Outlook",
+      "publisher": "Federal Reserve Bank of Philadelphia",
+      "url": "https://www.philadelphiafed.org/-/media/FRBP/Assets/Institutional/speeches/paulson/2026/261110-81st-Annual-Field-Meeting-Capstone-Speech.pdf",
+      "published_at": "2026-11-11T00:00:00Z",
+      "bucket": "fed_communications",
+      "direction": "tightening",
+      "score": 2,
+      "importance": "high",
+      "confidence": "high",
+      "claim_type": "documented_fact",
+      "event_key": "2026_11_philadelphia_fed_gradual_tightening_signal",
+      "evidence_text": "Anna Paulson said policy should remain somewhat restrictive, described the October hold as a pause in pace rather than direction, and indicated that further gradual tightening was likely needed.",
+      "why_it_matters": "The communication frames the current regime as an ongoing tightening cycle rather than an easing cycle.",
+      "official": true,
+      "first_seen_at": "2026-11-11T18:50:29+00:00",
+      "is_new": true
+    },
+    {
+      "id": "src_040",
+      "title": "Treasury Presentation to TBAC",
+      "publisher": "U.S. Department of the Treasury",
+      "url": "https://home.treasury.gov/system/files/221/CombinedChargesforArchivesQ42026.pdf",
+      "published_at": "2026-11-05T00:00:00Z",
+      "bucket": "market_pricing",
+      "direction": "tightening",
+      "score": 1,
+      "importance": "medium",
+      "confidence": "high",
+      "claim_type": "official_data",
+      "event_key": "2026_10_treasury_two_year_yield_repricing",
+      "evidence_text": "Treasury\u2019s presentation recorded a two-year yield of 4.787% at September 30, up from 4.204% at August 31 and 4.315% at July 31.",
+      "why_it_matters": "The substantial late-summer increase in the two-year yield indicates a material tightening in expected short-term policy conditions.",
+      "official": true,
+      "first_seen_at": "2026-11-11T18:50:29+00:00",
       "is_new": true
     }
   ]
