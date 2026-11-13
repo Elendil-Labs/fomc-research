@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-11-12T19:04:13+00:00",
+  "generated_at": "2026-11-13T18:42:15+00:00",
   "available": true,
-  "net_lean": 0.57,
+  "net_lean": 0.35,
   "label": "tightening",
   "indicators": [
     {
@@ -9,11 +9,11 @@
       "name": "Fed balance sheet",
       "unit": "$M",
       "weight": 0.28,
-      "latest": 6748145.0,
-      "as_of": "2026-11-04",
-      "change_90d": -422.0,
+      "latest": 6758867.0,
+      "as_of": "2026-11-11",
+      "change_90d": -1088.0,
       "signal": 0,
-      "detail": "\u039490d -422.00 $M",
+      "detail": "\u039490d -1,088.00 $M",
       "note": "neutral"
     },
     {
@@ -21,12 +21,12 @@
       "name": "Bank reserves",
       "unit": "$M",
       "weight": 0.22,
-      "latest": 2930088.0,
-      "as_of": "2026-11-04",
-      "change_90d": -63261.0,
-      "signal": 1,
-      "detail": "\u039490d -63,261.00 $M",
-      "note": "draining"
+      "latest": 2960603.0,
+      "as_of": "2026-11-11",
+      "change_90d": 16544.0,
+      "signal": 0,
+      "detail": "\u039490d +16,544.00 $M",
+      "note": "neutral"
     },
     {
       "id": "RRPONTSYD",
@@ -44,11 +44,11 @@
       "name": "10y Treasury yield (term-premium proxy)",
       "unit": "%",
       "weight": 0.2,
-      "latest": 4.88,
-      "as_of": "2026-11-09",
-      "change_90d": 0.18,
+      "latest": 4.98,
+      "as_of": "2026-11-10",
+      "change_90d": 0.3,
       "signal": 1,
-      "detail": "\u039490d +0.18 %",
+      "detail": "\u039490d +0.30 %",
       "note": "long-end rising"
     },
     {
@@ -56,10 +56,10 @@
       "name": "Repo stress (SOFR \u2212 IORB)",
       "unit": "bp",
       "weight": 0.15,
-      "latest": -0.01,
-      "as_of": "2026-11-10",
+      "latest": 0.0,
+      "as_of": "2026-11-12",
       "signal": 0,
-      "detail": "-0.01%",
+      "detail": "+0.00%",
       "note": "neutral"
     }
   ],
