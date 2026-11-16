@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-13T18:42:21+00:00",
+  "generated_at": "2026-11-16T21:12:46+00:00",
   "available": true,
   "source": "FRED API + NY Fed ACM + ICE BofA MOVE (via Yahoo)",
   "method": "Deterministic level/20-day-change checks against the 2022-10 and 2023-10 long-end bottoms; valuation boxes use the 2023 levels, timing boxes need elevated MOVE and a stalled front end (no LLM).",
@@ -32,11 +32,11 @@
       "group": "valuation",
       "threshold": 2.52,
       "rule": "latest >= 2.52 (2023-10-19 bottom level)",
-      "latest": 2.78,
-      "as_of": "2026-11-10",
-      "change_20d": -0.1,
+      "latest": 2.86,
+      "as_of": "2026-11-12",
+      "change_20d": 0.02,
       "checked": true,
-      "detail": "2.78 % (20d -0.10)",
+      "detail": "2.86 % (20d +0.02)",
       "note": "Real yield is the cleanest valuation anchor; the 2023 bottom printed 2.52."
     },
     {
@@ -46,11 +46,11 @@
       "group": "valuation",
       "threshold": 0.45,
       "rule": "latest >= 0.45 (2023-10-19 bottom level)",
-      "latest": 0.6751,
-      "as_of": "2026-11-12",
-      "change_20d": -0.1359,
+      "latest": 0.7246,
+      "as_of": "2026-11-13",
+      "change_20d": -0.0254,
       "checked": true,
-      "detail": "0.68 pp (20d -0.14)",
+      "detail": "0.72 pp (20d -0.03)",
       "note": "Term premium is the compensation for duration risk; it was 0.45 at the 2023 bottom and negative at the 2022 one."
     },
     {
@@ -61,10 +61,10 @@
       "threshold": 0.05,
       "rule": "20-day change <= +0.05pp",
       "latest": 2.24,
-      "as_of": "2026-11-12",
-      "change_20d": -0.11,
+      "as_of": "2026-11-13",
+      "change_20d": -0.08,
       "checked": true,
-      "detail": "2.24 % (20d -0.11)",
+      "detail": "2.24 % (20d -0.08)",
       "note": "A long-end bottom needs the selloff to be about term premium, not a repricing of inflation; breakevens must not be running."
     },
     {
@@ -74,11 +74,11 @@
       "group": "timing",
       "threshold": 130,
       "rule": "latest >= 130 (2023 bottom ~130, 2022 ~160)",
-      "latest": 98.7951,
-      "as_of": "2026-11-13",
-      "change_20d": -3.6949,
+      "latest": 101.2896,
+      "as_of": "2026-11-16",
+      "change_20d": 0.1896,
       "checked": false,
-      "detail": "98.80 index (20d -3.69)",
+      "detail": "101.29 index (20d +0.19)",
       "note": "Both bottoms came with rates vol elevated; a calm MOVE says the flush has not happened yet."
     },
     {
@@ -88,11 +88,11 @@
       "group": "timing",
       "threshold": -0.05,
       "rule": "DGS2 >= 0.05pp below its 20d max while DGS30 within 0.05pp of its 20d max",
-      "latest": -0.09,
-      "as_of": "2026-11-10",
-      "change_20d": -0.06,
+      "latest": 0.0,
+      "as_of": "2026-11-12",
+      "change_20d": 0.04,
       "checked": false,
-      "detail": "2y 4.73 is 0.09pp below its 20d max 4.82; 30y 5.35 is 0.21pp below its 20d max 5.56",
+      "detail": "2y 4.86 is 0.00pp below its 20d max 4.86; 30y 5.43 is 0.09pp below its 20d max 5.52",
       "note": "At both bottoms the 2y had stopped rising while the 30y was still printing highs: the steepening that marks the end of a long-end selloff."
     },
     {
@@ -102,11 +102,11 @@
       "group": "context",
       "threshold": null,
       "rule": "context only",
-      "latest": 4.98,
-      "as_of": "2026-11-10",
-      "change_20d": -0.23,
+      "latest": 5.1,
+      "as_of": "2026-11-12",
+      "change_20d": -0.09,
       "checked": null,
-      "detail": "4.98 % (20d -0.23)",
+      "detail": "5.10 % (20d -0.09)",
       "note": "Level of the benchmark long rate."
     },
     {
@@ -116,11 +116,11 @@
       "group": "context",
       "threshold": null,
       "rule": "context only",
-      "latest": 5.35,
-      "as_of": "2026-11-10",
-      "change_20d": -0.21,
+      "latest": 5.43,
+      "as_of": "2026-11-12",
+      "change_20d": -0.09,
       "checked": null,
-      "detail": "5.35 % (20d -0.21)",
+      "detail": "5.43 % (20d -0.09)",
       "note": "Level of the long bond."
     },
     {
@@ -130,11 +130,11 @@
       "group": "context",
       "threshold": null,
       "rule": "context only",
-      "latest": 0.25,
-      "as_of": "2026-11-10",
-      "change_20d": -0.17,
+      "latest": 0.24,
+      "as_of": "2026-11-12",
+      "change_20d": -0.13,
       "checked": null,
-      "detail": "0.25 pp (20d -0.17)",
+      "detail": "0.24 pp (20d -0.13)",
       "note": "Bear steepening is the long-end selloff signature; its reversal marks a bottom."
     },
     {
@@ -144,11 +144,11 @@
       "group": "context",
       "threshold": null,
       "rule": "context only",
-      "latest": 0.54,
-      "as_of": "2026-11-10",
-      "change_20d": -0.02,
+      "latest": 0.48,
+      "as_of": "2026-11-12",
+      "change_20d": -0.04,
       "checked": null,
-      "detail": "0.54 pp (20d -0.02)",
+      "detail": "0.48 pp (20d -0.04)",
       "note": "Belly-to-long slope isolates term premium from the policy path."
     },
     {
