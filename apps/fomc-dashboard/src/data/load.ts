@@ -1,6 +1,7 @@
 // Runtime data loaders. All data is static under public/data and fetched at runtime;
 // there is no backend. Vite serves public/ at the site root, so paths are absolute.
 
+import type { FomcCalendarDoc } from "../lib/fomcSchedule";
 import type {
   AnalogDoc,
   AuctionDoc,
@@ -109,6 +110,20 @@ export async function loadAnalog2018(): Promise<AnalogDoc | null> {
     const doc = await fetchJson<AnalogDoc>("data/analog_2018.json");
     if (!Array.isArray(doc.series_2018) || !Array.isArray(doc.series_2026)) return null;
     return doc;
+  } catch {
+    return null;
+  }
+}
+
+/**
+ * The FOMC meeting schedule, exported from Python (`fomc export-calendar`) so the app
+ * and the MCP server never carry separate copies of the dates. Returns null when the
+ * file hasn't been exported yet, so the UI can say so rather than invent a date.
+ */
+export async function loadFomcCalendar(): Promise<FomcCalendarDoc | null> {
+  try {
+    const doc = await fetchJson<FomcCalendarDoc>("data/fomc_calendar.json");
+    return Array.isArray(doc.meetings) && doc.meetings.length > 0 ? doc : null;
   } catch {
     return null;
   }

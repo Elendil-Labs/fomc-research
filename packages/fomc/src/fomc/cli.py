@@ -6,6 +6,7 @@ per-command options are exactly what `python -m fomc.<module> --help` shows.
     fomc status                 # current regime + SPY/TLT playbook
     fomc regime --at 2024-06-01
     fomc truth                  # rebuild the source-truth table
+    fomc export-calendar        # dashboard FOMC calendar JSON
     fomc dips                   # buy-the-dip cohort
     fomc backtest --horizon 5
     fomc study
@@ -22,6 +23,7 @@ from fomc import (
     backtest,
     dip_analysis,
     event_study,
+    export_calendar,
     export_truth,
     fetch,
     regime,
@@ -37,6 +39,8 @@ COMMANDS = {
     "regime": ("Show the hiking/easing regime timeline", regime.main),
     "truth": ("Build the per-event SPY/TLT source-truth table (CSV + MD)", truth.main),
     "export-truth": ("Export event-truth CSV+JSON for the dashboard", export_truth.main),
+    "export-calendar": ("Export the FOMC meeting calendar JSON for the dashboard",
+                        export_calendar.main),
     "study": ("Event study: SPY/TLT 5d before & after each FOMC", event_study.main),
     "dips": ("Deep-dive the 'SPY fell on decision day' cohort", dip_analysis.main),
     "backtest": ("Backtest the decision-day reversal rules", backtest.main),

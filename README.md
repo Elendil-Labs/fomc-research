@@ -62,6 +62,7 @@ result; the FOMC corpus and truth table are refreshed on meeting days.
 | `data/fomc/analysis/fomc_event_truth.csv` | One row per FOMC event: regime, action, SPY/TLT returns pre-5d, day 0, +1/2/3/5/10 | CC BY 4.0 | `fomc truth` |
 | `data/fomc/analysis/*.md`, `event_windows.csv`, `dip_events.csv`, `reversal_trades.csv` | Event study, dip cohort and backtest outputs | CC BY 4.0 | `fomc study`, `dips`, `backtest` |
 | `apps/fomc-dashboard/public/data/fomc_event_truth.{csv,json}` | Dashboard copy of the truth table (typed JSON) | CC BY 4.0 | `fomc export-truth`, every cron run |
+| `apps/fomc-dashboard/public/data/fomc_calendar.json` | Meeting schedule (2026 + 2027 + Jan 2028): decision and strategy meetings, blackout windows, source provenance | CC BY 4.0 | `fomc export-calendar`, every cron run |
 | `apps/fomc-dashboard/public/data/regime_intel/latest.json` | Scored intermeeting evidence: regime read, bucket scores, checklist, sources | CC BY 4.0 | Weekday 07:30 ET cron |
 | `.../regime_intel/history.json`, `history/YYYY-MM-DD.json` | Daily net-lean series and full daily snapshots | CC BY 4.0 | Weekday cron |
 | `.../regime_intel/balance_sheet.json` | Deterministic FRED balance-sheet axis (WALCL, WRESBAL, RRPONTSYD, DGS10, SOFR-IORB) | CC BY 4.0; FRED cited | Weekday cron |
@@ -86,6 +87,7 @@ module, so `uv run fomc <cmd> --help` shows that command's options.
 | `regime` | `regime.py` | Build and print the hiking vs easing timeline; writes `regime_timeline.csv`. Exposes `regime_on(date)`. Exit code 2 with an ALARM if the newest statement fails to parse. |
 | `truth` | `truth.py` | Per-event SPY/TLT source-truth table; writes `fomc_event_truth.csv` and `.md`. |
 | `export-truth` | `export_truth.py` | Re-shape the canonical CSV into the dashboard's `public/data/` CSV and typed JSON (offline). |
+| `export-calendar` | `export_calendar.py` | Serialise the meeting schedule (`fomc.calendar`) into the dashboard's `public/data/fomc_calendar.json` (offline). |
 | `study` | `event_study.py` | SPY/TLT returns 5 sessions before and after each FOMC; aggregates and conditional tables. |
 | `dips` | `dip_analysis.py` | The "SPY fell on the decision day" cohort by horizon and drop depth. |
 | `backtest` | `backtest.py` | Decision-day reversal rules with per-trade P&L, t-stats, stability split. |

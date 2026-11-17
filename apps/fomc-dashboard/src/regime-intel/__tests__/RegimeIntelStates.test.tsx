@@ -12,6 +12,7 @@ vi.mock("../../data/load", () => ({
   loadAuctions: () => Promise.resolve(null),
   loadCftc: () => Promise.resolve(null),
   loadEventTruth: () => Promise.resolve({ events: [] }),
+  loadFomcCalendar: () => Promise.resolve(null),
 }));
 
 import { RegimeIntel } from "../RegimeIntel";

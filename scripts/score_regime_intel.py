@@ -23,8 +23,12 @@ Scoring model — weighted vote-share over DIRECTION (not an averaged magnitude)
 Failure handling: if collection errored or returned no sources, the previous good
 latest.json is preserved and flagged {stale:true, error_summary:...}.
 
+The next FOMC meeting defaults to the shared schedule (fomc.calendar), so the score
+stays anchored to a real decision date without the caller passing one; --next-fomc
+still overrides it.
+
 Usage:
-    python scripts/score_regime_intel.py [--next-fomc 2026-07-29]
+    python scripts/score_regime_intel.py [--next-fomc 2026-12-09]
 """
 
 from __future__ import annotations
@@ -37,6 +41,7 @@ from datetime import date, datetime, timedelta, timezone
 from typing import Callable
 
 import _intel_common as ic
+from fomc.calendar import next_decision
 
 # Multiplicative weight components (surfaced transparently in the output "scoring" block).
 IMPORTANCE_W = {"high": 1.0, "medium": 0.6, "low": 0.3}
@@ -482,12 +487,20 @@ def preserve_stale(reason: str, now: str) -> int:
 
 def main(argv: list[str] | None = None) -> int:
     p = argparse.ArgumentParser(description="Score regime intelligence into latest.json")
-    p.add_argument("--next-fomc", default=None, help="ISO date of the next FOMC meeting (optional)")
+    p.add_argument(
+        "--next-fomc",
+        default=None,
+        help="ISO date of the next FOMC meeting (default: the next scheduled decision "
+             "in fomc.calendar; strategy meetings are skipped)",
+    )
     args = p.parse_args(argv)
 
     now = datetime.now(timezone.utc).isoformat(timespec="seconds")
     today = date.today()
     today_str = today.isoformat()
+    # Anchor to the shared schedule when the caller did not pass a date. None only when
+    # the calendar has run out of meetings — which fomc.calendar warns about well ahead.
+    next_fomc_meeting = args.next_fomc or next_decision(today)
 
     if not ic.LATEST_RAW.exists():
         return preserve_stale("no latest_raw.json — collection never ran", now)
@@ -524,7 +537,7 @@ def main(argv: list[str] | None = None) -> int:
         "evidence_shares": shares,
         "net_lean": net_lean,
         "evidence_dir": ev_dir,
-        "next_fomc_meeting": args.next_fomc,
+        "next_fomc_meeting": next_fomc_meeting,
         "new_this_run": raw.get("new_this_run", 0),
         "n_sources": len(sources),
         "n_events": len(events),

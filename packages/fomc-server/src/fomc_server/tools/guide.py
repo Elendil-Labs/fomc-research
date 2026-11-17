@@ -134,7 +134,10 @@ _GUIDE: dict[str, Any] = {
         "get_daily_log": "Daily net_lean / inferred-regime history points.",
         "get_checklist": "What-would-change-the-call checklist with statuses.",
         "get_stated_regime": "Statement-parsed regime on any date + parser audit/ALARM.",
-        "get_fomc_calendar": "2026 decision dates, blackout windows, truth-data coverage.",
+        "get_fomc_calendar": (
+            "FOMC meeting calendar (2026 + 2027 + Jan 2028): decision and strategy "
+            "meetings, blackout windows, truth-data coverage, schedule provenance."
+        ),
         "search_fed_corpus": (
             "Regex/substring search across the Fed primary-source corpus (statements, "
             "minutes, speeches, testimony, Warsh), newest first, with «»-marked snippets."
