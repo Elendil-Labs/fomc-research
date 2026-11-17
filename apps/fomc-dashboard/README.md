@@ -48,6 +48,7 @@ runtime, so the production build is pure static hosting.
 | File | Produced by | Notes |
 | --- | --- | --- |
 | `fomc_event_truth.csv` / `.json` | `fomc export-truth` | Event Explorer source; JSON is typed + null-safe |
+| `fomc_calendar.json` | `fomc export-calendar` | The meeting schedule (2026 + 2027 + Jan 2028) with blackout windows, meeting `kind` and source provenance. Serialised from `fomc.calendar`, the single source of truth — the app holds no dates of its own |
 | `regime_intel/latest.json` | `score_regime_intel.py` | What the Regime page renders |
 | `regime_intel/history.json` | `score_regime_intel.py` | Compact aggregate-score series (trend chart) |
 | `regime_intel/history/YYYY-MM-DD.json` | `score_regime_intel.py` | Full daily snapshots (audit) |
@@ -68,10 +69,11 @@ fomc truth
 
 # 2. re-shape the canonical CSV into the dashboard's CSV+JSON (offline)
 fomc export-truth
+fomc export-calendar   # meeting schedule JSON (offline); warns when it needs extending
 
 # 3. collect + score regime intelligence (needs PPLX_API_KEY_fomc)
 python scripts/collect_regime_intel.py --model sonar
-python scripts/score_regime_intel.py --next-fomc 2026-07-29
+python scripts/score_regime_intel.py --next-fomc 2026-12-09
 ```
 
 `PPLX_API_KEY_fomc` is read from the process env, then the repo-root `.env` (never committed).

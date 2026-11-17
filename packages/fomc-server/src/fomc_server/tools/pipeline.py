@@ -180,8 +180,11 @@ def _news_steps(py: str, lab: Path) -> list[dict[str, Any]]:
     steps.append(step)
     if not step["ok"]:
         return steps
+    # Anchor the score to the next scheduled DECISION (never a strategy meeting). The
+    # script defaults to the same shared schedule; passing it keeps the server's view
+    # and the written snapshot identical even if the two run on different days.
     argv = [py, "scripts/score_regime_intel.py"]
-    next_meeting = _calendar.next_fomc(_calendar.today_utc())
+    next_meeting = _calendar.next_decision(_calendar.today_utc())
     if next_meeting:
         argv += ["--next-fomc", next_meeting]
     step, _ = _run_step("score_regime_intel", argv, lab, STEP_TIMEOUT)

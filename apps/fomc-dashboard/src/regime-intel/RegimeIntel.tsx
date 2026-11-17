@@ -13,6 +13,7 @@ import {
   loadBalanceSheet,
   loadCftc,
   loadEventTruth,
+  loadFomcCalendar,
   loadLongEnd,
   loadMarketPricing,
   loadRegimeIntel,
@@ -29,6 +30,7 @@ import { RegimeChecklist } from "./RegimeChecklist";
 import { TrendChart, type TrendPoint } from "./TrendChart";
 import { DailyLog } from "./DailyLog";
 import { PlaybookPanel } from "./PlaybookPanel";
+import type { FomcCalendarDoc } from "../lib/fomcSchedule";
 
 const BASE = import.meta.env.BASE_URL || "/";
 const histUrl = `${BASE.replace(/\/$/, "")}/data/regime_intel/history.json`;
@@ -58,6 +60,8 @@ export function RegimeIntel() {
   const [auctions, setAuctions] = useState<AuctionDoc | null>(null);
   const [cftc, setCftc] = useState<CftcDoc | null>(null);
   const [events, setEvents] = useState<FomcEvent[]>([]);
+  // undefined while the fetch is in flight; null when the export is missing.
+  const [calendar, setCalendar] = useState<FomcCalendarDoc | null | undefined>(undefined);
 
   useEffect(() => {
     loadRegimeIntel().then(setDoc);
@@ -66,6 +70,7 @@ export function RegimeIntel() {
     loadLongEnd().then(setLongEnd);
     loadAuctions().then(setAuctions);
     loadCftc().then(setCftc);
+    loadFomcCalendar().then(setCalendar);
     loadEventTruth()
       .then((t) => setEvents(t.events ?? []))
       .catch(() => setEvents([]));
@@ -116,7 +121,7 @@ export function RegimeIntel() {
       <LongEndWatch longEnd={longEnd} auctions={auctions} cftc={cftc} />
 
       <div className="section-title">Playbook — next meeting vs. history</div>
-      <PlaybookPanel doc={doc} events={events} />
+      <PlaybookPanel doc={doc} events={events} calendar={calendar} />
 
       <div className="section-title">Evidence buckets</div>
       <BucketCards doc={doc} />

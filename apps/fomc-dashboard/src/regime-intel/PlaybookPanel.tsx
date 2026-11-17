@@ -1,6 +1,14 @@
 import { useState } from "react";
 import type { FomcEvent, RegimeIntelDocument } from "../types";
-import { blackoutEnd, blackoutStart, daysUntil, inBlackout, nextFomc } from "../lib/fomcSchedule";
+import {
+  blackoutEnd,
+  blackoutStart,
+  daysUntil,
+  inBlackout,
+  nextFomc,
+  nextMeeting,
+  type FomcCalendarDoc,
+} from "../lib/fomcSchedule";
 import {
   conditionEvents,
   playbookTable,
@@ -41,17 +49,29 @@ function StatCell({ s }: { s: WindowStats }) {
 export function PlaybookPanel({
   doc,
   events,
+  calendar,
   today = new Date(),
 }: {
   doc: RegimeIntelDocument;
   events: FomcEvent[];
+  /**
+   * The schedule exported from Python. `undefined` = still loading, `null` = the
+   * export is missing (the panel then says so instead of guessing a date).
+   */
+  calendar?: FomcCalendarDoc | null;
   /** Injectable clock so tests are deterministic. */
   today?: Date;
 }) {
   const [action, setAction] = useState<ActionFilter>("All");
 
   const regime = doc.current_repo_regime || "Unknown";
-  const next = nextFomc(today);
+  const meetings = calendar?.meetings ?? [];
+  const next = calendar ? nextFomc(meetings, today) : null;
+  // A strategy meeting announces no decision, so it never becomes `next` — show it
+  // separately when it is the nearer event.
+  const strategy = calendar ? nextMeeting(meetings, today, "strategy") : null;
+  const strategyUpcoming = strategy && (!next || strategy.end <= next);
+  const scheduleWarning = calendar?.provenance?.schedule_warning ?? null;
 
   const regimeEvents = conditionEvents(events, { regime });
   const conditioned =
@@ -77,12 +97,32 @@ export function PlaybookPanel({
               <span className="muted tiny">Blackout begins {shortDate(blackoutStart(next))}</span>
             )}
           </>
+        ) : calendar === undefined ? (
+          <span className="muted tiny">Loading the FOMC calendar…</span>
+        ) : calendar === null ? (
+          <span className="muted tiny">
+            FOMC calendar unavailable — run <code>fomc export-calendar</code> to publish
+            data/fomc_calendar.json.
+          </span>
         ) : (
           <span className="muted tiny">
             No future meeting in the local FOMC calendar — schedule needs updating.
           </span>
         )}
       </div>
+
+      {strategyUpcoming && strategy && (
+        <p className="muted tiny" style={{ margin: "2px 0 0" }}>
+          {shortDate(strategy.end)} strategy meeting, no decision — the Fed blackout still
+          applies ({shortDate(strategy.blackout_start)} → {shortDate(strategy.blackout_end)}).
+        </p>
+      )}
+
+      {scheduleWarning && (
+        <p className="muted tiny" style={{ margin: "2px 0 0" }}>
+          ⚠ {scheduleWarning}
+        </p>
+      )}
 
       <p className="playbook-conditioning">
         Historical playbook: <strong>{regime}</strong>-regime meetings since 2018 (n=

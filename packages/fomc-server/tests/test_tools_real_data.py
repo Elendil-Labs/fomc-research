@@ -191,3 +191,34 @@ def test_checklist_carries_honesty_note():
     assert "spytlt_confirms" in out["honesty_note"]
     assert "SPY/TLT price trend" in out["honesty_note"]
     assert "stays 'unknown'" not in out["honesty_note"]
+
+
+def test_fomc_calendar_covers_2027_and_labels_the_strategy_meeting():
+    out = get_fomc_calendar()
+    dates = [m["date"] for m in out["meetings"]]
+    assert "2026-12-09" in dates and "2027-01-27" in dates and "2028-01-26" in dates
+    assert not [d for d in dates if d.startswith("2027-12")]  # no December 2027 meeting
+
+    strategy = [m for m in out["meetings"] if m["kind"] == "strategy"]
+    assert [m["date"] for m in strategy] == ["2027-10-27"]
+    assert strategy[0]["decision_date"] is None
+    assert "no policy decision" in strategy[0]["note"]
+    # blackout still applies to the strategy meeting
+    assert strategy[0]["blackout_start"] == "2027-10-16"
+    assert strategy[0]["blackout_end"] == "2027-10-28"
+
+    # decision logic never lands on it
+    assert out["next_fomc"] != "2027-10-27"
+    assert out["next_strategy_meeting"]["end"] == "2027-10-27"
+
+
+def test_fomc_calendar_carries_provenance_instead_of_the_2026_only_note():
+    out = get_fomc_calendar()
+    assert "calendar_note" not in out
+    prov = out["calendar"]
+    assert prov["sources"][0]["url"].endswith("monetary20261112a.htm")
+    assert prov["sources"][0]["published"] == "2026-11-12"
+    assert prov["coverage"]["last_decision"] == "2028-01-26"
+    # Reminder is silent while the horizon is long; it is surfaced through `warnings`.
+    assert prov["schedule_warning"] is None
+    assert prov["horizon_days"] == 120

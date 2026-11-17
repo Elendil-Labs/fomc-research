@@ -22,7 +22,7 @@ tools to refresh the intel and ingest a new meeting on decision day.
 | `get_daily_log` | Daily net-lean / inferred-regime history |
 | `get_checklist` | What-would-change-the-call checklist |
 | `get_stated_regime` | Statement-parsed regime on any date + parser audit/ALARM |
-| `get_fomc_calendar` | 2026 decision dates, blackout windows, data coverage |
+| `get_fomc_calendar` | Meeting calendar (2026 + 2027 + Jan 2028): decision and strategy meetings, blackout windows, data coverage |
 
 ### Long end (4)
 | Tool | What it returns |
