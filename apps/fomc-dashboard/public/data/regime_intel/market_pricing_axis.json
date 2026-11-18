@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-17T19:59:40+00:00",
+  "generated_at": "2026-11-18T19:31:13+00:00",
   "available": true,
   "net_lean": 0.6,
   "label": "tightening",
@@ -10,12 +10,12 @@
       "name": "2y Treasury yield (policy-path momentum)",
       "unit": "%",
       "weight": 0.3,
-      "latest": 4.88,
-      "as_of": "2026-11-13",
-      "prior_as_of": "2026-08-14",
-      "change_90d": 0.71,
+      "latest": 4.83,
+      "as_of": "2026-11-16",
+      "prior_as_of": "2026-08-18",
+      "change_90d": 0.64,
       "signal": 1,
-      "detail": "\u039491d +0.71 %",
+      "detail": "\u039490d +0.64 %",
       "note": "market repricing tighter policy"
     },
     {
@@ -23,10 +23,10 @@
       "name": "Curve slope (10y \u2212 2y)",
       "unit": "%",
       "weight": 0.2,
-      "latest": 0.27,
-      "as_of": "2026-11-13",
+      "latest": 0.29,
+      "as_of": "2026-11-16",
       "signal": 0,
-      "detail": "+0.27%",
+      "detail": "+0.29%",
       "note": "neutral"
     },
     {
@@ -34,10 +34,10 @@
       "name": "Fed-funds path (2y \u2212 funds rate)",
       "unit": "%",
       "weight": 0.3,
-      "latest": 1.0,
-      "as_of": "2026-11-13",
+      "latest": 0.95,
+      "as_of": "2026-11-16",
       "signal": 1,
-      "detail": "+1.00%",
+      "detail": "+0.95%",
       "note": "hikes priced in (2y above funds)"
     },
     {
@@ -45,10 +45,10 @@
       "name": "Net liquidity (WALCL \u2212 TGA \u2212 RRP)",
       "unit": "$M",
       "weight": 0.2,
-      "latest": 5844146.0,
+      "latest": 5844166.0,
       "as_of": "2026-11-11",
       "prior_as_of": "2026-08-12",
-      "change_90d": 48458.0,
+      "change_90d": 48386.0,
       "signal": 0,
       "detail": "\u039491d +48 $B",
       "note": "neutral"

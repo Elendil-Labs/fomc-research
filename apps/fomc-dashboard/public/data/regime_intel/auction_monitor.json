@@ -1,10 +1,27 @@
 {
-  "generated_at": "2026-11-17T19:59:45+00:00",
+  "generated_at": "2026-11-18T19:31:19+00:00",
   "available": true,
   "source": "TreasuryDirect TA_WS securities API",
   "method": "Each 5/7/10/20/30y coupon auction scored vs the trailing 12 months of the same term (excluding itself): bid-to-cover, indirect share and dealer share of competitive awards; two weak readings = stress, one = watch (no LLM).",
   "note_on_tail": "tail_bp is always null: the when-issued yield at the 1pm close, needed for the true tail/stop-through, is not published in the TreasuryDirect API.",
   "auctions": [
+    {
+      "cusip": "912810UZ9",
+      "term": "20-Year",
+      "type": "Bond",
+      "reopening": false,
+      "auction_date": "2026-11-18",
+      "high_yield": 5.459,
+      "bid_to_cover": 2.63,
+      "indirect_pct": null,
+      "dealer_pct": null,
+      "bc_avg_12m": 2.626,
+      "indirect_avg_12m": null,
+      "dealer_avg_12m": null,
+      "tail_bp": null,
+      "flags": [],
+      "status": "ok"
+    },
     {
       "cusip": "912810UY2",
       "term": "30-Year",
@@ -1371,13 +1388,6 @@
   ],
   "upcoming": [
     {
-      "term": "20-Year",
-      "auction_date": "2026-11-18",
-      "announcement_date": "2026-11-12",
-      "offering_amount": "16000000000",
-      "reopening": false
-    },
-    {
       "term": "10-Year",
       "auction_date": "2026-11-19",
       "announcement_date": "2026-11-12",
@@ -1404,9 +1414,9 @@
     "stress_count_90d": 0,
     "watch_count_90d": 2,
     "next_long_end_auction": {
-      "term": "20-Year",
-      "auction_date": "2026-11-18"
+      "term": "10-Year",
+      "auction_date": "2026-11-19"
     },
-    "read": "0 stress and 2 watch auctions in the last 90 days; no long-end stress in the window; next long-end auction 20-Year on 2026-11-18."
+    "read": "0 stress and 2 watch auctions in the last 90 days; no long-end stress in the window; next long-end auction 10-Year on 2026-11-19."
   }
 }
