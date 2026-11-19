@@ -1,10 +1,27 @@
 {
-  "generated_at": "2026-11-18T19:31:19+00:00",
+  "generated_at": "2026-11-19T19:36:34+00:00",
   "available": true,
   "source": "TreasuryDirect TA_WS securities API",
   "method": "Each 5/7/10/20/30y coupon auction scored vs the trailing 12 months of the same term (excluding itself): bid-to-cover, indirect share and dealer share of competitive awards; two weak readings = stress, one = watch (no LLM).",
   "note_on_tail": "tail_bp is always null: the when-issued yield at the 1pm close, needed for the true tail/stop-through, is not published in the TreasuryDirect API.",
   "auctions": [
+    {
+      "cusip": "91282CRE3",
+      "term": "10-Year",
+      "type": "Note",
+      "reopening": true,
+      "auction_date": "2026-11-19",
+      "high_yield": 2.903,
+      "bid_to_cover": 2.43,
+      "indirect_pct": null,
+      "dealer_pct": null,
+      "bc_avg_12m": 2.511,
+      "indirect_avg_12m": null,
+      "dealer_avg_12m": null,
+      "tail_bp": null,
+      "flags": [],
+      "status": "ok"
+    },
     {
       "cusip": "912810UZ9",
       "term": "20-Year",
@@ -1388,24 +1405,17 @@
   ],
   "upcoming": [
     {
-      "term": "10-Year",
-      "auction_date": "2026-11-19",
-      "announcement_date": "2026-11-12",
-      "offering_amount": "19000000000",
-      "reopening": true
-    },
-    {
       "term": "5-Year",
       "auction_date": "2026-11-24",
       "announcement_date": "2026-11-19",
-      "offering_amount": null,
+      "offering_amount": "70000000000",
       "reopening": false
     },
     {
       "term": "7-Year",
       "auction_date": "2026-11-25",
       "announcement_date": "2026-11-19",
-      "offering_amount": null,
+      "offering_amount": "44000000000",
       "reopening": false
     }
   ],
@@ -1413,10 +1423,7 @@
     "last_long_end_stress": null,
     "stress_count_90d": 0,
     "watch_count_90d": 2,
-    "next_long_end_auction": {
-      "term": "10-Year",
-      "auction_date": "2026-11-19"
-    },
-    "read": "0 stress and 2 watch auctions in the last 90 days; no long-end stress in the window; next long-end auction 10-Year on 2026-11-19."
+    "next_long_end_auction": null,
+    "read": "0 stress and 2 watch auctions in the last 90 days; no long-end stress in the window; no long-end auction on the calendar."
   }
 }
