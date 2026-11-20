@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-19T19:36:24+00:00",
+  "generated_at": "2026-11-20T19:14:45+00:00",
   "available": true,
   "net_lean": 0.35,
   "label": "tightening",
@@ -9,11 +9,11 @@
       "name": "Fed balance sheet",
       "unit": "$M",
       "weight": 0.28,
-      "latest": 6758867.0,
-      "as_of": "2026-11-11",
-      "change_90d": -1088.0,
+      "latest": 6741452.0,
+      "as_of": "2026-11-18",
+      "change_90d": -4247.0,
       "signal": 0,
-      "detail": "\u039490d -1,088.00 $M",
+      "detail": "\u039490d -4,247.00 $M",
       "note": "neutral"
     },
     {
@@ -21,11 +21,11 @@
       "name": "Bank reserves",
       "unit": "$M",
       "weight": 0.22,
-      "latest": 2960603.0,
-      "as_of": "2026-11-11",
-      "change_90d": 16544.0,
+      "latest": 2979656.0,
+      "as_of": "2026-11-18",
+      "change_90d": 44369.0,
       "signal": 0,
-      "detail": "\u039490d +16,544.00 $M",
+      "detail": "\u039490d +44,369.00 $M",
       "note": "neutral"
     },
     {
@@ -33,8 +33,8 @@
       "name": "Reverse-repo cushion",
       "unit": "$B",
       "weight": 0.15,
-      "latest": 0.405,
-      "as_of": "2026-11-19",
+      "latest": 0.401,
+      "as_of": "2026-11-20",
       "signal": 1,
       "detail": "0 $B",
       "note": "near-depleted (QT cushion gone)"
@@ -44,11 +44,11 @@
       "name": "10y Treasury yield (term-premium proxy)",
       "unit": "%",
       "weight": 0.2,
-      "latest": 5.1,
-      "as_of": "2026-11-17",
-      "change_90d": 0.45,
+      "latest": 5.07,
+      "as_of": "2026-11-18",
+      "change_90d": 0.38,
       "signal": 1,
-      "detail": "\u039490d +0.45 %",
+      "detail": "\u039490d +0.38 %",
       "note": "long-end rising"
     },
     {
@@ -56,10 +56,10 @@
       "name": "Repo stress (SOFR \u2212 IORB)",
       "unit": "bp",
       "weight": 0.15,
-      "latest": 0.0,
-      "as_of": "2026-11-18",
+      "latest": 0.01,
+      "as_of": "2026-11-19",
       "signal": 0,
-      "detail": "+0.00%",
+      "detail": "+0.01%",
       "note": "neutral"
     }
   ],
