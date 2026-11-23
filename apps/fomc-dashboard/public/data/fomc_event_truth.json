@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-20T19:13:33+00:00",
+  "generated_at": "2026-11-23T17:29:16+00:00",
   "source": "data/fomc/analysis/fomc_event_truth.csv",
   "count": 72,
   "first_event_date": "2018-01-31",
@@ -1743,19 +1743,19 @@
       "spy_close": 772.31,
       "spy_pre5": 0.079,
       "spy_d0": 0.344,
-      "spy_p1": null,
-      "spy_p2": null,
-      "spy_p3": null,
-      "spy_p5": null,
-      "spy_p10": null,
+      "spy_p1": -0.382,
+      "spy_p2": -2.148,
+      "spy_p3": -2.617,
+      "spy_p5": -0.712,
+      "spy_p10": -1.619,
       "tlt_close": 80.99,
       "tlt_pre5": 1.872,
       "tlt_d0": -0.784,
-      "tlt_p1": null,
-      "tlt_p2": null,
-      "tlt_p3": null,
-      "tlt_p5": null,
-      "tlt_p10": null
+      "tlt_p1": 0.617,
+      "tlt_p2": 1.05,
+      "tlt_p3": 0.914,
+      "tlt_p5": 0.951,
+      "tlt_p10": -0.086
     }
   ]
 }
