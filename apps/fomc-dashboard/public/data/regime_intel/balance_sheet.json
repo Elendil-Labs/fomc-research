@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-20T19:14:45+00:00",
+  "generated_at": "2026-11-23T17:33:33+00:00",
   "available": true,
   "net_lean": 0.35,
   "label": "tightening",
@@ -44,11 +44,11 @@
       "name": "10y Treasury yield (term-premium proxy)",
       "unit": "%",
       "weight": 0.2,
-      "latest": 5.07,
-      "as_of": "2026-11-18",
-      "change_90d": 0.38,
+      "latest": 5.04,
+      "as_of": "2026-11-19",
+      "change_90d": 0.3,
       "signal": 1,
-      "detail": "\u039490d +0.38 %",
+      "detail": "\u039490d +0.30 %",
       "note": "long-end rising"
     },
     {
@@ -56,10 +56,10 @@
       "name": "Repo stress (SOFR \u2212 IORB)",
       "unit": "bp",
       "weight": 0.15,
-      "latest": 0.01,
-      "as_of": "2026-11-19",
+      "latest": 0.02,
+      "as_of": "2026-11-20",
       "signal": 0,
-      "detail": "+0.01%",
+      "detail": "+0.02%",
       "note": "neutral"
     }
   ],
