@@ -612,10 +612,10 @@
     },
     {
       "date": "2026-11-23",
-      "net_lean": 0.6464,
+      "net_lean": 0.6563,
       "inferred_regime": "Tightening",
       "conviction": "High",
-      "new_this_run": 10
+      "new_this_run": 6
     }
   ]
 }
