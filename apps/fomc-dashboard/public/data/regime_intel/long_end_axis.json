@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-23T22:52:55+00:00",
+  "generated_at": "2026-11-24T21:28:43+00:00",
   "available": true,
   "source": "FRED API + NY Fed ACM + ICE BofA MOVE (via Yahoo)",
   "method": "Deterministic level/20-day-change checks against the 2022-10 and 2023-10 long-end bottoms; valuation boxes use the 2023 levels, timing boxes need elevated MOVE and a stalled front end (no LLM).",
@@ -32,11 +32,11 @@
       "group": "valuation",
       "threshold": 2.52,
       "rule": "latest >= 2.52 (2023-10-19 bottom level)",
-      "latest": 2.77,
-      "as_of": "2026-11-20",
+      "latest": 2.79,
+      "as_of": "2026-11-23",
       "change_20d": 0.13,
       "checked": true,
-      "detail": "2.77 % (20d +0.13)",
+      "detail": "2.79 % (20d +0.13)",
       "note": "Real yield is the cleanest valuation anchor; the 2023 bottom printed 2.52."
     },
     {
@@ -46,11 +46,11 @@
       "group": "valuation",
       "threshold": 0.45,
       "rule": "latest >= 0.45 (2023-10-19 bottom level)",
-      "latest": 0.7153,
-      "as_of": "2026-11-20",
-      "change_20d": 0.074,
+      "latest": 0.665,
+      "as_of": "2026-11-23",
+      "change_20d": -0.011,
       "checked": true,
-      "detail": "0.72 pp (20d +0.07)",
+      "detail": "0.66 pp (20d -0.01)",
       "note": "Term premium is the compensation for duration risk; it was 0.45 at the 2023 bottom and negative at the 2022 one."
     },
     {
@@ -74,11 +74,11 @@
       "group": "timing",
       "threshold": 130,
       "rule": "latest >= 130 (2023 bottom ~130, 2022 ~160)",
-      "latest": 100.9137,
-      "as_of": "2026-11-23",
-      "change_20d": -2.3963,
+      "latest": 98.9113,
+      "as_of": "2026-11-24",
+      "change_20d": -3.2787,
       "checked": false,
-      "detail": "100.91 index (20d -2.40)",
+      "detail": "98.91 index (20d -3.28)",
       "note": "Both bottoms came with rates vol elevated; a calm MOVE says the flush has not happened yet."
     },
     {
@@ -89,10 +89,10 @@
       "threshold": -0.05,
       "rule": "DGS2 >= 0.05pp below its 20d max while DGS30 within 0.05pp of its 20d max",
       "latest": -0.25,
-      "as_of": "2026-11-20",
-      "change_20d": -0.02,
+      "as_of": "2026-11-23",
+      "change_20d": -0.06,
       "checked": false,
-      "detail": "2y 4.63 is 0.25pp below its 20d max 4.88; 30y 5.31 is 0.16pp below its 20d max 5.47",
+      "detail": "2y 4.63 is 0.25pp below its 20d max 4.88; 30y 5.29 is 0.18pp below its 20d max 5.47",
       "note": "At both bottoms the 2y had stopped rising while the 30y was still printing highs: the steepening that marks the end of a long-end selloff."
     },
     {
@@ -103,10 +103,10 @@
       "threshold": null,
       "rule": "context only",
       "latest": 4.92,
-      "as_of": "2026-11-20",
-      "change_20d": -0.04,
+      "as_of": "2026-11-23",
+      "change_20d": -0.08,
       "checked": null,
-      "detail": "4.92 % (20d -0.04)",
+      "detail": "4.92 % (20d -0.08)",
       "note": "Level of the benchmark long rate."
     },
     {
@@ -116,11 +116,11 @@
       "group": "context",
       "threshold": null,
       "rule": "context only",
-      "latest": 5.31,
-      "as_of": "2026-11-20",
-      "change_20d": 0.02,
+      "latest": 5.29,
+      "as_of": "2026-11-23",
+      "change_20d": -0.04,
       "checked": null,
-      "detail": "5.31 % (20d +0.02)",
+      "detail": "5.29 % (20d -0.04)",
       "note": "Level of the long bond."
     },
     {
@@ -131,7 +131,7 @@
       "threshold": null,
       "rule": "context only",
       "latest": 0.29,
-      "as_of": "2026-11-20",
+      "as_of": "2026-11-23",
       "change_20d": -0.02,
       "checked": null,
       "detail": "0.29 pp (20d -0.02)",
@@ -144,11 +144,11 @@
       "group": "context",
       "threshold": null,
       "rule": "context only",
-      "latest": 0.6,
-      "as_of": "2026-11-20",
-      "change_20d": 0.09,
+      "latest": 0.55,
+      "as_of": "2026-11-23",
+      "change_20d": 0.04,
       "checked": null,
-      "detail": "0.60 pp (20d +0.09)",
+      "detail": "0.55 pp (20d +0.04)",
       "note": "Belly-to-long slope isolates term premium from the policy path."
     },
     {
