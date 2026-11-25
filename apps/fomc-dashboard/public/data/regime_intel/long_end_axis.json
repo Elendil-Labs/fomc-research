@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-24T21:28:43+00:00",
+  "generated_at": "2026-11-25T20:37:15+00:00",
   "available": true,
   "source": "FRED API + NY Fed ACM + ICE BofA MOVE (via Yahoo)",
   "method": "Deterministic level/20-day-change checks against the 2022-10 and 2023-10 long-end bottoms; valuation boxes use the 2023 levels, timing boxes need elevated MOVE and a stalled front end (no LLM).",
@@ -46,11 +46,11 @@
       "group": "valuation",
       "threshold": 0.45,
       "rule": "latest >= 0.45 (2023-10-19 bottom level)",
-      "latest": 0.665,
-      "as_of": "2026-11-23",
-      "change_20d": -0.011,
+      "latest": 0.6518,
+      "as_of": "2026-11-24",
+      "change_20d": 0.0193,
       "checked": true,
-      "detail": "0.66 pp (20d -0.01)",
+      "detail": "0.65 pp (20d +0.02)",
       "note": "Term premium is the compensation for duration risk; it was 0.45 at the 2023 bottom and negative at the 2022 one."
     },
     {
@@ -60,11 +60,11 @@
       "group": "valuation",
       "threshold": 0.05,
       "rule": "20-day change <= +0.05pp",
-      "latest": 2.13,
-      "as_of": "2026-11-23",
-      "change_20d": -0.21,
+      "latest": 2.12,
+      "as_of": "2026-11-24",
+      "change_20d": -0.22,
       "checked": true,
-      "detail": "2.13 % (20d -0.21)",
+      "detail": "2.12 % (20d -0.22)",
       "note": "A long-end bottom needs the selloff to be about term premium, not a repricing of inflation; breakevens must not be running."
     },
     {
@@ -74,11 +74,11 @@
       "group": "timing",
       "threshold": 130,
       "rule": "latest >= 130 (2023 bottom ~130, 2022 ~160)",
-      "latest": 98.9113,
-      "as_of": "2026-11-24",
-      "change_20d": -3.2787,
+      "latest": 97.5271,
+      "as_of": "2026-11-25",
+      "change_20d": -0.3429,
       "checked": false,
-      "detail": "98.91 index (20d -3.28)",
+      "detail": "97.53 index (20d -0.34)",
       "note": "Both bottoms came with rates vol elevated; a calm MOVE says the flush has not happened yet."
     },
     {
@@ -158,11 +158,11 @@
       "group": "context",
       "threshold": null,
       "rule": "context only",
-      "latest": 7.28,
-      "as_of": "2026-11-19",
-      "change_20d": -0.04,
+      "latest": 7.21,
+      "as_of": "2026-11-25",
+      "change_20d": -0.03,
       "checked": null,
-      "detail": "7.28 % (20d -0.04)",
+      "detail": "7.21 % (20d -0.03)",
       "note": "Where the long end bites the real economy."
     }
   ]
