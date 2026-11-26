@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-25T20:37:07+00:00",
+  "generated_at": "2026-11-26T20:28:17+00:00",
   "available": true,
   "net_lean": 0.35,
   "label": "tightening",
@@ -44,11 +44,11 @@
       "name": "10y Treasury yield (term-premium proxy)",
       "unit": "%",
       "weight": 0.2,
-      "latest": 4.92,
-      "as_of": "2026-11-23",
-      "change_90d": 0.28,
+      "latest": 4.91,
+      "as_of": "2026-11-24",
+      "change_90d": 0.25,
       "signal": 1,
-      "detail": "\u039490d +0.28 %",
+      "detail": "\u039490d +0.25 %",
       "note": "long-end rising"
     },
     {
