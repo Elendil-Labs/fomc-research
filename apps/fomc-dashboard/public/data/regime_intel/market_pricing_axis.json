@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-26T20:28:19+00:00",
+  "generated_at": "2026-11-27T20:12:48+00:00",
   "available": true,
   "net_lean": 0.6,
   "label": "tightening",
@@ -45,10 +45,10 @@
       "name": "Net liquidity (WALCL \u2212 TGA \u2212 RRP)",
       "unit": "$M",
       "weight": 0.2,
-      "latest": 5824539.0,
+      "latest": 5824489.0,
       "as_of": "2026-11-18",
       "prior_as_of": "2026-08-19",
-      "change_90d": 32908.0,
+      "change_90d": 32577.0,
       "signal": 0,
       "detail": "\u039491d +33 $B",
       "note": "neutral"
